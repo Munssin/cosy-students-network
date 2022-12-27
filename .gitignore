@@ -44,10 +44,4 @@ Thumbs.db
 *.wmv
 *.avi
 
-/studentfy/asgi.py
-studentfy/asgi.py
-studentfy/settings.py
-studentfy/urls.py
-studentfy/wsgi.py
-studentfy/__init__.py
 
