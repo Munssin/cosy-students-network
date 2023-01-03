@@ -45,4 +45,4 @@ Thumbs.db
 *.avi
 
 
-/socnetwork/templates/app/node_modules/
+/socnetwork/templates/node_modules/

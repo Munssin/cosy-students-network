@@ -16,11 +16,14 @@ const panini =  require("panini");
 const imagemin =  require("gulp-imagemin");
 const del =  require("del");
 const notify = require("gulp-notify");
+const sourcemaps = require("gulp-sourcemaps");
+const concat = require("gulp-concat");
 const browserSync =  require("browser-sync").create();
 
+
 /*Path*/
-const srcPath = "src/"
-const distPath = "dist/"
+const srcPath = "app/src/"
+const distPath = "app/dist/"
 
 const path = {
       build: {
@@ -73,6 +76,11 @@ function html() {
 
 function css() {
     return src(path.src.css, {base: srcPath + "assets/scss/"})
+
+       /* .pipe(sourcemaps.init())
+        .pipe(sourcemaps.write({includeContent: false, sourceRoot: '.'}))
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(sourcemaps.write('.'))*/
         .pipe(plumber({
             errorHandler : function(err) {
                 notify.onError({
