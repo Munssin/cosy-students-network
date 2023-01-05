@@ -77,10 +77,7 @@ function html() {
 function css() {
     return src(path.src.css, {base: srcPath + "assets/scss/"})
 
-       /* .pipe(sourcemaps.init())
-        .pipe(sourcemaps.write({includeContent: false, sourceRoot: '.'}))
-        .pipe(sourcemaps.init({loadMaps: true}))
-        .pipe(sourcemaps.write('.'))*/
+        .pipe(sourcemaps.init())
         .pipe(plumber({
             errorHandler : function(err) {
                 notify.onError({
@@ -105,6 +102,7 @@ function css() {
             suffix: ".min",
             extname: ".css"
         }))
+        .pipe(sourcemaps.write())
         .pipe(dest(path.build.css))
         .pipe(browserSync.reload({stream:true}));
 }
