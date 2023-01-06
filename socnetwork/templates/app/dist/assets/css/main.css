@@ -1,0 +1,230 @@
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../../fonts/ubuntu/Ubuntu-Bold.eot");
+    src: url("../../fonts/ubuntu/Ubuntu-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/ubuntu/Ubuntu-Bold.woff2") format("woff2"), url("../../fonts/ubuntu/Ubuntu-Bold.woff") format("woff"), url("../../fonts/ubuntu/Ubuntu-Bold.ttf") format("truetype"), url("../../fonts/ubuntu/Ubuntu-Bold.svg#Ubuntu-Bold") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+  src: url("../../fonts/ubuntu/Ubuntu-Light.eot");
+  src: url("../../fonts/ubuntu/Ubuntu-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/ubuntu/Ubuntu-Light.woff2") format("woff2"), url("../../fonts/ubuntu/Ubuntu-Light.woff") format("woff"), url("../../fonts/ubuntu/Ubuntu-Light.ttf") format("truetype"), url("../../fonts/ubuntu/Ubuntu-Light.svg#Ubuntu-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+  src: url("../../fonts/ubuntu/Ubuntu-Medium.eot");
+  src: url("../../fonts/ubuntu/Ubuntu-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/ubuntu/Ubuntu-Medium.woff2") format("woff2"), url("../../fonts/ubuntu/Ubuntu-Medium.woff") format("woff"), url("../../fonts/ubuntu/Ubuntu-Medium.ttf") format("truetype"), url("../../fonts/ubuntu/Ubuntu-Medium.svg#Ubuntu-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+  src: url("../../fonts/ubuntu/Ubuntu-Regular.eot");
+  src: url("../../fonts/ubuntu/Ubuntu-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/ubuntu/Ubuntu-Regular.woff2") format("woff2"), url("../../fonts/ubuntu/Ubuntu-Regular.woff") format("woff"), url("../../fonts/ubuntu/Ubuntu-Regular.ttf") format("truetype"), url("../../fonts/ubuntu/Ubuntu-Regular.svg#Ubuntu-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.text {
+    font-family: "Ubuntu", sans-serif;
+}
+
+button {
+    font-family: "Ubuntu", sans-serif;
+}
+
+.btn-green {
+    background-color: #0cab5f;
+    color: white;
+}
+
+.btn-yellow {
+    background-color: #b1a10b;
+    color: white;
+}
+
+.btn-light-yellow {
+    background-color: #ada76a;
+    color: white;
+}
+
+.btn-light-yellow:hover {
+    color: white;
+    background: #d3cb81;
+    border: #d3cb81;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+}
+
+.btn-light-yellow:active {
+    color: white;
+    background: #d3cb81;
+    border: #d3cb81;
+}
+
+.btn-yellow:hover {
+    color: white;
+    background: #d7c30d;
+    border: #d7c30d;
+    transition: easy;
+}
+
+.btn-yellow:active {
+    color: white;
+    background: #d7c30d;
+    border: #d7c30d;
+}
+
+.btn-green:hover {
+    color: white;
+    background: #0ed174;
+    border: #0ed174;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+}
+
+.btn-green:active {
+    color: white;
+    background: #0ed174;
+    border: #0ed174;
+}
+
+.btn-dark {
+    background-color: #353535;
+    color: white;
+}
+
+.btn-dark.active {
+    background-color: #b1a10b;
+    border: #b1a10b;
+}
+
+.btn-dark:hover {
+    background: #353535;
+    border: #353535;
+}
+
+.input-red-grey {
+    width: 730px;
+    height: 55px;
+    background: #242424;
+    border-radius: 10px;
+    color: white;
+}
+
+.input-red-grey::-moz-placeholder {
+    font-family: "Ubuntu", sans-serif;
+    font-size: larger;
+    color: #8F1E1E;
+}
+
+.input-red-grey::placeholder {
+    font-family: "Ubuntu", sans-serif;
+    font-size: larger;
+    color: #8F1E1E;
+}
+
+.input-red-black {
+    Width: 1110px;
+    Height: 55px;
+    background: #242424;
+    border-radius: 10px;
+    color: white;
+}
+
+.input-red-black::-moz-placeholder {
+    color: #8F1E1E;
+    font-family: "Ubuntu", sans-serif;
+    font-size: larger;
+}
+
+.input-red-black::placeholder {
+    color: #8F1E1E;
+    font-family: "Ubuntu", sans-serif;
+    font-size: larger;
+}
+
+.input-grey-black {
+    width: 1110px;
+    height: 55px;
+    background: #242424;
+    border-radius: 10px;
+    color: white;
+}
+
+.input-grey-black::-moz-placeholder {
+    color: #3B3B3B;
+    font-family: "Ubuntu", sans-serif;
+    font-size: larger;
+}
+
+.input-grey-black::placeholder {
+    color: #3B3B3B;
+    font-family: "Ubuntu", sans-serif;
+    font-size: larger;
+}
+
+.input-grey-grey {
+    width: 730px;
+    height: 55px;
+    background: #242424;
+    border-radius: 10px;
+    color: white;
+}
+
+.input-grey-grey::-moz-placeholder {
+    color: #3B3B3B;
+    font-family: "Ubuntu", sans-serif;
+    font-size: larger;
+}
+
+.input-grey-grey::placeholder {
+    color: #3B3B3B;
+    font-family: "Ubuntu", sans-serif;
+    font-size: larger;
+}
+
+a:link {
+    color: blue;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+}
+
+a:visited {
+    color: #d7c30d;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+}
+
+a:hover {
+    color: #d7c30d;
+    text-decoration: underline;
+    font-family: "Ubuntu", sans-serif;
+}
+
+a:active {
+    color: blue;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #FFFFFF;
+    font-family: "Ubuntu", sans-serif;
+}
+
+p {
+    color: #FFFFFF;
+    font-family: "Ubuntu", sans-serif;
+}

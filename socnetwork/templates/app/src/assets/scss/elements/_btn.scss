@@ -1,0 +1,77 @@
+
+button{
+  font-family: "Ubuntu", sans-serif;
+}
+.btn-green {
+  background-color: #0cab5f;
+  color: white;
+}
+
+.btn-yellow{
+  background-color: #b1a10b;
+  color:white;
+}
+
+.btn-light-yellow{
+  background-color: #ada76a;
+  color:white;
+}
+
+.btn-light-yellow:hover {
+	color: white;
+	background: #d3cb81;
+    border: #d3cb81;
+	transition: easy;
+  }
+
+.btn-light-yellow:active{
+    color: white;
+	background: #d3cb81;
+    border: #d3cb81;
+  }
+
+
+.btn-yellow:hover {
+	color: white;
+	background: #d7c30d;
+    border: #d7c30d;
+	transition: easy;
+}
+
+.btn-yellow:active{
+    color: white;
+	background: #d7c30d;
+    border: #d7c30d;
+  }
+
+.btn-green:hover {
+	color: white;
+	background: #0ed174;
+    border: #0ed174;
+	transition: easy;
+  }
+
+.btn-green:active{
+    color: white;
+	background: #0ed174;
+    border: #0ed174;
+  }
+
+
+.btn-dark{
+  background-color: #353535;
+  color:white;
+  &.active{
+    background-color:#b1a10b ;
+    border: #b1a10b;
+  }
+  &:hover{
+    background: #353535;
+    border: #353535;
+  }
+}
+
+
+
+
+
