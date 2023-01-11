@@ -39,7 +39,6 @@ const path = {
           js: srcPath + "assets/js/*.js",
           images: srcPath + "assets/images/**/*.{json,jpeg,png,svg,jpg,gif,ico,webp,webmanifest,xml}",
           fonts: srcPath +  "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
-
       },
       watch: {
           html: srcPath + "**/*.html",
@@ -47,7 +46,6 @@ const path = {
           js: srcPath + "assets/js/**/*.js",
           images: srcPath + "assets/images/**/*.{json,jpeg,png,svg,jpg,gif,ico,webp,webmanifest,xml}",
           fonts: srcPath +  "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
-
       },
       clean: "./" + distPath
 }
@@ -169,10 +167,6 @@ const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts))
 const watch = gulp.parallel(build, watchFiles, serve)
 
 
-
-
-
-
 exports.html = html
 exports.css = css
 exports.js = js
@@ -182,5 +176,3 @@ exports.clean = clean
 exports.build = build
 exports.watch = watch
 exports.default = watch
-
-
