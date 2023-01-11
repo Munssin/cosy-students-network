@@ -22,8 +22,8 @@ const browserSync =  require("browser-sync").create();
 
 
 /*Path*/
-const srcPath = "app/src/"
-const distPath = "app/dist/"
+const srcPath = "src/"
+const distPath = "auth/"
 
 const path = {
       build: {
