@@ -5,12 +5,60 @@ button{
 .btn-green {
   background-color: #0cab5f;
   color: white;
+
+}
+
+.form-one-green{
+  position: relative;
+  bottom: -45px;
+   width: 540px;
+  left:30px;
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-size: 17px;
+  font-weight: 300;
+
+
+}
+
+.form-two-green{
+  margin-right:  30px;
+  width: 240px;
+  float: right;
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 300;
+
+
 }
 
 .btn-yellow{
   background-color: #b1a10b;
   color:white;
 }
+
+.form-one-yellow{
+  position: relative;
+  bottom: -200px;
+  left:30px;
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.form-two-yellow{
+
+   width: 150px;
+margin-left: 30px;
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+
+
 
 .btn-light-yellow{
   background-color: #ada76a;
@@ -21,7 +69,7 @@ button{
 	color: white;
 	background: #d3cb81;
     border: #d3cb81;
-	transition: easy;
+	transition: all 3s ease;
   }
 
 .btn-light-yellow:active{
@@ -35,7 +83,7 @@ button{
 	color: white;
 	background: #d7c30d;
     border: #d7c30d;
-	transition: easy;
+	transition: all 3s ease;
 }
 
 .btn-yellow:active{
@@ -48,7 +96,7 @@ button{
 	color: white;
 	background: #0ed174;
     border: #0ed174;
-	transition: easy;
+	transition: all 3s ease;
   }
 
 .btn-green:active{

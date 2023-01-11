@@ -1,0 +1,59 @@
+
+
+.input-grey-black{
+
+  width: 540px;
+  height: 35px;
+
+  background: #242424;
+  border-radius: 10px;
+  border: #242424;
+  color:white;
+ box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgba(0,0,0,0.1),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+  &.fail-data{
+   &::placeholder{
+      color: #8F1E1E;
+   }
+  }
+
+
+}
+
+.input-grey-black::placeholder {
+  color: #3B3B3B;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 17px;
+}
+
+.input-grey-grey{
+  width: 730px;
+height: 55px;
+
+background: #242424;
+border-radius: 10px;
+  color:white;
+}
+
+.input-grey-grey::placeholder {
+  color: #3B3B3B;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: larger;
+}
+
+.label{
+  margin-bottom: 15px;
+
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-size: 17px;
+  font-weight: 300;
+  color: #FFFFFF;
+  display:block;
+
+
+}
+
+

@@ -1,4 +1,4 @@
-a:link {
+a.usual:link {
   color: blue;
   text-decoration: none;
   font-family: 'Ubuntu', sans-serif;
@@ -6,7 +6,7 @@ a:link {
 }
 
 
-a:visited {
+a.usual:visited {
   color: #d7c30d;
   text-decoration: none;
   font-family: 'Ubuntu', sans-serif;
@@ -14,14 +14,14 @@ a:visited {
 }
 
 
-a:hover {
+a.usual:hover {
   color: #d7c30d;
   text-decoration: underline;
   font-family: 'Ubuntu', sans-serif;
 }
 
 
-a:active {
+a.usual:active {
   color: blue;
   text-decoration: none;
   font-family: 'Ubuntu', sans-serif;
