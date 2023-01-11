@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: 'Ubuntu', sans-serif;
+  transition: .3s all ease;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  transition: .3s all ease;
+}
+
+input {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  line-height: 30px;
+}
+
+p {
+  line-height: 30px;
+  word-wrap: break-word;
+}
+
+button {
+  border: transparent;
+}
+

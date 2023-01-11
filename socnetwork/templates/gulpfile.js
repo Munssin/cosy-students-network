@@ -67,8 +67,7 @@ function html() {
         .pipe(panini({
             root: srcPath,
             layouts: srcPath + "tpl/layouts/",
-            partials: srcPath + "tpl/partials/",
-            data: srcPath + "tpl/data/"
+            partials: srcPath + "tpl/partials/"
         }))
         .pipe(dest(path.build.html))
         .pipe(browserSync.reload({stream:true}));

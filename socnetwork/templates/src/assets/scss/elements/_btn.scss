@@ -1,28 +1,25 @@
 
-button{
+button {
   font-family: "Ubuntu", sans-serif;
 }
+
 .btn-green {
   background-color: #0cab5f;
   color: white;
 
 }
 
-.form-one-green{
-  position: relative;
-  bottom: -45px;
-   width: 540px;
-  left:30px;
+.form-one-green {
+  width: 540px;
+  padding: 5px 15px;
   font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-size: 17px;
   font-weight: 300;
-
-
 }
 
-.form-two-green{
-  margin-right:  30px;
+.form-two-green {
+  padding: 5px 15px;
   width: 240px;
   float: right;
   font-family: 'Ubuntu', sans-serif;
@@ -33,24 +30,21 @@ button{
 
 }
 
-.btn-yellow{
+.btn-yellow {
   background-color: #b1a10b;
-  color:white;
+  color: white;
 }
 
-.form-one-yellow{
-  position: relative;
-  bottom: -200px;
-  left:30px;
+.form-one-yellow {
+  padding: 5px 15px;
   font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-size: 14px;
 }
 
-.form-two-yellow{
+.form-two-yellow {
 
-   width: 150px;
-margin-left: 30px;
+  width: 150px;
   font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-size: 15px;
@@ -58,62 +52,62 @@ margin-left: 30px;
 }
 
 
-
-
-.btn-light-yellow{
+.btn-light-yellow {
   background-color: #ada76a;
-  color:white;
+  color: white;
 }
 
 .btn-light-yellow:hover {
-	color: white;
-	background: #d3cb81;
-    border: #d3cb81;
-	transition: all 3s ease;
-  }
+  color: white;
+  background: #d3cb81;
+  border: #d3cb81;
+  transition: all 3s ease;
+}
 
-.btn-light-yellow:active{
-    color: white;
-	background: #d3cb81;
-    border: #d3cb81;
-  }
+.btn-light-yellow:active {
+  color: white;
+  background: #d3cb81;
+  border: #d3cb81;
+}
 
 
 .btn-yellow:hover {
-	color: white;
-	background: #d7c30d;
-    border: #d7c30d;
-	transition: all 3s ease;
+  color: white;
+  background: #d7c30d;
+  border: #d7c30d;
+  transition: all 3s ease;
 }
 
-.btn-yellow:active{
-    color: white;
-	background: #d7c30d;
-    border: #d7c30d;
-  }
+.btn-yellow:active {
+  color: white;
+  background: #d7c30d;
+  border: #d7c30d;
+}
 
 .btn-green:hover {
-	color: white;
-	background: #0ed174;
-    border: #0ed174;
-	transition: all 3s ease;
-  }
+  color: white;
+  background: #0ed174;
+  border: #0ed174;
+  transition: all 3s ease;
+}
 
-.btn-green:active{
-    color: white;
-	background: #0ed174;
-    border: #0ed174;
-  }
+.btn-green:active {
+  color: white;
+  background: #0ed174;
+  border: #0ed174;
+}
 
 
-.btn-dark{
+.btn-dark {
   background-color: #353535;
-  color:white;
-  &.active{
-    background-color:#b1a10b ;
+  color: white;
+
+  &.active {
+    background-color: #b1a10b;
     border: #b1a10b;
   }
-  &:hover{
+
+  &:hover {
     background: #353535;
     border: #353535;
   }

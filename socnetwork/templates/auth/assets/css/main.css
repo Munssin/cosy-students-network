@@ -1,3 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: "Ubuntu", sans-serif;
+    transition: 0.3s all ease;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s all ease;
+}
+
+input {
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    line-height: 30px;
+}
+
+p {
+    line-height: 30px;
+    word-wrap: break-word;
+}
+
+button {
+    border: transparent;
+}
+
 body {
     background: #3B3B3B;
     background-size: 100%;
@@ -47,6 +103,10 @@ body {
     font-family: "Ubuntu", sans-serif;
 }
 
+.login-page .form .form-one-yellow {
+    margin-top: 150px;
+}
+
 .button {
     margin-top: 250px;
 }
@@ -91,10 +151,6 @@ body {
   font-display: swap;
 }
 
-.text {
-    font-family: "Ubuntu", sans-serif;
-}
-
 button {
     font-family: "Ubuntu", sans-serif;
 }
@@ -105,10 +161,8 @@ button {
 }
 
 .form-one-green {
-    position: relative;
-    bottom: -45px;
     width: 540px;
-    left: 30px;
+    padding: 5px 15px;
     font-family: "Ubuntu", sans-serif;
     font-style: normal;
     font-size: 17px;
@@ -116,7 +170,7 @@ button {
 }
 
 .form-two-green {
-    margin-right: 30px;
+    padding: 5px 15px;
     width: 240px;
     float: right;
     font-family: "Ubuntu", sans-serif;
@@ -131,9 +185,7 @@ button {
 }
 
 .form-one-yellow {
-    position: relative;
-    bottom: -200px;
-    left: 30px;
+    padding: 5px 15px;
     font-family: "Ubuntu", sans-serif;
     font-style: normal;
     font-size: 14px;
@@ -141,7 +193,6 @@ button {
 
 .form-two-yellow {
     width: 150px;
-    margin-left: 30px;
     font-family: "Ubuntu", sans-serif;
     font-style: normal;
     font-size: 15px;
@@ -306,32 +357,34 @@ p {
     height: 600px;
     background: #2E2E2E;
     border-radius: 10px;
-    margin: 30px auto;
+    margin: auto;
+    padding: 30px;
 }
 
 .form .form-group {
-    margin-bottom: 10px;
-    margin-top: 40px;
-    margin-left: 30px;
+    margin-bottom: 40px;
+}
+
+.form .form-group:last-child {
+    margin-bottom: 30px;
 }
 
 .form-name-h3 {
     position: relative;
     text-align: center;
-    bottom: -20px;
     font-family: "Ubuntu", sans-serif;
     font-style: normal;
     font-size: 20px;
     font-weight: 300;
     color: #FFFFFF;
+    margin-bottom: 30px;
 }
 
 hr {
     position: relative;
-    bottom: -25px;
-    width: 540px;
-    height: 0px;
-    margin: auto;
-    border: 5px solid #1F1F1F;
-    transform: rotate(-179.6deg);
+    width: 100%;
+    height: 5px;
+    background: #1F1F1F;
+    border: none;
+    margin-bottom: 30px;
 }
