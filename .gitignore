@@ -46,3 +46,4 @@ Thumbs.db
 
 
 /socnetwork/templates/node_modules/
+/socnetwork/templates/package-lock.json/

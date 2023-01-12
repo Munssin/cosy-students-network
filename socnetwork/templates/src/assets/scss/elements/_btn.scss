@@ -6,12 +6,15 @@ button {
 .btn-green {
   background-color: #0cab5f;
   color: white;
+  border-radius: 6px;
 
 }
 
 .form-one-green {
   width: 540px;
+  height: 40px;
   padding: 5px 15px;
+  margin-top: 30px;
   font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-size: 17px;
@@ -20,6 +23,7 @@ button {
 
 .form-two-green {
   padding: 5px 15px;
+  height: 40px;
   width: 240px;
   float: right;
   font-family: 'Ubuntu', sans-serif;
@@ -33,18 +37,21 @@ button {
 .btn-yellow {
   background-color: #b1a10b;
   color: white;
+  border-radius: 6px;
 }
 
 .form-one-yellow {
   padding: 5px 15px;
+  height: 30px;
+  margin-top: 150px;
   font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-size: 14px;
 }
 
 .form-two-yellow {
-
   width: 150px;
+  height: 40px;
   font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-size: 15px;
@@ -55,13 +62,14 @@ button {
 .btn-light-yellow {
   background-color: #ada76a;
   color: white;
+  border-radius: 6px;
 }
 
 .btn-light-yellow:hover {
   color: white;
   background: #d3cb81;
   border: #d3cb81;
-  transition: all 3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-light-yellow:active {
@@ -75,7 +83,7 @@ button {
   color: white;
   background: #d7c30d;
   border: #d7c30d;
-  transition: all 3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-yellow:active {
@@ -88,7 +96,7 @@ button {
   color: white;
   background: #0ed174;
   border: #0ed174;
-  transition: all 3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-green:active {
@@ -101,6 +109,7 @@ button {
 .btn-dark {
   background-color: #353535;
   color: white;
+  border-radius: 6px;
 
   &.active {
     background-color: #b1a10b;
