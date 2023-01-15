@@ -122,6 +122,81 @@ button {
   }
 }
 
+.list-button{
+  color: #FFFFFF;
+  background: #171717;
+  border-radius: 6px;
+  height: 30px;
+  font-size: 17px;
+
+}
+
+.list-button:hover {
+  color: #FFFFFF;
+  background: #3d3d3d;
+}
+
+
+.list-button:active {
+  color: #FFFFFF;
+  background: #b1a10b;
+}
+
+.width-description{
+  width: 90px;
+}
+
+.width-settings{
+  width: 150px;
+}
+
+.button-exit{
+  position: absolute;
+  bottom: 15px;
+  color: #FFFFFF;
+  background: #1f1f1f;
+  border-radius: 6px;
+  height: 30px;
+  font-size: 17px;
+  transform: translateX( 15px);
+  width: 150px;
+
+}
+
+.button-exit:hover {
+  color: #FFFFFF;
+  background: #454545;
+}
+
+
+.button-exit:active {
+  color: #FFFFFF;
+  background: #b1a10b;
+}
+
+.description-button{
+  color: #FFFFFF;
+  background: #353535;
+  border-radius: 6px;
+  height: 30px;
+  font-size: 17px;
+  margin-right: 20px;
+  width: 150px;
+
+}
+
+.description-button:hover {
+  color: #FFFFFF;
+  background: #5b5b5b;
+}
+
+
+.description-button:active {
+  color: #FFFFFF;
+  background: #b1a10b;
+}
+
+
 
 
 

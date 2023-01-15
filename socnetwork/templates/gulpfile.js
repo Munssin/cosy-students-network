@@ -23,7 +23,7 @@ const browserSync =  require("browser-sync").create();
 
 /*Path*/
 const srcPath = "src/"
-const distPath = "auth/"
+const distPath = "user-cabinet-admin/"
 
 const path = {
       build: {
