@@ -123,6 +123,8 @@ button {
 }
 
 .list-button{
+  display: inline-block;
+  text-align: center;
   color: #FFFFFF;
   background: #171717;
   border-radius: 6px;
@@ -152,7 +154,7 @@ button {
 
 .button-exit{
   position: absolute;
-  bottom: 15px;
+  bottom: 90px;
   color: #FFFFFF;
   background: #1f1f1f;
   border-radius: 6px;

@@ -13,7 +13,7 @@
   width: 316px;
   height: 58px;
   padding: 20px;
-  transform: translateY( 5px);
+  transform: translateY( -10px);
   font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-weight: 550;
@@ -55,7 +55,7 @@
 .list{
   display: flex;
   float:right;
-  transform: translateY( -34px);
+  transform: translateY( 0px);
   .element-one{
     transform: translateX( -55px);
   }
