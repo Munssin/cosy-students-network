@@ -59,50 +59,6 @@ body {
     background-size: 100%;
 }
 
-.nav {
-    background: #191919;
-    background-size: 100%;
-    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(0, 0, 0, 0.1);
-    height: 80px;
-}
-
-.nav-name {
-    display: block;
-    width: 316px;
-    height: 58px;
-    padding: 20px;
-    transform: translateY(5px);
-    font-family: "Ubuntu", sans-serif;
-    font-style: normal;
-    font-weight: 550;
-    font-size: 25px;
-    color: #FFFFFF;
-}
-
-.nav-name:link {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-family: "Ubuntu", sans-serif;
-}
-
-.nav-name:visited {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-family: "Ubuntu", sans-serif;
-}
-
-.nav-name:hover {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-family: "Ubuntu", sans-serif;
-}
-
-.nav-name:active {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-family: "Ubuntu", sans-serif;
-}
-
 .login-page .form .form-one-yellow {
     margin-top: 150px;
 }
@@ -111,8 +67,102 @@ body {
     margin-top: 235px;
 }
 
+.circle {
+  position: absolute;
+  top: -35px;
+  left: -80px;
+  height: 170px;
+  width: 170px;
+  background-color: #B1A10B;
+  border-radius: 50%;
+}
+
 .button-login {
     margin-top: 330px;
+}
+
+.container {
+    position: fixed;
+    width: 370px;
+    height: 665px;
+    background: #1F1F1F;
+}
+
+.sidebar {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    height: 1px;
+    background: #2E2E2E;
+    border: none;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    position: absolute;
+    z-index: 2;
+    transform: translateX(395px);
+    margin-top: 20px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+}
+
+.image-avatar {
+    position: relative;
+}
+
+.name-student {
+    position: absolute;
+    z-index: 1;
+    background: #B4AB55;
+    height: 100px;
+    width: 100%;
+    margin-top: 55px;
+    transform: translateX(475px);
+}
+
+.cabinet-header {
+    transform: translateX(110px);
+    font-weight: 150;
+    margin-top: 20px;
+}
+
+.offline-online {
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.5);
+    transform: translateX(110px);
+    margin-top: 10px;
+}
+
+.cabinet-hr-student {
+    background: #2E2E2E;
+    height: 1px;
+    margin-top: 210px;
+}
+
+.button-student {
+    transform: translateX(410px);
+}
+
+.description-student {
+    transform: translateX(420px);
+}
+
+.text-cabinet {
+    font-size: 17px;
+    font-weight: 550;
+}
+
+.text-cabinet-var {
+    transform: translateX(5px);
+    font-size: 17px;
+}
+
+.text-cabinetA {
+    font-family: "Inter";
+    font-size: 13px;
+     transform: translateY(-15px);
 }
 
 @font-face {
@@ -268,6 +318,64 @@ button {
     border: #353535;
 }
 
+.list-button {
+    color: #FFFFFF;
+    background: #171717;
+    border-radius: 6px;
+    height: 30px;
+    font-size: 17px;
+
+}
+
+.list-button:hover {
+    color: #FFFFFF;
+    background: #3d3d3d;
+}
+
+.list-button:active {
+    color: #FFFFFF;
+    background: #b1a10b;
+}
+
+.width-description {
+    width: 90px;
+}
+
+.width-settings {
+    width: 150px;
+}
+
+.button-exit {
+    position: absolute;
+    bottom: 15px;
+    color: #FFFFFF;
+    background: #1f1f1f;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 7px 100px;
+    margin-left: 10px;
+}
+
+.button-exit:hover {
+    color: #FFFFFF;
+    background: #454545;
+}
+
+.button-exit:active {
+    color: #FFFFFF;
+    background: #b1a10b;
+}
+
+.description-button {
+    color: #FFFFFF;
+    background: #B1A10B;
+    border-radius: 6px;
+    height: 30px;
+    font-size: 17px;
+    margin-right: 20px;
+    width: 150px;
+}
+
 .input-grey-black {
     width: 540px;
     height: 35px;
@@ -328,25 +436,25 @@ button {
     display: block;
 }
 
-a.usual:link {
+.usual:link {
     color: blue;
     text-decoration: none;
     font-family: "Ubuntu", sans-serif;
 }
 
-a.usual:visited {
+.usual:visited {
     color: #d7c30d;
     text-decoration: none;
     font-family: "Ubuntu", sans-serif;
 }
 
-a.usual:hover {
+.usual:hover {
     color: #d7c30d;
     text-decoration: underline;
     font-family: "Ubuntu", sans-serif;
 }
 
-a.usual:active {
+.usual:active {
     color: blue;
     text-decoration: none;
     font-family: "Ubuntu", sans-serif;
@@ -380,7 +488,6 @@ p {
     margin-bottom: 20px;
 }
 
-
 .form-name-h3 {
     text-align: center;
     font-family: "Ubuntu", sans-serif;
@@ -396,5 +503,196 @@ hr {
     height: 5px;
     background: #1F1F1F;
     border: none;
+    margin-bottom: 30px;
+}
+
+.nav {
+    background: #191919;
+    background-size: 100%;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(0, 0, 0, 0.1);
+    height: 80px;
+}
+
+.nav-name {
+    display: block;
+    width: 316px;
+    height: 58px;
+    padding: 20px;
+    transform: translateY(5px);
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 25px;
+    color: #FFFFFF;
+}
+
+.nav-name:link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.nav-name:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.nav-name:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.nav-name:active {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.list {
+    display: flex;
+    float: right;
+    transform: translateY(-34px);
+}
+
+.list .element-one {
+    transform: translateX(-55px);
+}
+
+.list .element-two {
+    transform: translateX(-20px);
+}
+buttonA {
+    font-family: "Ubuntu";
+}
+.listA {
+    float: left;
+        text-align: left;
+        transform: translateY(50px);
+        padding-left: 20px;
+}
+
+.listA .element {
+    transform: translateY(-45px);
+        text-align: left;
+            padding-top: 20px;
+}
+
+.listA-button {
+    color: #FFFFFF;
+    background: #ffffff00;
+    font-size: 20px;
+        text-align: left;
+}
+
+.listA-button:hover {
+    color: #FFFFFF;
+    background: #3d3d3d;
+        text-align: left;
+}
+
+.listA-button:active {
+    color: #FFFFFF;
+    background: #b1a10b;
+        text-align: left;
+}
+
+.width-Asettings {
+    width: 300px ;
+        text-align: left;
+    padding: 10px 3px;
+}
+
+.text-A {
+    font-family: "Inter";
+    font-size: 13px;
+    line-height: 15px;
+}
+
+/*
+======================
+
+      group-info
+
+======================
+*/
+
+buttonG {
+    font-family: "Ubuntu";
+}
+.listG {
+    float: left;
+        text-align: left;
+        padding-left: 20px;
+        transform: translateY(-250px);
+}
+
+.listG .element {
+    transform: translateY(-45px);
+        text-align: left;
+            padding-top: 20px;
+}
+
+.listG-button {
+    color: #FFFFFF;
+    background: #ffffff00;
+    font-size: 20px;
+        text-align: left;
+}
+
+.listG-button:hover {
+    color: #FFFFFF;
+    background: #3d3d3d;
+        text-align: left;
+}
+
+.listG-button:active {
+    color: #FFFFFF;
+    background: #b1a10b;
+        text-align: left;
+}
+
+.width-Gsettings {
+    width: 300px ;
+        text-align: left;
+    padding: 10px 3px;
+}
+
+.text-G {
+    font-family: "Inter";
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.redactor {
+    position: relative;
+}
+
+.formG {
+    width: 800px;
+    height: 600px;
+    background: #2E2E2E;
+    border-radius: 10px;
+    padding: 100px 50px;
+    margin-left: 450px;
+    margin-top: -50px;
+}
+
+.form .form-group {
+    margin-bottom: 25px;
+}
+
+.form .form-group:last-child {
+    margin-bottom: 20px;
+}
+
+.form-name-h3 {
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 300;
+    color: #FFFFFF;
     margin-bottom: 30px;
 }
