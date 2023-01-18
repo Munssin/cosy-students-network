@@ -667,27 +667,28 @@ buttonG {
 
 .redactor {
     position: relative;
+    index-z: 0;
 }
 
 .formG {
+    float: right;
     width: 800px;
     height: 600px;
     background: #2E2E2E;
-    border-radius: 10px;
-    padding: 100px 50px;
-    margin-left: 450px;
-    margin-top: -50px;
+    padding: 30px 50px;
+    margin-right: 325px;
+    margin-top: -30px;
 }
 
-.form .form-group {
+.formG .form-group {
     margin-bottom: 25px;
 }
 
-.form .form-group:last-child {
+.formG .form-group:last-child {
     margin-bottom: 20px;
 }
 
-.form-name-h3 {
+.formG-name-h3 {
     text-align: center;
     font-family: "Ubuntu", sans-serif;
     font-style: normal;
@@ -695,4 +696,44 @@ buttonG {
     font-weight: 300;
     color: #FFFFFF;
     margin-bottom: 30px;
+}
+
+.sidebarG {
+    background: #242424;
+    width: 540px;
+    height: 1px;
+    margin-left: 460px;
+    transform: translateY(230px);
+    index-z: 1;
+}
+
+.listG-button {
+    color: #FFFFFF;
+    background: #ffffff00;
+    font-size: 17px;
+        text-align: left;
+}
+
+.listG-button:hover {
+    color: #FFFFFF;
+    background: #3d3d3d;
+        text-align: left;
+}
+
+.listG-button:active {
+    color: #FFFFFF;
+    background: #b1a10b;
+        text-align: left;
+}
+
+.width-Gsettings {
+    width: 300px ;
+        text-align: left;
+    padding: 10px 3px;
+}
+
+.listA .elementG {
+    transform: translateY(-55px);
+        text-align: left;
+            padding-top: 10px;
 }
