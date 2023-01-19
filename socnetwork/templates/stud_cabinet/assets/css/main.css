@@ -1057,7 +1057,25 @@ buttonU {
 ======================
 */
 
+.button-AddFile {
+    position: absolute;
+    bottom: 75px;
+    color: #FFFFFF;
+    background: #b1a10b;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 20px 390px;
+    margin-left: 430px;
+}
+.button-AddFile:hover {
+    color: #FFFFFF;
+    background: #454545;
+}
 
+.button-AddFile:active {
+    color: #FFFFFF;
+    background: #1f1f1f;
+}
 .for-ulRG {
     float: right;
       list-style-type: none;
