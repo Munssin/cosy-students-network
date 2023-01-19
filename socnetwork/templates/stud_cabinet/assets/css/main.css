@@ -1117,3 +1117,79 @@ buttonU {
     background: #b1a10b;
         text-align: left;
 }
+
+
+/*
+======================
+
+         /Calendar
+
+======================
+*/
+
+.sidebarCA {
+    background: #B1A10B;
+    width: 905px;
+    height: 2px;
+    margin-left: 30px;
+    transform: translateY(600px);
+    index-z: 1;
+}
+
+.list-buttonCA {
+    color: #FFFFFF;
+    background: #3B3B3B;
+    border-radius: 6px;
+    height: 40px;
+    font-size: 17px;
+    margin-left: 30px;
+}
+
+.list-buttonCA:hover {
+    color: #FFFFFF;
+    background: #3d3d3d;
+}
+
+.list-buttonCA:active {
+    color: #FFFFFF;
+    background: #B1A10B;
+    border-radius: 6px;
+    height: 40px;
+    font-size: 17px;
+}
+
+.formCA{
+    position: absolute;
+    width: 1000px;
+    height: 670px;
+    background: #2E2E2E;
+    border-radius: 10px;
+    margin-top: -40px;
+
+}
+
+.button-calendar {
+   transform: translateX(-10px);
+    line-height: 60px;
+}
+
+.buttonCA {
+    margin-top: 235px;
+}
+
+
+.width-settingsCA {
+    width: 285px;
+}
+.text-calendar {
+    display: block;
+    width: 600px;
+    height: 1px;
+    padding: 20px;
+    font-style: normal;
+    font-weight: 550;
+    color: #FFFFFF;
+    margin-top: 10px;
+    transform: translateX(15px);
+    font-size: 17px;
+}
