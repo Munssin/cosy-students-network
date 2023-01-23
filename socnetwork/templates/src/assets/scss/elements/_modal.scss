@@ -1,0 +1,84 @@
+.modal-content{
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.button-close{
+  color: white;
+  font-size: 22px;
+  transform: translateY(-40px);
+  margin-left:450px;
+}
+
+.modal{
+  transform: translateX(500px);
+}
+
+.modal-title{
+  transform: translateX(175px);
+}
+.line-modal{
+  border-bottom: 2px solid  white;
+  transform: translateY(-50px);
+}
+
+.input-name-adm{
+  width: 450px;
+  background: #242424;
+  border:  #242424;
+  border-radius: 6px;
+  transform: translateX(25px);
+  color: white;
+}
+
+.form-group-modal{
+  margin-top: -50px;
+
+}
+
+.l-position{
+  transform: translateX(29px);
+}
+
+.modal-light-button{
+  width: 450px ;
+  margin: 10px ;
+  height: 35px;
+  transform: translateX(15px);
+}
+
+.btn-pos{
+  margin-top: 150px;
+}
+
+.small-btn-modal{
+  height: 35px;
+  margin-top: 50px;
+  transform: translateX(25px);
+  width: 100px;
+}
+
+.right-pos{
+  float:right;
+  transform: translateX(-25px);
+}
+
+
+.creation-group{
+  transform: translateY(-65px);
+
+}
+
+.pos-input-creation{
+  transform: translateY(-25px);
+  margin:25px;
+
+}
+
+.positionForCreationButton{
+  margin-top:-100px;
+  transform: translateY(-20px);
+}
+
+.center-modal{
+  transform: translateX(0px);
+}
