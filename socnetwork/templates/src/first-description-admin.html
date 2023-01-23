@@ -9,15 +9,17 @@ title: General
             <a class="navbar-brand nav-name" href="#">
                 Studentfly
             </a>
-                <ul class="list">
-                    <li class="element-one">
-                        <button type="button"  class="list-button width-description">Про нас</button>
-                    </li>
-                     <li class="element-two">
+            <ul class="list">
+                <li class="element-one">
+                    <button type="button" class="list-button width-description">Про нас</button>
+                </li>
+                <li class="element-two">
 
-                        <button type="button" class="list-button width-settings" data-bs-toggle="modal" data-bs-target="#modal">Налаштування</button>
-                     </li>
-                </ul>
+                    <button type="button" class="list-button width-settings" data-bs-toggle="modal"
+                            data-bs-target="#modal">Налаштування
+                    </button>
+                </li>
+            </ul>
         </div>
     </nav>
     <div class="container">
@@ -25,48 +27,167 @@ title: General
         <button type="button" class="button-exit">Вийти з акаунту</button>
     </div>
     <div class="image-avatar">
-        <img src="" alt="Avatar" class="avatar">
+        <!--Фото користувача-->
+        <img src="https://picsum.photos/id/237/200/300" alt="" class="avatar">
         <div class="name-admin">
             <!-- cabinet-header стиль для  Ім'я Прізвище користувача         -->
-            <h2 class="cabinet-header"></h2>
-            <h5 class="offline-online"></h5>
+            <h2 class="cabinet-header">Грицюк Христина</h2>
+            <h5 class="offline-online">online</h5>
         </div>
     </div>
     <div class="content-admin">
-    <div class="button-admin">
-        <button id="btn-des" onclick="show()" type="button" class="description-button">Опис</button>
-        <button type="button" class="description-button">Групи</button>
-        <button type="button" class="description-button">Список груп</button>
-    </div>
-    <div id="description-content"  class="description-admin">
-        <br>
-        <p class="text-cabinet">Електронна пошта:</p>
-        <!-- text-cabinet-var стиль для електронної пошти користувача        -->
-        <p class="text-cabinet-var"></p>
-        <p class="text-cabinet">Університет:</p>
-        <!-- text-cabinet-var стиль для назви університету користувача        -->
-        <p class="text-cabinet-var"></p>
-        <p class="text-cabinet">Про користувача:</p>
-        <!-- text-cabinet-var стиль для опису користувача        -->
-        <p class="text-cabinet-var"></p>
-    </div>
-    </div>
-   <div class="modal fade" id="modal" tabindex="-1">
-    <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
+        <!-- Кнопки таби-->
+        <div class="button-admin">
+            <input class="radio" id="one" name="group" type="radio">
+            <input class="radio" id="two" name="group" type="radio">
+            <input class="radio" id="three" name="group" type="radio" checked>
+            <div class="tabs">
+                <label class="tab" id="three-tab" for="three">Опис</label>
+                <label class="tab" id="two-tab" for="two">Групи</label>
+                <label class="tab" id="one-tab" for="one">Список групи</label>
 
-      </div>
-      <div class="modal-footer">
 
-      </div>
+            </div>
+            <div class="line"></div>
+            <div class="panels">
+                <!--Панель опису користувача-->
+                <div class="description-admin" id="one-panel">
+                    <br>
+                    <p class="text-cabinet">Електронна пошта:</p>
+                    <p class="text-cabinet-var">mypost</p>
+                    <p class="text-cabinet">Університет:</p>
+                    <p class="text-cabinet-var">Львівська Політехніка</p>
+                    <p class="text-cabinet">Про користувача:</p>
+                    <p class="text-cabinet-var">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+                        вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя
+                        Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных
+                        изменений пять веков, но и перешагнул в электронный дизайн.</p>
+                </div>
+                <div class="group" id="two-panel">
+                    <!--Панель Знайти групу-->
+                    <div class="found-group">
+                        <label class="label found">Знайти групу:</label>
+                        <!--        fail-data - якщо неправильно введенні дані-->
+                        <input class="input-grey-black fail-data" placeholder="  Введіть назву групи"
+                               aria-label="Username"/>
+                        <button type="button" class="btn btn-yellow position-btn-found">Знайти
+                        </button>
+                    </div>
+                    <div class="found-group ">
+                        <label class="label found">Знайти користувача:</label>
+                        <input class="input-grey-black" placeholder="  Введіть електронну пошту" aria-label="Username"/>
+                        <button type="button" class="btn btn-yellow position-btn-found">Знайти
+                        </button>
+                    </div>
+                    <div class="line-panel"></div>
+                    <button type="button" class="btn btn-yellow button-creation" data-bs-toggle="modal"
+                            data-bs-target="#CreationModal">Створити групу
+                    </button>
+                </div>
+                <!--Панель Список групи-->
+                <div class="groups-all" id="three-panel">
+                    <br>
+                    <div class="scroll pos-scroll">
+                        <!--Тут знаходить фото та назва групи -->
+                        <a href="" class="scroll-button">
+                            <div class="list-scroll">
+                                <img src="https://picsum.photos/id/237/200/300" alt="" class="small-avatar">
+                                <p class="name-group-btn">ПМ-11</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+    <!--Модальне вікно Налаштування-->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-head">
+                    <h5 class="modal-title" id="exampleModalLabel">Налаштування</h5>
+                    <button type="button" class="btn-close button-close" data-bs-dismiss="modal">x</button>
+                    <hr class="line-modal">
+                </div>
+                <div class="modal-bod">
+                    <form action="">
+                        <div class="form-group-modal">
+                            <label class="label l-position">Ім'я:</label>
+                            <input class="input-name-adm" placeholder="  Ім'я" aria-label="Name"/>
+                            <div class="btn-pos">
+                                <button type="button" class="btn btn-light-yellow modal-light-button">Змінити пароль
+                                </button>
+                                <button type="button" class="btn btn-light-yellow modal-light-button">Вийти з акаунту
+                                </button>
+                                <button type="button" class="btn btn-light-yellow small-btn-modal ">Назад
+                                </button>
+                                <button type="button" class="btn btn-light-yellow small-btn-modal right-pos">Далі
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-foot">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Модальне вікно Створення групи-->
+    <div class="modal center-modal fade" id="CreationModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-head">
+                    <h5 class="modal-title" id="exampleModalLabel">Створити групу</h5>
+                    <button type="button" class="btn-close button-close" data-bs-dismiss="modal">x</button>
+                    <hr class="line-modal">
+                </div>
+                <div class="modal-bod">
+                    <form action="">
+                        <div class="creation-group">
+                            <label class="label l-position top-label">Назва групи:</label>
+                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть назву групи"
+                                   aria-label="Name"/>
+                        </div>
+                        <div class="creation-group">
+                            <label class="label l-position top-label">Ім'я старости:</label>
+                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть ім'я старости"
+                                   aria-label="Name"/>
+                        </div>
+                        <div class="creation-group">
+                            <label class="label l-position top-label">Електронна пошта:</label>
+                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть електронну пошту"
+                                   aria-label="Name"/>
+                        </div>
+                        <div class="creation-group">
+                            <label class="label l-position top-label">Пароль:</label>
+                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть пароль"
+                                   aria-label="Name"/>
+                        </div>
+                        <div class="creation-group">
+                            <label class="label l-position top-label">Повторіть пароль:</label>
+                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть пароль знову"
+                                   aria-label="Name"/>
+                        </div>
+                        <div class="btn-pos positionForCreationButton">
+                            <button type="button" class="btn btn-light-yellow small-btn-modal ">Назад
+                            </button>
+                            <button type="button" class="btn btn-light-yellow small-btn-modal right-pos">Далі
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-foot">
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
 
