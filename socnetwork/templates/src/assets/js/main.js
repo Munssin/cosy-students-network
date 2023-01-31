@@ -1,3 +1,3 @@
 //= components/admin-frontend.js
-//= components/script2.js
+//= components/monitor-frontend.js
 //= components/script3.js

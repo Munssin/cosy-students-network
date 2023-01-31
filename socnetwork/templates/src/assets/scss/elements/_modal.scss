@@ -1,5 +1,13 @@
 .modal-content{
   background: rgba(0, 0, 0, 0.65);
+  &.small{
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.creation-color{
+  background: rgba(0, 0, 0, 95);
 }
 
 .button-close{
@@ -11,10 +19,17 @@
 
 .modal{
   transform: translateX(500px);
+  &.small{
+    transform: translateX(250px);
+    margin-top: 250px;
+  }
 }
 
 .modal-title{
   transform: translateX(175px);
+  &.pos{
+    transform: translateX(145px);
+  }
 }
 .line-modal{
   border-bottom: 2px solid  white;
@@ -28,7 +43,13 @@
   border-radius: 6px;
   transform: translateX(25px);
   color: white;
+  &.red-fail-input{
+   &::placeholder{
+      color: #8F1E1E;
+   }
+  }
 }
+
 
 .form-group-modal{
   margin-top: -50px;
@@ -81,4 +102,10 @@
 
 .center-modal{
   transform: translateX(0px);
+}
+
+.modal-bod{
+  &.pos{
+    transform: translateY(6px);
+  }
 }

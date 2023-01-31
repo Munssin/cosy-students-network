@@ -1,11 +1,22 @@
 .scroll{
   background: #242424;
-  border: none;
+  border-radius: 6px;
   width:600px;
   height:300px;
   overflow-y: scroll;
-  box-shadow: 1px 1px grey, -1px -1px grey;
 
+
+}
+.scroll-student{
+  background: #242424;
+  border-radius: 6px;
+  width:930px;
+  height:350px;
+  overflow-y: scroll;
+  &.pos{
+    transform: translateY(125px);
+    margin-left:35px;
+  }
 }
 
 .small-avatar{
@@ -15,9 +26,13 @@
 }
 
 .name-group-btn{
-  float:right;
-  transform: translate(-460px);
-  padding: 5px;
+  display: inline;
+  padding: 20px;
+}
+
+.name-students{
+  display: inline;
+  padding: 25px;
 }
 
 ::-webkit-scrollbar {
@@ -27,7 +42,7 @@
 /* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
-
+  border-radius: 10px;
 }
 
 /* Handle */

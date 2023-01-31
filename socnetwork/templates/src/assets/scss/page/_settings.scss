@@ -1,0 +1,105 @@
+.pos-set{
+  transform: translateY(80px);
+}
+
+.grey-background{
+  position: fixed;
+  width: 1000px;
+  height: 100%;
+  background: #2E2E2E;
+  transform: translateX(450px);
+}
+
+.style-set-btn{
+ position: absolute;
+  bottom: 90px;
+  color: #FFFFFF;
+  background: #B1A10B;
+  border-radius: 6px;
+  height: 30px;
+  font-size: 17px;
+  transform: translateX( 15px);
+  width: 250px;
+  &.pos-set-btn{
+    transform: translateX( 690px);
+    margin-bottom: -110px;
+  }
+}
+.style-set-btn:hover {
+  color: #FFFFFF;
+  background: #454545;
+}
+
+
+.style-set-btn:active {
+  color: #FFFFFF;
+  background: #454545;
+}
+
+
+
+.settings-group{
+  margin-top: 20px;
+  margin-left:35px;
+  &.pos{
+    transform: translateY(85px);
+  }
+}
+
+.line-set{
+   border-bottom: 3px solid  #242424;
+   transform: translateY(115px);
+   width:930px;
+  margin-left: 35px;
+}
+
+.NameGroup{
+  background: #B1A10B;
+  width:340px;
+  height: 60px;
+  margin-top: 20px;
+  border-radius: 6px;
+  &.color-NameGroup{
+    transform: translateY(10px);
+    background: #373737;
+  }
+}
+
+.n-group-size{
+  font-size: 20px;
+  margin-left:15px ;
+  transform: translateY(8px);
+}
+
+.users-all{
+   color: rgba(255,255,255,0.5);
+  font-size:17px ;
+  margin-top: -17px;
+  margin-left: 15px;
+}
+
+.listOfSubjects{
+  transform: translateY(10px);
+  margin-left: -34px;
+  width:370px ;
+  height: 480px;
+  overflow-y: auto;
+}
+
+.NewChanel{
+ margin-left: -34px;
+}
+
+.button-hidden{
+  display: none;
+  transform: translateY(90px);
+  margin-left: 25px;
+}
+
+.all-input{
+  margin-top: -20px;
+}
+
+.settings-of-groups{
+  overflow-y: auto;
+}
