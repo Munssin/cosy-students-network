@@ -4,6 +4,9 @@
   width: 370px;
   height: 100%;
   background:#1F1F1F;
+  &.monitor-left-part{
+    transform: translateY(-50px);
+  }
 }
 
 .sidebar{

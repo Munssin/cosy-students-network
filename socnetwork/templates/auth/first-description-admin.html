@@ -80,8 +80,9 @@
                         <!--        fail-data - якщо неправильно введенні дані-->
                         <input class="input-grey-black fail-data" placeholder="  Введіть назву групи"
                                aria-label="Username"/>
-                        <button type="button" class="btn btn-yellow position-btn-found">Знайти
-                        </button>
+                        <a  class="btn btn-yellow position-btn-found" href="settings-groups.html">Знайти
+                        </a>
+
                     </div>
                     <div class="found-group ">
                         <label class="label found">Знайти користувача:</label>
@@ -149,7 +150,7 @@
     <div class="modal center-modal fade" id="CreationModal" tabindex="-1" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content creation-color">
                 <div class="modal-head">
                     <h5 class="modal-title" id="exampleModalLabel">Створити групу</h5>
                     <button type="button" class="btn-close button-close" data-bs-dismiss="modal">x</button>
@@ -159,7 +160,8 @@
                     <form action="">
                         <div class="creation-group">
                             <label class="label l-position top-label">Назва групи:</label>
-                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть назву групи"
+                            <!--red-fail-input-якщо введенні некоректні дані-->
+                            <input class="input-name-adm pos-input-creation red-fail-input" placeholder="  Введіть назву групи"
                                    aria-label="Name"/>
                         </div>
                         <div class="creation-group">
@@ -185,8 +187,8 @@
                         <div class="btn-pos positionForCreationButton">
                             <button type="button" class="btn btn-light-yellow small-btn-modal ">Назад
                             </button>
-                            <button type="button" class="btn btn-light-yellow small-btn-modal right-pos">Далі
-                            </button>
+                            <a class="btn btn-light-yellow small-btn-modal right-pos" href="creation-group.html">Далі
+                            </a>
                         </div>
                     </form>
 
@@ -202,6 +204,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 
