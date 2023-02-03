@@ -3,28 +3,20 @@ layout: default
 title: General
 ---
 
-<div class="first-page">
-    <nav class="navbar  nav">
-        <div class="container-fluid">
-            <a class="navbar-brand nav-name" href="#">
-                Studentfly
-            </a>
-        </div>
-    </nav>
-    <form class="form">
-        <h3 class="form-name-h3">Вхід в акаунт</h3>
+<div class="form-page">
+    <form class="form" id="login-form">
+        <h3 class="form-title">Вхід в акаунт</h3>
         <hr>
-
         <div class="form-group">
             <!--        fail-data - якщо неправильно введенні дані-->
             <label class="label">Електронна пошта:</label>
-            <input class="input-grey-black fail-data" placeholder="Введіть електронну пошту" aria-label="Username"/>
+            <input type="email" class="input fail-data" placeholder="Введіть електронну пошту"/>
         </div>
         <div class="form-group">
             <label class="label">Пароль:</label>
-            <input class="input-grey-black" placeholder="Введіть пароль" aria-label="Username"/>
+            <input type="password" class="input" required placeholder="Введіть пароль"/>
         </div>
-        <button type="button" class="btn btn-green form-one-green">Вхід</button>
-        <button type="button" class="btn btn-yellow form-one-yellow">Забули пароль?</button>
+        <button type="submit" class="btn btn-green form-one-green">Вхід</button>
+        <a href="reset-password.html" class="btn btn-yellow form-one-yellow">Забули пароль?</a>
     </form>
 </div>

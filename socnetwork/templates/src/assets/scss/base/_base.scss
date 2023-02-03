@@ -7,6 +7,9 @@
 *, *:before, *:after {
   box-sizing: border-box;
 }
+:root{
+  --black: #191919;
+}
 
 html, body {
   margin: 0;

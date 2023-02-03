@@ -1,11 +1,5 @@
 @import "base/base";
-@import "page/style-index";
-@import "page/style-login";
-@import "page/style-email";
-@import "page/description";
-@import "page/settings";
-@import "page/style-page-monitor";
-@import "base/fonts";
+
 @import "elements/btn";
 @import "elements/inputs";
 @import "elements/links";
@@ -14,3 +8,13 @@
 @import "elements/nav";
 @import "elements/modal";
 @import "elements/select";
+@import "elements/header";
+
+@import "page/style-index";
+@import "page/style-login";
+@import "page/style-email";
+@import "page/description";
+@import "page/settings";
+@import "page/style-page-monitor";
+@import "page/user-profile";
+@import "page/user-workplace";
