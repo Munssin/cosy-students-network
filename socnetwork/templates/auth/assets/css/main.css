@@ -12,6 +12,8 @@
 
 :root {
     --black: #191919;
+    --green: #0CAB5F;
+    --yellow-dark: #B1A10B;
 }
 
 html, body {
@@ -60,8 +62,43 @@ button {
     border: transparent;
 }
 
-button {
-    font-family: "Ubuntu", sans-serif;
+.btn {
+    max-width: 405px;
+    width: 100%;
+    height: 55px;
+    background: var(--green);
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.2;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+}
+
+.btn:hover {
+    color: var(--green);
+    background: transparent;
+    border: 2px solid var(--green);
+}
+
+.btn.large-btn {
+    height: 80px;
+    max-width: 100%;
+}
+
+.btn.yellow-btn {
+    background: var(--yellow-dark);
+    max-width: 280px;
+}
+
+.btn.yellow-btn:hover {
+    color: var(--yellow-dark);
+    background: transparent;
+    border: 2px solid var(--yellow-dark);
 }
 
 .btn-empty {
@@ -70,12 +107,6 @@ button {
     border-radius: 6px;
     left: 1521px;
     top: 54px;
-}
-
-.btn-green {
-    background-color: #0cab5f;
-    color: white;
-    border-radius: 6px;
 }
 
 .form-one-green {
@@ -829,6 +860,10 @@ hr {
     justify-content: center;
 }
 
+.login-page .form .yellow-btn {
+    margin-top: 205px;
+}
+
 .nav-name {
     display: block;
     width: 316px;
@@ -864,10 +899,6 @@ hr {
     color: #FFFFFF;
     text-decoration: none;
     font-family: "Ubuntu", sans-serif;
-}
-
-.login-page .form .form-one-yellow {
-    margin-top: 150px;
 }
 
 .button {
@@ -1187,10 +1218,6 @@ button {
 body {
     background: #3B3B3B;
     background-size: 100%;
-}
-
-.login-page .form .form-one-yellow {
-    margin-top: 150px;
 }
 
 .button {
@@ -1874,58 +1901,6 @@ buttonU {
     transform: translateY(1px);
 }
 
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #242424;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #1F1F1F;
-    opacity: 0.7;
-    z-index: 0;
-}
-
-.modal-window {
-    z-index: 2;
-    width: 275px;
-    height: 201px;
-    border-right: 10px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
-    background: #FFFFFF;
-    padding: 10px;
-}
-
-.modal-text {
-    position: center;
-    color: #000000;
-}
-
-.btn-close {
-    position: absolute;
-    right: 0px;
-    top: 20px;
-    border: none;
-    background: none;
-    opacity: 0.7;
-}
-
-.btn-close:hover {
-    opacity: 1;
-}
-
 #element {
     background-color: #ffffff;
     width: 200px;
@@ -2306,10 +2281,6 @@ button {
 body {
     background: #3B3B3B;
     background-size: 100%;
-}
-
-.login-page .form .form-one-yellow {
-    margin-top: 150px;
 }
 
 .button {
@@ -2880,32 +2851,6 @@ hr {
     font-size: 22px;
     transform: translateY(-40px);
     margin-left: 450px;
-}
-
-.modal {
-    transform: translateX(500px);
-}
-
-.modal-title {
-    transform: translateX(175px);
-}
-
-.line-modal {
-    border-bottom: 2px solid white;
-    transform: translateY(-50px);
-}
-
-.input-name-adm {
-    width: 450px;
-    background: #242424;
-    border: #242424;
-    border-radius: 6px;
-    transform: translateX(25px);
-    color: white;
-}
-
-.form-group-modal {
-    margin-top: -50px;
 }
 
 .l-position {

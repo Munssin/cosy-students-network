@@ -24,9 +24,6 @@ body {
     background-size: 100%;
 }
 
-.login-page .form .form-one-yellow {
-    margin-top: 150px;
-}
 
 .button {
     margin-top: 235px;
@@ -711,58 +708,6 @@ buttonU {
       margin-top: -630px;
     transform: translateY(1px);
     }
-
-.modal{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height:100%;
-    background: #242424;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal .overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #1F1F1F;
-    opacity: 0.7;
-    z-index: 0;
-}
-
-.modal-window{
-    z-index: 2;
-    width: 275px;
-    height: 201px;
-    border-right: 10px;
-    box-shadow: 0 10px 15px rgba(0,0,0, .4);
-    background: #FFFFFF;
-    padding: 10px;
-
-}
-
-.modal-text{
-    position: center;
-    color: #000000;
-}
-
-.btn-close {
-    position: absolute;
-    right: 0px;
-    top: 20px;
-    border: none;
-    background: none;
-    opacity: 0.7;
-}
-.btn-close:hover{
-    opacity: 1;
-}
 
 #element {
 
