@@ -1,14 +1,29 @@
 .button{
- margin-top: 335px ;
+ margin-top: 135px ;
 }
 
 .reset-pass{
   .form{
     .yellow-btn{
+      margin-left: -10px;
       margin-top: 205px;
     }
    .green-btn{
+      margin-left: 280px;
+      margin-top: -55px
+    }
+  }
+}
+
+.reset-pass-email{
+  .form{
+    .yellow-btn{
+      margin-left: -10px;
       margin-top: 205px;
+    }
+   .green-btn{
+      margin-left: 280px;
+      margin-top: -55px
     }
   }
 }

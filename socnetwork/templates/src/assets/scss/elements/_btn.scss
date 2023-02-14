@@ -10,7 +10,7 @@
   font-size: 32px;
   line-height: 1.2;
   color: #fff;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px 15px;
@@ -33,19 +33,50 @@
     &:hover {
       color: var(--yellow-dark);
       background: transparent;
-      border: 2px solid var(--yellow-dark);
+      border: 3px solid var(--yellow-dark);
     }
   }
-}
 
-.btn-empty {
+  &.green-btn {
+    background: var(--green);
+    max-width: 280px;
+
+    &:hover {
+      color: var(--green);
+      background: transparent;
+      border: 2px solid var(--green);
+    }
+  }
+
+  &.empty {
   background: #0cab5f;
   color: white;
   border-radius: 6px;
   left: 1521px;
   top: 54px;
 }
+}
 
+.scroll-button {
+  display: inline-block;
+  padding: 8px;
+  text-decoration: none;
+  width: 100%;
+  color: #FFFFFF;
+  background: #242424;
+  border-color: #242424;
+  height: 55px;
+  font-size: 17px;
+
+  &:hover {
+  color: #FFFFFF;
+  background: #4a4a4a;
+}
+  &:active {
+  color: #FFFFFF;
+  background: #4a4a4a;
+}
+}
 
 .form-one-green {
   width: 540px;
@@ -71,12 +102,6 @@
 
 }
 
-.btn-yellow {
-  background-color: #b1a10b;
-  color: white;
-  border-radius: 6px;
-}
-
 .form-one-yellow {
   padding: 5px 15px;
   height: 30px;
@@ -100,63 +125,18 @@
   background-color: #ada76a;
   color: white;
   border-radius: 6px;
-}
-
-.btn-light-yellow:hover {
-  color: white;
-  background: #d3cb81;
-  border: #d3cb81;
-  transition: all 0.3s ease;
-}
-
-.btn-light-yellow:active {
-  color: white;
-  background: #d3cb81;
-  border: #d3cb81;
-}
-
-
-.btn-yellow:hover {
-  color: white;
-  background: #d7c30d;
-  border: #d7c30d;
-  transition: all 0.3s ease;
-}
-
-.btn-yellow:active {
-  color: white;
-  background: #d7c30d;
-  border: #d7c30d;
-}
-
-.btn-green:hover {
-  color: white;
-  background: #0ed174;
-  border: #0ed174;
-  transition: all 0.3s ease;
-}
-
-.btn-green:active {
-  color: white;
-  background: #0ed174;
-  border: #0ed174;
-}
-
-
-.btn-dark {
-  background-color: #353535;
-  color: white;
-  border-radius: 6px;
-
-  &.active {
-    background-color: #b1a10b;
-    border: #b1a10b;
-  }
 
   &:hover {
-    background: #353535;
-    border: #353535;
-  }
+  color: white;
+  background: #d3cb81;
+  border: #d3cb81;
+  transition: all 0.3s ease;
+}
+  &:active {
+  color: white;
+  background: #d3cb81;
+  border: #d3cb81;
+}
 }
 
 .list-button {
@@ -168,27 +148,15 @@
   height: 30px;
   font-size: 17px;
 
-}
-
-.list-button:hover {
+  &:hover {
   color: #FFFFFF;
   background: #3d3d3d;
 }
-
-
-.list-button:active {
+  &:active {
   color: #FFFFFF;
   background: #b1a10b;
 }
-
-.width-description {
-  width: 90px;
 }
-
-.width-settings {
-  width: 150px;
-}
-
 
 .button-delete {
   margin-left: 35px;
@@ -199,17 +167,17 @@
   height: 30px;
   font-size: 17px;
   width: 150px;
-}
 
-.button-delete:hover {
-  color: #FFFFFF;
-  background: #242424;
-}
+  &:hover {
+    color: #FFFFFF;
+    background: #242424;
+  }
 
 
-.button-delete:active {
-  color: #FFFFFF;
-  background: #242424;
+  &:active {
+    color: #FFFFFF;
+    background: #242424;
+  }
 }
 
 .button-list-group {
@@ -225,19 +193,18 @@
     text-align: center;
     width: 120px;
   }
+
+  &:hover {
+    color: #FFFFFF;
+    background: #242424;
+  }
+
+
+  &:active {
+    color: #FFFFFF;
+    background: #242424;
+  }
 }
-
-.button-list-group:hover {
-  color: #FFFFFF;
-  background: #242424;
-}
-
-
-.button-list-group:active {
-  color: #FFFFFF;
-  background: #242424;
-}
-
 
 .button-sub {
   color: #FFFFFF;
@@ -250,17 +217,16 @@
   height: auto;
   font-size: 17px;
   width: auto;
-}
 
-.button-sub:hover {
-  color: #FFFFFF;
-  background: #353535;
-}
+  &:hover {
+    color: #FFFFFF;
+    background: #353535;
+  }
 
-
-.button-sub:active {
-  color: #FFFFFF;
-  background: #353535;
+  &:active {
+    color: #FFFFFF;
+    background: #353535;
+  }
 }
 
 .description-button {
@@ -273,42 +239,19 @@
   margin-right: 20px;
   width: 150px;
 
-}
-
-.description-button:hover {
-  color: #FFFFFF;
-  background: #5b5b5b;
-}
+  &:hover {
+    color: #FFFFFF;
+    background: #5b5b5b;
+  }
 
 
-.description-button:active {
-  color: #FFFFFF;
-  background: #b1a10b;
-}
-
-
-.scroll-button {
-  display: inline-block;
-  padding: 8px;
-  text-decoration: none;
-  width: 100%;
-  color: #FFFFFF;
-  background: #242424;
-  border-color: #242424;
-  height: 55px;
-  font-size: 17px;
-}
-
-.scroll-button:hover {
-  color: #FFFFFF;
-  background: #4a4a4a;
+  &:active {
+    color: #FFFFFF;
+    background: #b1a10b;
+  }
 }
 
 
-.scroll-button:active {
-  color: #FFFFFF;
-  background: #4a4a4a;
-}
 
 
 

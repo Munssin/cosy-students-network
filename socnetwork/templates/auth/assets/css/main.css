@@ -61,11 +61,57 @@ button {
     border: transparent;
 }
 
-button {
-    font-family: "Ubuntu", sans-serif;
+.btn {
+    max-width: 405px;
+    width: 100%;
+    height: 55px;
+    background: var(--green);
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.2;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
 }
 
-.btn-empty {
+.btn:hover {
+    color: var(--green);
+    background: transparent;
+    border: 2px solid var(--green);
+}
+
+.btn.large-btn {
+    height: 80px;
+    max-width: 100%;
+}
+
+.btn.yellow-btn {
+    background: var(--yellow-dark);
+    max-width: 280px;
+}
+
+.btn.yellow-btn:hover {
+    color: var(--yellow-dark);
+    background: transparent;
+    border: 3px solid var(--yellow-dark);
+}
+
+.btn.green-btn {
+    background: var(--green);
+    max-width: 280px;
+}
+
+.btn.green-btn:hover {
+    color: var(--green);
+    background: transparent;
+    border: 2px solid var(--green);
+}
+
+.btn.empty {
     background: #0cab5f;
     color: white;
     border-radius: 6px;
@@ -73,10 +119,26 @@ button {
     top: 54px;
 }
 
-.btn-green {
-    background-color: #0cab5f;
-    color: white;
-    border-radius: 6px;
+.scroll-button {
+    display: inline-block;
+    padding: 8px;
+    text-decoration: none;
+    width: 100%;
+    color: #FFFFFF;
+    background: #242424;
+    border-color: #242424;
+    height: 55px;
+    font-size: 17px;
+}
+
+.scroll-button:hover {
+    color: #FFFFFF;
+    background: #4a4a4a;
+}
+
+.scroll-button:active {
+    color: #FFFFFF;
+    background: #4a4a4a;
 }
 
 .form-one-green {
@@ -99,12 +161,6 @@ button {
     font-style: normal;
     font-size: 15px;
     font-weight: 300;
-}
-
-.btn-yellow {
-    background-color: #b1a10b;
-    color: white;
-    border-radius: 6px;
 }
 
 .form-one-yellow {
@@ -144,48 +200,6 @@ button {
     border: #d3cb81;
 }
 
-.btn-yellow:hover {
-    color: white;
-    background: #d7c30d;
-    border: #d7c30d;
-    transition: all 0.3s ease;
-}
-
-.btn-yellow:active {
-    color: white;
-    background: #d7c30d;
-    border: #d7c30d;
-}
-
-.btn-green:hover {
-    color: white;
-    background: #0ed174;
-    border: #0ed174;
-    transition: all 0.3s ease;
-}
-
-.btn-green:active {
-    color: white;
-    background: #0ed174;
-    border: #0ed174;
-}
-
-.btn-dark {
-    background-color: #353535;
-    color: white;
-    border-radius: 6px;
-}
-
-.btn-dark.active {
-    background-color: #b1a10b;
-    border: #b1a10b;
-}
-
-.btn-dark:hover {
-    background: #353535;
-    border: #353535;
-}
-
 .list-button {
     display: inline-block;
     text-align: center;
@@ -204,14 +218,6 @@ button {
 .list-button:active {
     color: #FFFFFF;
     background: #b1a10b;
-}
-
-.width-description {
-    width: 90px;
-}
-
-.width-settings {
-    width: 150px;
 }
 
 .button-delete {
@@ -302,28 +308,6 @@ button {
 .description-button:active {
     color: #FFFFFF;
     background: #b1a10b;
-}
-
-.scroll-button {
-    display: inline-block;
-    padding: 8px;
-    text-decoration: none;
-    width: 100%;
-    color: #FFFFFF;
-    background: #242424;
-    border-color: #242424;
-    height: 55px;
-    font-size: 17px;
-}
-
-.scroll-button:hover {
-    color: #FFFFFF;
-    background: #4a4a4a;
-}
-
-.scroll-button:active {
-    color: #FFFFFF;
-    background: #4a4a4a;
 }
 
 .input {
@@ -1018,15 +1002,27 @@ hr {
 }
 
 .button {
-    margin-top: 335px;
+    margin-top: 135px;
 }
 
 .reset-pass .form .yellow-btn {
+    margin-left: -10px;
     margin-top: 205px;
 }
 
 .reset-pass .form .green-btn {
+    margin-left: 280px;
+    margin-top: -55px;
+}
+
+.reset-pass-email .form .yellow-btn {
+    margin-left: -10px;
     margin-top: 205px;
+}
+
+.reset-pass-email .form .green-btn {
+    margin-left: 280px;
+    margin-top: -55px;
 }
 
 .button-login {
@@ -1045,7 +1041,7 @@ hr {
 
 .image-avatar {
     position: relative;
-    transform: translateY(-50px);
+    transform: translateY(-15px);
     margin-left: -10px;
 }
 
