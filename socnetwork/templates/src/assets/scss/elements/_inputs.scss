@@ -23,19 +23,34 @@
       color: #8F1E1E;
     }
   }
+
   &.grey {
-  width: 730px;
-  height: 55px;
+    width: 730px;
+    height: 55px;
 
-  background: #242424;
-  border-radius: 10px;
-  color: #fff;
+    background: #242424;
+    border-radius: 10px;
+    color: #fff;
 
-  &::placeholder {
-    color: #3B3B3B;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: larger;
+    &::placeholder {
+      color: #3B3B3B;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: larger;
+    }
   }
+
+  &.name-adm {
+    width: 450px;
+    background: #242424;
+    border: #242424;
+    border-radius: 6px;
+    transform: translateX(25px);
+    color: white;
+  }
+  &.pos-input-creation{
+  transform: translateY(-25px);
+  margin:25px;
+
 }
 }
 
@@ -47,6 +62,16 @@
   font-weight: 300;
   color: #FFFFFF;
   display: block;
+
+  &.found {
+    display: block;
+    margin-left: 5px;
+  }
+
+  &.l-position{
+  transform: translateX(29px);
+}
+
 }
 
 

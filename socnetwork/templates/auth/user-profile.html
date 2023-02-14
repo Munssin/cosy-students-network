@@ -20,96 +20,56 @@
                 <nav class="header-nav">
                     <a href="" class="header-link">Про нас</a>
                     <a href="" class="header-link" data-bs-toggle="modal"
-                       data-bs-target="#test">Налаштування</a>
+                       data-bs-target="#modal">Налаштування</a>
                 </nav>
             </div>
         </div>
     </header>
     
-    <div class="modal center-modal fade" id="test" tabindex="-1" aria-labelledby="exampleModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content creation-color">
-                <div class="modal-head">
-                    <h5 class="modal-title" id="exampleModalLabel">Створити групу</h5>
-                    <button type="button" class="btn-close button-close" data-bs-dismiss="modal">x</button>
-                    <hr class="line-modal">
-                </div>
-                <div class="modal-bod">
-                    <form action="">
-                        <div class="creation-group">
-                            <label class="label l-position top-label">Назва групи:</label>
-                            <!--red-fail-input-якщо введенні некоректні дані-->
-                            <input class="input-name-adm pos-input-creation red-fail-input"
-                                   placeholder="  Введіть назву групи"
-                                   aria-label="Name"/>
-                        </div>
-                        <div class="creation-group">
-                            <label class="label l-position top-label">Ім'я старости:</label>
-                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть ім'я старости"
-                                   aria-label="Name"/>
-                        </div>
-                        <div class="creation-group">
-                            <label class="label l-position top-label">Електронна пошта:</label>
-                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть електронну пошту"
-                                   aria-label="Name"/>
-                        </div>
-                        <div class="creation-group">
-                            <label class="label l-position top-label">Пароль:</label>
-                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть пароль"
-                                   aria-label="Name"/>
-                        </div>
-                        <div class="creation-group">
-                            <label class="label l-position top-label">Повторіть пароль:</label>
-                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть пароль знову"
-                                   aria-label="Name"/>
-                        </div>
-                        <div class="btn-pos positionForCreationButton">
-                            <button type="button" class="btn btn-light-yellow small-btn-modal ">Назад
-                            </button>
-                            <a class="btn btn-light-yellow small-btn-modal right-pos" href="creation-group.html">Далі
-                            </a>
-                        </div>
-                    </form>
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-head">
+                        <h5 class="modal-title" id="exampleModalLabel">Налаштування</h5>
+                        <button type="button" class="btn-close button-close" data-bs-dismiss="modal">x</button>
+                        <hr class="line-modal">
+                    </div>
+                    <div class="modal-bod">
+                        <form action="">
+                            <div class="form-group-modal">
+                                <label class="label l-position">Ім'я:</label>
+                                <input class="input name-adm" placeholder="  Ім'я" aria-label="Name"/>
+                                <div class="btn-pos">
+                                    <button type="button" class="btn btn-light-yellow modal-light-button">Змінити пароль
+                                    </button>
+                                    <button type="button" class="btn btn-light-yellow modal-light-button">Вийти з акаунту
+                                    </button>
+                                    <button type="button" class="btn btn-light-yellow small-btn-modal ">Назад
+                                    </button>
+                                    <button type="button" class="btn btn-light-yellow small-btn-modal right-pos">Далі
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-foot">
     
-                </div>
-                <div class="modal-foot">
-    
+                    </div>
                 </div>
             </div>
-        </div>
-    </div></head>
+        </div></head>
 <body>
 
 <div class="description-user">
-    <nav class="navbar fixed-top nav">
-        <div class="container-fluid">
-            <a class="navbar-brand nav-name" href="#">
-                STUDENTFLY
-            </a>
-            <ul class="list">
-                <li class="element-one">
-                    <button type="button" class="list-button width-description">Про нас</button>
-                </li>
-                <li class="element-two">
-                    <button type="button" class="list-button width-settings">Налаштування</button>
-                </li>
-            </ul>
-        </div>
-    </nav>
     <div class="container">
+        <div class="NameGroup color-NameGroup" onClick="javascript:document.location.href='settings-groups.html';">
+                <p class="n-group-size">ПМ-12
+                </p>
+                <p class="users-all">22 users
+                </p>
+            </div>
+         <hr class="sidebar">
         <button type="button" class="button-exit">Вийти з акаунту</button>
-        <hr class="sidebar">
-        <ul class="listA">
-            <li class="element">
-                <button type="buttonA" class="listA-button width-Asettings">ПМ-12
-                    <p class="text-A">21 users</p></button>
-            </li>
-            <li class="element">
-                <button type="buttonA" class="listA-button width-Asettings"> ПМ 2021
-                    <p class="text-A">112 users</p></button>
-            </li>
-        </ul>
     </div>
     <div class="image-avatar">
         <img src="" alt=" " class="avatar">
