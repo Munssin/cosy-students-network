@@ -60,22 +60,43 @@
         </div></head>
 <body>
 
-<div class="form-page login-page">
-    <form class="form" id="login-form">
-        <h3 class="form-title">Вхід в акаунт</h3>
-        <hr>
-        <div class="form-group">
-            <!--        fail-data - якщо неправильно введенні дані-->
-            <label class="label">Електронна пошта:</label>
-            <input type="email" class="input fail-data" placeholder="Введіть електронну пошту"/>
+<div class="description-user">
+    <div class="container">
+        <div class="NameGroup color-NameGroup" onClick="javascript:document.location.href='settings-groups.html';">
+                <p class="n-group-size">ПМ-12
+                </p>
+                <p class="users-all">22 users
+                </p>
+            </div>
+         <hr class="sidebar">
+        <button type="button" class="button-exit">Вийти з акаунту</button>
+    </div>
+    <div class="image-avatar">
+        <img src="" alt=" " class="avatar">
+        <div class="name-student">
+            <!-- cabinet-header стиль для  Ім'я Прізвище користувача         -->
+            <h2 class="cabinet-header">Name Surname</h2>
+            <h5 class="offline-online">Online/offline</h5>
+            <div class="circle"></div>
         </div>
-        <div class="form-group">
-            <label class="label">Пароль:</label>
-            <input type="password" class="input" required placeholder="Введіть пароль"/>
-        </div>
-        <button type="submit" class="btn large-btn">Вхід</button>
-        <a href="reset-password.html" class="btn yellow-btn">Забули пароль?</a>
-    </form>
+    </div>
+    <hr class="cabinet-hr-student">
+    <div class="button-student">
+        <button type="button" class="description-button">Опис</button>
+    </div>
+    <div class="description-student">
+        <br>
+        <p class="text-cabinet">Пошта:</p>
+        <p class="text-cabinet-var">myppost@gmail.com:</p>
+        <p class="text-cabinet">Університет:</p>
+        <p class="text-cabinet-var">Lviv Polytechnic</p>
+        <p class="text-cabinet">Про користувача:</p>
+        <p class="text-cabinet-var">I am an atom is a particle of matter that uniquely defines a chemical element.
+            An atom consists of a central nucleus that is surrounded by one or more negatively charged electons. The
+            nucleus is positively charged and contains one or more relatively
+            heavy particles known as protons and neutons.</p>
+        <p class="text-cabinet-var"></p>
+    </div>
 </div>
 
 

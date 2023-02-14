@@ -189,29 +189,6 @@
   width: 150px;
 }
 
-.button-exit {
-  position: absolute;
-  bottom: 90px;
-  color: #FFFFFF;
-  background: #1f1f1f;
-  border-radius: 6px;
-  height: 30px;
-  font-size: 17px;
-  transform: translateX(15px);
-  width: 150px;
-
-}
-
-.button-exit:hover {
-  color: #FFFFFF;
-  background: #454545;
-}
-
-
-.button-exit:active {
-  color: #FFFFFF;
-  background: #b1a10b;
-}
 
 .button-delete {
   margin-left: 35px;
@@ -309,60 +286,6 @@
   background: #b1a10b;
 }
 
-.tab {
-  cursor: pointer;
-  padding: 5px;
-  height: 30px;
-  border-radius: 6px;
-  font-size: 17px;
-  display: inline-block;
-  background: #353535;
-  color: white;
-  width: 150px;
-  text-align: center;
-  margin: 20px;
-
-}
-
-.tabs {
-  z-index: 3;
-  transform: translateX(-500px);
-
-  &.content-monitor {
-    margin-left: -195px;
-  }
-}
-
-.radio {
-  z-index: 3;
-  display: none;
-}
-
-#three:checked ~ .panels #one-panel,
-#two:checked ~ .panels #two-panel,
-#one:checked ~ .panels #three-panel {
-  display: block;
-}
-
-#two:checked ~ .tabs #two-tab,
-#one:checked ~ .tabs #one-tab,
-#three:checked ~ .tabs #three-tab {
-  background: #b1a10b;
-  color: #FFFFFF;
-
-}
-
-#three-new:checked ~ .panels #one-panel,
-#one-new:checked ~ .panels #three-panel {
-  display: block;
-}
-
-#one-new:checked ~ .tabs #one-tab-new,
-#three-new:checked ~ .tabs #three-tab-new {
-  background: #b1a10b;
-  color: #FFFFFF;
-
-}
 
 .scroll-button {
   display: inline-block;
