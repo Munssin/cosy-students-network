@@ -1,36 +1,41 @@
-.scroll{
+.scroll {
   background: #242424;
   border-radius: 6px;
-  width:600px;
-  height:300px;
+  width: 600px;
+  height: 300px;
   overflow-y: scroll;
 
-
-}
-.scroll-student{
-  background: #242424;
-  border-radius: 6px;
-  width:930px;
-  height:350px;
-  overflow-y: scroll;
-  &.pos{
-    transform: translateY(125px);
-    margin-left:35px;
+  &.pos-scroll {
+    transform: translateX(670px);
+    margin: 20px;
   }
 }
 
-.small-avatar{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+.scroll-student {
+  background: #242424;
+  border-radius: 6px;
+  width: 930px;
+  height: 350px;
+  overflow-y: scroll;
+
+  &.pos {
+    transform: translateY(125px);
+    margin-left: 35px;
+  }
 }
 
-.name-group-btn{
+.small-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.name-group-btn {
   display: inline;
   padding: 20px;
 }
 
-.name-students{
+.name-students {
   display: inline;
   padding: 25px;
 }

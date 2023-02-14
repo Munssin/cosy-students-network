@@ -1,0 +1,128 @@
+.container {
+  position: fixed;
+  transform: translateY(-40px);
+  width: 370px;
+  height: 100%;
+  background: #1F1F1F;
+
+  &.pos-set {
+    transform: translateY(80px);
+  }
+
+}
+
+.sidebar {
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  height: 1px;
+  background: white;
+  border: none;
+  margin-left: -15px;
+}
+
+.button-exit {
+  position: absolute;
+  bottom: 90px;
+  color: #FFFFFF;
+  background: #1f1f1f;
+  border-radius: 6px;
+  height: 30px;
+  font-size: 17px;
+  transform: translateX(15px);
+  width: 150px;
+
+  &:hover {
+    color: #FFFFFF;
+    background: #454545;
+  }
+
+
+  &:active {
+    color: #FFFFFF;
+    background: #b1a10b;
+  }
+}
+
+
+.NameGroup {
+  background: #B1A10B;
+  width: 340px;
+  height: 60px;
+  margin-top: 20px;
+  border-radius: 6px;
+
+  &.color-NameGroup {
+    transform: translateY(10px);
+    background: #373737;
+  }
+}
+
+.n-group-size {
+  font-size: 20px;
+  margin-left: 15px;
+  transform: translateY(8px);
+}
+
+.users-all {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 17px;
+  margin-top: -17px;
+  margin-left: 15px;
+}
+
+.listOfSubjects {
+  transform: translateY(10px);
+  margin-left: -34px;
+  width: 370px;
+  height: 480px;
+  overflow-y: auto;
+}
+
+.button-sub {
+  color: #FFFFFF;
+  text-align: left;
+  padding: 5px;
+  margin-top: 12px;
+  transform: translateX(50px);
+  background: #1f1f1f;
+  border-radius: 6px;
+  height: auto;
+  font-size: 17px;
+  width: auto;
+
+  &:hover {
+    color: #FFFFFF;
+    background: #353535;
+  }
+
+  &:active {
+    color: #FFFFFF;
+    background: #353535;
+  }
+}
+
+.style-set-btn {
+  position: absolute;
+  bottom: 90px;
+  color: #FFFFFF;
+  background: #B1A10B;
+  border-radius: 6px;
+  height: 30px;
+  font-size: 17px;
+  transform: translateX(15px);
+  width: 250px;
+
+  &:hover {
+    color: #FFFFFF;
+    background: #454545;
+  }
+
+
+  &:active {
+    color: #FFFFFF;
+    background: #454545;
+  }
+}
+
+

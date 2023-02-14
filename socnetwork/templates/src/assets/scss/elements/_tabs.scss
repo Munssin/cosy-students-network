@@ -1,0 +1,99 @@
+.button-admin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 5px;
+  height: 30px;
+  border-radius: 6px;
+  font-size: 17px;
+  display: inline-block;
+  background: #353535;
+  color: white;
+  width: 150px;
+  text-align: center;
+  margin: 20px;
+
+}
+
+.group{
+  display: none;
+  animation: fadein 0.8s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.radio {
+  display: none;
+}
+
+.tabs {
+  transform: translateX(-500px);
+
+  &.content-monitor {
+    margin-left: -195px;
+  }
+}
+#three:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel,
+#one:checked ~ .panels #three-panel {
+  display: block;
+}
+
+.panels{
+  transform: translate(-690px);
+  margin-top: -120px;
+   width: 100%;
+  text-align: left;
+  z-index: 3;
+}
+
+#two:checked ~ .tabs #two-tab,
+#one:checked ~ .tabs #one-tab,
+#three:checked ~ .tabs #three-tab {
+  background: #b1a10b;
+  color: #FFFFFF;
+
+}
+
+#three-new:checked ~ .panels #one-panel,
+#one-new:checked ~ .panels #three-panel {
+  display: block;
+}
+
+#one-new:checked ~ .tabs #one-tab-new,
+#three-new:checked ~ .tabs #three-tab-new {
+  background: #b1a10b;
+  color: #FFFFFF;
+
+}
+
+#four-user:checked ~ .panels #one-panel,
+#three-user:checked ~ .panels #two-panel,
+#two-user:checked ~ .panels #three-panel,
+#one-user:checked ~ .panels #four-panel{
+    display: block;
+}
+#one-user:checked ~ .tabs #one-tab-user,
+#two-user:checked ~ .tabs #two-tab-user,
+#three-user:checked ~ .tabs #three-tab-user,
+#four-user:checked ~ .tabs #four-tab-user{
+    background: #b1a10b;
+    color: #FFFFFF;
+}
+
+
+
+
