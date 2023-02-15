@@ -3,22 +3,22 @@ layout: default
 title: General
 ---
 
-<div class="form-page">
-    <form class="form" id="reset-pass-form">
+<div class="login-page">
+    <form class="form">
         <h3 class="form-name-h3">Відновлення паролю</h3>
         <hr>
        <div class="form-group">
             <!--        fail-data - якщо неправильно введенні дані-->
             <label class="label">Введіть новий пароль:</label>
-            <input class="input" type="password" placeholder="Новий пароль"/>
+            <input class="input-grey-black fail-data" placeholder="Новий пароль" aria-label="Username"/>
         </div>
         <div class="form-group">
             <label class="label">Повторіть пароль:</label>
-            <input class="input" type="password" placeholder="Повторіть пароль"/>
+            <input class="input-grey-black" placeholder="Повторіть пароль" aria-label="Username"/>
         </div>
         <div class="button">
-            <a href="reset-password.html" class="btn btn-yellow form-two-yellow">Назад</a>
-            <button type="button" class="btn">Створити новий пароль</button>
+            <button type="button" class="btn btn-yellow form-two-yellow">Назад</button>
+            <button type="button" class="btn btn-green form-two-green">Створити новий пароль</button>
         </div>
     </form>
 </div>

@@ -4,6 +4,24 @@ title: General
 ---
 
 <div class="settings-of-groups">
+    <nav class="navbar fixed-top nav">
+        <div class="container-fluid">
+            <a class="navbar-brand nav-name" href="#">
+                Studentfly
+            </a>
+            <ul class="list">
+                <li class="element-one">
+                    <button type="button" class="list-button width-description">Про нас</button>
+                </li>
+                <li class="element-two">
+
+                    <button type="button" class="list-button width-settings" data-bs-toggle="modal"
+                            data-bs-target="#modal">Налаштування
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <!--Бічна панель-->
     <div class="container pos-set">
         <div class="NameGroup">
@@ -31,11 +49,11 @@ title: General
         <div class="all-input">
             <div class="settings-group pos">
                 <label class="label found">Додати користувача до групи:</label>
-                <input class="input" placeholder="  Введіть електронну пошту" aria-label="Username"/>
+                <input class="input-grey-black" placeholder="  Введіть електронну пошту" aria-label="Username"/>
             </div>
             <div class="settings-group pos">
                 <label class="label found">Змінити назву групи:</label>
-                <input class="input" placeholder="  Введіть нову назву групи" aria-label="Username"/>
+                <input class="input-grey-black" placeholder="  Введіть нову назву групи" aria-label="Username"/>
             </div>
         </div>
         <div class="line-set"></div>
@@ -57,6 +75,39 @@ title: General
         <button type="button" class="button-delete">Видалити канал</button>
     </div>
 
+    <!--Модальне вікно Налаштування-->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-head">
+                    <h5 class="modal-title" id="exampleModalLabel">Налаштування</h5>
+                    <button type="button" class="btn-close button-close" data-bs-dismiss="modal">x</button>
+                    <hr class="line-modal">
+                </div>
+                <div class="modal-bod">
+                    <form action="">
+                        <div class="form-group-modal">
+                            <label class="label l-position">Ім'я:</label>
+                            <input class="input-name-adm" placeholder="  Ім'я" aria-label="Name"/>
+                            <div class="btn-pos">
+                                <button type="button" class="btn btn-light-yellow modal-light-button">Змінити пароль
+                                </button>
+                                <button type="button" class="btn btn-light-yellow modal-light-button">Вийти з акаунту
+                                </button>
+                                <button type="button" class="btn btn-light-yellow small-btn-modal ">Назад
+                                </button>
+                                <button type="button" class="btn btn-light-yellow small-btn-modal right-pos">Далі
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-foot">
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--Модальне вікно Інформація про студента-->
     <div class="modal fade small" id="modalInfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

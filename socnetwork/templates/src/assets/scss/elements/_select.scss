@@ -1,0 +1,57 @@
+.scroll{
+  background: #242424;
+  border-radius: 6px;
+  width:600px;
+  height:300px;
+  overflow-y: scroll;
+
+
+}
+.scroll-student{
+  background: #242424;
+  border-radius: 6px;
+  width:930px;
+  height:350px;
+  overflow-y: scroll;
+  &.pos{
+    transform: translateY(125px);
+    margin-left:35px;
+  }
+}
+
+.small-avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.name-group-btn{
+  display: inline;
+  padding: 20px;
+}
+
+.name-students{
+  display: inline;
+  padding: 25px;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b4ab55;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #dacf67;
+}

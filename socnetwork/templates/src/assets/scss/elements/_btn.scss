@@ -1,81 +1,21 @@
-.btn {
-  max-width: 405px;
-  width: 100%;
-  height: 55px;
 
-  background: var(--green);
-  border-radius: 10px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 1.2;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 15px;
+button {
+  font-family: "Ubuntu", sans-serif;
+}
 
-  &:hover {
-    color: var(--green);
-    background: transparent;
-    border: 2px solid var(--green);
-  }
-
-  &.large-btn {
-    height: 80px;
-    max-width: 100%;
-  }
-
-  &.yellow-btn {
-    background: var(--yellow-dark);
-    max-width: 280px;
-
-    &:hover {
-      color: var(--yellow-dark);
-      background: transparent;
-      border: 3px solid var(--yellow-dark);
-    }
-  }
-
-  &.green-btn {
-    background: var(--green);
-    max-width: 280px;
-
-    &:hover {
-      color: var(--green);
-      background: transparent;
-      border: 2px solid var(--green);
-    }
-  }
-
-  &.empty {
+.btn-empty {
   background: #0cab5f;
   color: white;
   border-radius: 6px;
   left: 1521px;
   top: 54px;
 }
-}
 
-.scroll-button {
-  display: inline-block;
-  padding: 8px;
-  text-decoration: none;
-  width: 100%;
-  color: #FFFFFF;
-  background: #242424;
-  border-color: #242424;
-  height: 55px;
-  font-size: 17px;
+.btn-green {
+  background-color: #0cab5f;
+  color: white;
+  border-radius: 6px;
 
-  &:hover {
-  color: #FFFFFF;
-  background: #4a4a4a;
-}
-  &:active {
-  color: #FFFFFF;
-  background: #4a4a4a;
-}
 }
 
 .form-one-green {
@@ -102,6 +42,12 @@
 
 }
 
+.btn-yellow {
+  background-color: #b1a10b;
+  color: white;
+  border-radius: 6px;
+}
+
 .form-one-yellow {
   padding: 5px 15px;
   height: 30px;
@@ -125,21 +71,66 @@
   background-color: #ada76a;
   color: white;
   border-radius: 6px;
+}
 
-  &:hover {
+.btn-light-yellow:hover {
   color: white;
   background: #d3cb81;
   border: #d3cb81;
   transition: all 0.3s ease;
 }
-  &:active {
+
+.btn-light-yellow:active {
   color: white;
   background: #d3cb81;
   border: #d3cb81;
 }
+
+
+.btn-yellow:hover {
+  color: white;
+  background: #d7c30d;
+  border: #d7c30d;
+  transition: all 0.3s ease;
 }
 
-.list-button {
+.btn-yellow:active {
+  color: white;
+  background: #d7c30d;
+  border: #d7c30d;
+}
+
+.btn-green:hover {
+  color: white;
+  background: #0ed174;
+  border: #0ed174;
+  transition: all 0.3s ease;
+}
+
+.btn-green:active {
+  color: white;
+  background: #0ed174;
+  border: #0ed174;
+}
+
+
+.btn-dark {
+  background-color: #353535;
+  color: white;
+  border-radius: 6px;
+
+  &.active {
+    background-color: #b1a10b;
+    border: #b1a10b;
+  }
+
+  &:hover {
+    background: #353535;
+    border: #353535;
+  }
+}
+
+.list-button{
   display: inline-block;
   text-align: center;
   color: #FFFFFF;
@@ -148,17 +139,52 @@
   height: 30px;
   font-size: 17px;
 
-  &:hover {
+}
+
+.list-button:hover {
   color: #FFFFFF;
   background: #3d3d3d;
 }
-  &:active {
+
+
+.list-button:active {
   color: #FFFFFF;
   background: #b1a10b;
 }
+
+.width-description{
+  width: 90px;
 }
 
-.button-delete {
+.width-settings{
+  width: 150px;
+}
+
+.button-exit{
+  position: absolute;
+  bottom: 90px;
+  color: #FFFFFF;
+  background: #1f1f1f;
+  border-radius: 6px;
+  height: 30px;
+  font-size: 17px;
+  transform: translateX( 15px);
+  width: 150px;
+
+}
+
+.button-exit:hover {
+  color: #FFFFFF;
+  background: #454545;
+}
+
+
+.button-exit:active {
+  color: #FFFFFF;
+  background: #b1a10b;
+}
+
+.button-delete{
   margin-left: 35px;
   transform: translateY(140px);
   color: #FFFFFF;
@@ -167,46 +193,46 @@
   height: 30px;
   font-size: 17px;
   width: 150px;
-
-  &:hover {
-    color: #FFFFFF;
-    background: #242424;
-  }
-
-
-  &:active {
-    color: #FFFFFF;
-    background: #242424;
-  }
 }
 
-.button-list-group {
+.button-delete:hover {
+  color: #FFFFFF;
+  background: #242424;
+}
+
+
+.button-delete:active {
+  color: #FFFFFF;
+  background: #242424;
+}
+
+.button-list-group{
   color: #FFFFFF;
   background: #353535;
   border-radius: 6px;
   padding: 5px 30px;
   margin: 15px;
   font-size: 17px;
-
-  &.special {
+  &.special{
     padding: 5px;
     text-align: center;
     width: 120px;
   }
-
-  &:hover {
-    color: #FFFFFF;
-    background: #242424;
-  }
-
-
-  &:active {
-    color: #FFFFFF;
-    background: #242424;
-  }
 }
 
-.button-sub {
+.button-list-group:hover {
+  color: #FFFFFF;
+  background: #242424;
+}
+
+
+.button-list-group:active {
+  color: #FFFFFF;
+  background: #242424;
+}
+
+
+.button-sub{
   color: #FFFFFF;
   text-align: left;
   padding: 5px;
@@ -217,19 +243,20 @@
   height: auto;
   font-size: 17px;
   width: auto;
-
-  &:hover {
-    color: #FFFFFF;
-    background: #353535;
-  }
-
-  &:active {
-    color: #FFFFFF;
-    background: #353535;
-  }
 }
 
-.description-button {
+.button-sub:hover {
+  color: #FFFFFF;
+  background: #353535;
+}
+
+
+.button-sub:active {
+  color: #FFFFFF;
+  background:#353535 ;
+}
+
+.description-button{
   text-align: center;
   color: #FFFFFF;
   background: #353535;
@@ -239,14 +266,95 @@
   margin-right: 20px;
   width: 150px;
 
-  &:hover {
-    color: #FFFFFF;
-    background: #5b5b5b;
-  }
+}
+
+.description-button:hover {
+  color: #FFFFFF;
+  background: #5b5b5b;
+}
 
 
-  &:active {
-    color: #FFFFFF;
-    background: #b1a10b;
+.description-button:active {
+  color: #FFFFFF;
+  background: #b1a10b;
+}
+
+.tab{
+  cursor: pointer;
+  padding: 5px;
+  height: 30px;
+  border-radius: 6px;
+  font-size: 17px;
+  display: inline-block;
+  background: #353535;
+  color: white;
+  width: 150px;
+  text-align: center;
+  margin: 20px;
+
+}
+.tabs{
+  z-index: 3;
+  transform: translateX(-500px);
+  &.content-monitor{
+    margin-left: -195px;
   }
 }
+
+.radio {
+  z-index: 3;
+  display: none;
+}
+
+#three:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel,
+#one:checked ~ .panels #three-panel {
+  display: block;
+}
+
+#two:checked ~ .tabs #two-tab,
+#one:checked ~ .tabs #one-tab,
+#three:checked ~ .tabs #three-tab {
+  background: #b1a10b;
+  color: #FFFFFF;
+
+}
+
+#three-new:checked ~ .panels #one-panel,
+#one-new:checked ~ .panels #three-panel {
+  display: block;
+}
+
+#one-new:checked ~ .tabs #one-tab-new,
+#three-new:checked ~ .tabs #three-tab-new {
+  background: #b1a10b;
+  color: #FFFFFF;
+
+}
+
+.scroll-button{
+  display: inline-block;
+  padding: 8px;
+  text-decoration: none;
+  width: 100%;
+  color: #FFFFFF;
+  background: #242424;
+  border-color: #242424;
+  height: 55px;
+  font-size: 17px;
+}
+
+.scroll-button:hover {
+  color: #FFFFFF;
+  background: #4a4a4a;
+}
+
+
+.scroll-button:active {
+  color: #FFFFFF;
+  background: #4a4a4a;
+}
+
+
+
+

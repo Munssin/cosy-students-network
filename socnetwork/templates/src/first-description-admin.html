@@ -51,7 +51,7 @@ title: General
                     <div class="found-group">
                         <label class="label found">Знайти групу:</label>
                         <!--        fail-data - якщо неправильно введенні дані-->
-                        <input class="input" placeholder="  Введіть назву групи"
+                        <input class="input-grey-black fail-data" placeholder="  Введіть назву групи"
                                aria-label="Username"/>
                         <a  class="btn btn-yellow position-btn-found" href="settings-groups.html">Знайти
                         </a>
@@ -59,7 +59,7 @@ title: General
                     </div>
                     <div class="found-group ">
                         <label class="label found">Знайти користувача:</label>
-                        <input class="input" placeholder="  Введіть електронну пошту" aria-label="Username"/>
+                        <input class="input-grey-black" placeholder="  Введіть електронну пошту" aria-label="Username"/>
                         <button type="button" class="btn btn-yellow position-btn-found">Знайти
                         </button>
                     </div>
@@ -85,6 +85,40 @@ title: General
             </div>
         </div>
     </div>
+    <!--Модальне вікно Налаштування-->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-head">
+                    <h5 class="modal-title" id="exampleModalLabel">Налаштування</h5>
+                    <button type="button" class="btn-close button-close" data-bs-dismiss="modal">x</button>
+                    <hr class="line-modal">
+                </div>
+                <div class="modal-bod">
+                    <form action="">
+                        <div class="form-group-modal">
+                            <label class="label l-position">Ім'я:</label>
+                            <input class="input-name-adm" placeholder="  Ім'я" aria-label="Name"/>
+                            <div class="btn-pos">
+                                <button type="button" class="btn btn-light-yellow modal-light-button">Змінити пароль
+                                </button>
+                                <button type="button" class="btn btn-light-yellow modal-light-button">Вийти з акаунту
+                                </button>
+                                <button type="button" class="btn btn-light-yellow small-btn-modal ">Назад
+                                </button>
+                                <button type="button" class="btn btn-light-yellow small-btn-modal right-pos">Далі
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-foot">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--Модальне вікно Створення групи-->
     <div class="modal center-modal fade" id="CreationModal" tabindex="-1" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
@@ -98,29 +132,29 @@ title: General
                 <div class="modal-bod">
                     <form action="">
                         <div class="creation-group">
-                            <label class="label l-position">Назва групи:</label>
+                            <label class="label l-position top-label">Назва групи:</label>
                             <!--red-fail-input-якщо введенні некоректні дані-->
-                            <input class="input name-adm pos-input-creation" placeholder="  Введіть назву групи"
+                            <input class="input-name-adm pos-input-creation red-fail-input" placeholder="  Введіть назву групи"
                                    aria-label="Name"/>
                         </div>
                         <div class="creation-group">
-                            <label class="label l-position">Ім'я старости:</label>
-                            <input class="input name-adm pos-input-creation" placeholder="  Введіть ім'я старости"
+                            <label class="label l-position top-label">Ім'я старости:</label>
+                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть ім'я старости"
                                    aria-label="Name"/>
                         </div>
                         <div class="creation-group">
-                            <label class="label l-position">Електронна пошта:</label>
-                            <input class="input name-adm pos-input-creation" placeholder="  Введіть електронну пошту"
+                            <label class="label l-position top-label">Електронна пошта:</label>
+                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть електронну пошту"
                                    aria-label="Name"/>
                         </div>
                         <div class="creation-group">
-                            <label class="label l-position">Пароль:</label>
-                            <input class="input name-adm pos-input-creation" placeholder="  Введіть пароль"
+                            <label class="label l-position top-label">Пароль:</label>
+                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть пароль"
                                    aria-label="Name"/>
                         </div>
                         <div class="creation-group">
-                            <label class="label l-position">Повторіть пароль:</label>
-                            <input class="input name-adm pos-input-creation" placeholder="  Введіть пароль знову"
+                            <label class="label l-position top-label">Повторіть пароль:</label>
+                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть пароль знову"
                                    aria-label="Name"/>
                         </div>
                         <div class="btn-pos positionForCreationButton">
