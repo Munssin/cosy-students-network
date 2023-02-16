@@ -47,3 +47,6 @@ Thumbs.db
 
 /socnetwork/templates/node_modules/
 /socnetwork/templates/package-lock.json/
+/sent_emails/
+/studentfy/__init__.py
+/socnetwork/__init__.py
