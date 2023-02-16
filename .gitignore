@@ -50,3 +50,5 @@ Thumbs.db
 /sent_emails/
 /studentfy/__init__.py
 /socnetwork/__init__.py
+/studentfy/
+/socnetwork/migrations/
