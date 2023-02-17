@@ -763,10 +763,6 @@ hr {
     background: #1F1F1F;
 }
 
-.container.pos-set {
-    transform: translateY(80px);
-}
-
 .sidebar {
     position: absolute;
     bottom: 100px;
@@ -856,11 +852,11 @@ hr {
     background: #454545;
 }
 
-.button-admin {
+.button-tabs {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 120px;
+    margin-top: 100px;
 }
 
 .tab {
@@ -911,7 +907,6 @@ hr {
 }
 
 .panels {
-    transform: translate(-690px);
     margin-top: -120px;
     width: 100%;
     text-align: left;
@@ -1801,6 +1796,10 @@ buttonU {
     font-size: 17px;
 }
 
+.dropdown {
+    transform: translateY(130px);
+}
+
 .sidebarCH {
     background: #B1A10B;
     width: 805px;
@@ -1835,11 +1834,11 @@ buttonU {
 
 .formCH {
     position: absolute;
-    width: 1000px;
-    height: 670px;
+    width: 70%;
+    height: 100%;
     background: #2E2E2E;
     border-radius: 10px;
-    margin-top: 45px;
+    margin-top: 0px;
     transform: translateX(400px);
 }
 
@@ -2198,6 +2197,7 @@ redactor {
 }
 
 .listA-button {
+    position: fixed;
     color: #FFFFFF;
     background: rgba(255, 255, 255, 0);
     font-size: 20px;
