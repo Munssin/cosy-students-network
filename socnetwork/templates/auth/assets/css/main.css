@@ -119,6 +119,27 @@ button {
     top: 54px;
 }
 
+.button-exit {
+    position: absolute;
+    bottom: 45px;
+    color: #FFFFFF;
+    background: #1f1f1f;
+    border-radius: 6px;
+    height: 50px;
+    font-size: 17px;
+    width: 330px;
+}
+
+.button-exit:hover {
+    color: #FFFFFF;
+    background: #454545;
+}
+
+.button-exit:active {
+    color: #FFFFFF;
+    background: #b1a10b;
+}
+
 .scroll-button {
     display: inline-block;
     padding: 8px;
@@ -737,7 +758,6 @@ hr {
 
 .container {
     position: fixed;
-    transform: translateY(-40px);
     width: 370px;
     height: 100%;
     background: #1F1F1F;
@@ -755,28 +775,6 @@ hr {
     background: white;
     border: none;
     margin-left: -15px;
-}
-
-.button-exit {
-    position: absolute;
-    bottom: 90px;
-    color: #FFFFFF;
-    background: #1f1f1f;
-    border-radius: 6px;
-    height: 30px;
-    font-size: 17px;
-    transform: translateX(15px);
-    width: 150px;
-}
-
-.button-exit:hover {
-    color: #FFFFFF;
-    background: #454545;
-}
-
-.button-exit:active {
-    color: #FFFFFF;
-    background: #b1a10b;
 }
 
 .NameGroup {
@@ -1041,7 +1039,7 @@ hr {
 
 .image-avatar {
     position: relative;
-    transform: translateY(-15px);
+    transform: translateY(100px);
     margin-left: -10px;
 }
 
@@ -1198,6 +1196,11 @@ hr {
 
 .settings-of-groups {
     overflow-y: auto;
+}
+
+.description-student {
+    transform: translateX(400px);
+    margin-top: 250px;
 }
 
 .list {
