@@ -1,111 +1,91 @@
-.modal-content{
+.modal-content {
   background: rgba(0, 0, 0, 0.65);
-  &.small{
+
+  &.creation-color {
+    background: rgba(0, 0, 0, 95);
+  }
+
+  &.small {
     width: 150px;
     height: 150px;
   }
 }
 
-.creation-color{
-  background: rgba(0, 0, 0, 95);
-}
 
-.button-close{
+.button-close {
   color: white;
   font-size: 22px;
   transform: translateY(-40px);
-  margin-left:450px;
+  margin-left: 450px;
 }
 
-.modal{
+.modal {
   transform: translateX(500px);
-  &.small{
+
+  &.center-modal {
+    transform: translateX(0px);
+  }
+
+  &.small {
     transform: translateX(250px);
     margin-top: 250px;
   }
 }
 
-.modal-title{
+.modal-title {
   transform: translateX(175px);
-  &.pos{
+
+  &.pos {
     transform: translateX(145px);
   }
 }
-.line-modal{
-  border-bottom: 2px solid  white;
+
+.line-modal {
+  border-bottom: 2px solid white;
   transform: translateY(-50px);
 }
 
-.input-name-adm{
-  width: 450px;
-  background: #242424;
-  border:  #242424;
-  border-radius: 6px;
-  transform: translateX(25px);
-  color: white;
-  &.red-fail-input{
-   &::placeholder{
-      color: #8F1E1E;
-   }
-  }
-}
 
-
-.form-group-modal{
+.form-group-modal {
   margin-top: -50px;
 
 }
 
-.l-position{
-  transform: translateX(29px);
-}
-
-.modal-light-button{
-  width: 450px ;
-  margin: 10px ;
+.modal-light-button {
+  width: 450px;
+  margin: 10px;
   height: 35px;
   transform: translateX(15px);
 }
 
-.btn-pos{
+.btn-pos {
   margin-top: 150px;
+
+  &.positionForCreationButton {
+    margin-top: -100px;
+    transform: translateY(-20px);
+  }
 }
 
-.small-btn-modal{
+.small-btn-modal {
   height: 35px;
   margin-top: 50px;
   transform: translateX(25px);
   width: 100px;
 }
 
-.right-pos{
-  float:right;
+.right-pos {
+  float: right;
   transform: translateX(-25px);
 }
 
-
-.creation-group{
+.creation-group {
   transform: translateY(-65px);
 
 }
 
-.pos-input-creation{
-  transform: translateY(-25px);
-  margin:25px;
-
-}
-
-.positionForCreationButton{
-  margin-top:-100px;
-  transform: translateY(-20px);
-}
-
-.center-modal{
-  transform: translateX(0px);
-}
-
-.modal-bod{
-  &.pos{
+.modal-bod {
+  &.pos {
     transform: translateY(6px);
   }
 }
