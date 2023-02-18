@@ -11,12 +11,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
     
     <link rel="stylesheet" href="assets/css/main.css">
-    
-    
+
     <header class="header">
         <div class="header-container">
             <div class="header-main">
-                <a href="/" class="header-logo">STUDENTFLY</a>
+                <a href="user-profile.html" class="header-logo">STUDENTFLY</a>
                 <nav class="header-nav">
                     <a href="" class="header-link">Про нас</a>
                     <a href="" class="header-link" data-bs-toggle="modal"
@@ -25,7 +24,7 @@
             </div>
         </div>
     </header>
-    
+
     <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -53,7 +52,7 @@
                         </form>
                     </div>
                     <div class="modal-foot">
-    
+
                     </div>
                 </div>
             </div>
@@ -62,9 +61,19 @@
 
 <div class="description-user">
     <div class="container">
-        <hr class="sidebar">
-        <button type="button" class="button-exit">Вийти з акаунту</button>
-    </div>
+        <div class="dropdown">
+                <button type="buttonA" class="listA-button width-Asettings" data-bs-toggle="dropdown" aria-expanded="false">
+                    ПМ-12 <p class="text-A">21 users</p></button>
+                  </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="user-workplace.html">Дискретна</a></li>
+                    <li><a class="dropdown-item" href="user-workplace.html">Мат аналіз</a></li>
+                    <li><a class="dropdown-item" href="user-workplace.html">Фізика</a></li>
+                </ul>
+            </div>
+            <hr class="sidebar">
+            <button type="button" class="button-exit">Налаштування</button>
+        </div>
     <div class="image-avatar">
         <!--Фото користувача-->
         <img src="https://picsum.photos/id/237/200/300" alt="" class="avatar">
