@@ -46,9 +46,10 @@ Thumbs.db
 
 
 /socnetwork/templates/node_modules/
-/socnetwork/templates/package-lock.json/
+/socnetwork/package-lock.json/
 /sent_emails/
 /studentfy/__init__.py
 /socnetwork/__init__.py
 /studentfy/
 /socnetwork/migrations/
+/socnetwork/node_modules/
