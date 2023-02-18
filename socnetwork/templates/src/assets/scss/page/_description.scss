@@ -79,7 +79,8 @@
 }
 
 .content-admin{
-  transform: translateY(180px);
+  transform: translateY(205px);
+  margin-right: -115px;
   z-index: 3;
 }
 
@@ -107,12 +108,21 @@
 }
 
 .found-group{
-  transform: translateX(675px);
+  margin-left: 680px;
   padding: 10px;
+
+  &.top{
+    margin-top: 15px;
+  }
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
 }
 
 .position-btn-found{
-  margin: 10px;
+  margin-left: 15px;
   height: 40px;
 }
 

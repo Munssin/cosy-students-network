@@ -1,5 +1,6 @@
 .modal-content {
   background: rgba(0, 0, 0, 0.65);
+  padding-bottom: 20px;
 
   &.creation-color {
     background: rgba(0, 0, 0, 95);
@@ -88,4 +89,16 @@
   &.pos {
     transform: translateY(6px);
   }
+}
+
+.position-set-large{
+  margin-left: 25px;
+}
+
+.position-set-small{
+  margin-top:-85px;
+}
+
+.top-position-btn{
+  margin-top:-85px;
 }

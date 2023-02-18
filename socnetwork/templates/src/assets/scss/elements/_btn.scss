@@ -91,6 +91,7 @@
 
 .form-two-green {
   padding: 5px 15px;
+  margin-top: -40px;
   height: 40px;
   width: 240px;
   float: right;
@@ -206,28 +207,6 @@
   }
 }
 
-.button-sub {
-  color: #FFFFFF;
-  text-align: left;
-  padding: 5px;
-  margin-top: 12px;
-  transform: translateX(50px);
-  background: #1f1f1f;
-  border-radius: 6px;
-  height: auto;
-  font-size: 17px;
-  width: auto;
-
-  &:hover {
-    color: #FFFFFF;
-    background: #353535;
-  }
-
-  &:active {
-    color: #FFFFFF;
-    background: #353535;
-  }
-}
 
 .description-button {
   text-align: center;

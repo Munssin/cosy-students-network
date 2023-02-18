@@ -27,37 +27,41 @@
     </header>
     
     <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-head">
-                        <h5 class="modal-title" id="exampleModalLabel">Налаштування</h5>
-                        <button type="button" class="btn-close button-close" data-bs-dismiss="modal">x</button>
-                        <hr class="line-modal">
-                    </div>
-                    <div class="modal-bod">
-                        <form action="">
-                            <div class="form-group-modal">
-                                <label class="label l-position">Ім'я:</label>
-                                <input class="input name-adm" placeholder="  Ім'я" aria-label="Name"/>
-                                <div class="btn-pos">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-head">
+                    <h5 class="modal-title" id="exampleModalLabel">Налаштування</h5>
+                    <button type="button" class="btn-close button-close" data-bs-dismiss="modal">x</button>
+                    <hr class="line-modal">
+                </div>
+                <div class="modal-bod">
+                    <form action="">
+                        <div class="form-group-modal">
+                            <label class="label l-position">Ім'я:</label>
+                            <input class="input name-adm" placeholder="  Ім'я" aria-label="Name"/>
+                            <div class="btn-pos">
+                                <div class="position-set-large">
                                     <button type="button" class="btn btn-light-yellow modal-light-button">Змінити пароль
                                     </button>
                                     <button type="button" class="btn btn-light-yellow modal-light-button">Вийти з акаунту
                                     </button>
+                                </div>
                                     <button type="button" class="btn btn-light-yellow small-btn-modal ">Назад
                                     </button>
+                                 <div class="position-set-small">
                                     <button type="button" class="btn btn-light-yellow small-btn-modal right-pos">Далі
                                     </button>
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                    <div class="modal-foot">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-foot">
     
-                    </div>
                 </div>
             </div>
-        </div></head>
+        </div>
+    </div></head>
 <body>
 
 <div class="description-user">
@@ -76,7 +80,7 @@
     </div>
     <div class="content-admin">
         <!-- Кнопки таби-->
-        <div class="button-admin">
+        <div class="button-admin pos">
             <input class="radio" id="one" name="group" type="radio">
             <input class="radio" id="two" name="group" type="radio">
             <input class="radio" id="three" name="group" type="radio" checked>
@@ -105,23 +109,27 @@
                 </div>
                 <div class="group" id="two-panel">
                     <!--Панель Знайти групу-->
-                    <div class="found-group">
+                    <div class="found-group top">
                         <label class="label found">Знайти групу:</label>
                         <!--        fail-data - якщо неправильно введенні дані-->
-                        <input class="input" placeholder="  Введіть назву групи"
-                               aria-label="Username"/>
-                        <a  class="btn btn-yellow position-btn-found" href="settings-groups.html">Знайти
-                        </a>
+                        <div class="row">
+                            <input class="input" placeholder="  Введіть назву групи"
+                                   aria-label="Username"/>
+                            <a class="btn yellow-btn position-btn-found" href="settings-groups.html">Знайти
+                            </a>
+                        </div>
 
                     </div>
                     <div class="found-group ">
                         <label class="label found">Знайти користувача:</label>
+                         <div class="row">
                         <input class="input" placeholder="  Введіть електронну пошту" aria-label="Username"/>
-                        <button type="button" class="btn btn-yellow position-btn-found">Знайти
+                        <button type="button" class="btn yellow-btn position-btn-found">Знайти
                         </button>
+                         </div>
                     </div>
                     <div class="line-panel"></div>
-                    <button type="button" class="btn btn-yellow button-creation" data-bs-toggle="modal"
+                    <button type="button" class="btn yellow-btn button-creation" data-bs-toggle="modal"
                             data-bs-target="#CreationModal">Створити групу
                     </button>
                 </div>
@@ -183,8 +191,10 @@
                         <div class="btn-pos positionForCreationButton">
                             <button type="button" class="btn btn-light-yellow small-btn-modal ">Назад
                             </button>
+                            <div class="top-position-btn">
                             <a class="btn btn-light-yellow small-btn-modal right-pos" href="creation-group.html">Далі
                             </a>
+                            </div>
                         </div>
                     </form>
 

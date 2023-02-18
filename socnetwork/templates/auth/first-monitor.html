@@ -27,107 +27,114 @@
     </header>
     
     <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-head">
-                        <h5 class="modal-title" id="exampleModalLabel">Налаштування</h5>
-                        <button type="button" class="btn-close button-close" data-bs-dismiss="modal">x</button>
-                        <hr class="line-modal">
-                    </div>
-                    <div class="modal-bod">
-                        <form action="">
-                            <div class="form-group-modal">
-                                <label class="label l-position">Ім'я:</label>
-                                <input class="input name-adm" placeholder="  Ім'я" aria-label="Name"/>
-                                <div class="btn-pos">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-head">
+                    <h5 class="modal-title" id="exampleModalLabel">Налаштування</h5>
+                    <button type="button" class="btn-close button-close" data-bs-dismiss="modal">x</button>
+                    <hr class="line-modal">
+                </div>
+                <div class="modal-bod">
+                    <form action="">
+                        <div class="form-group-modal">
+                            <label class="label l-position">Ім'я:</label>
+                            <input class="input name-adm" placeholder="  Ім'я" aria-label="Name"/>
+                            <div class="btn-pos">
+                                <div class="position-set-large">
                                     <button type="button" class="btn btn-light-yellow modal-light-button">Змінити пароль
                                     </button>
                                     <button type="button" class="btn btn-light-yellow modal-light-button">Вийти з акаунту
                                     </button>
+                                </div>
                                     <button type="button" class="btn btn-light-yellow small-btn-modal ">Назад
                                     </button>
+                                 <div class="position-set-small">
                                     <button type="button" class="btn btn-light-yellow small-btn-modal right-pos">Далі
                                     </button>
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                    <div class="modal-foot">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-foot">
     
-                    </div>
                 </div>
             </div>
-        </div></head>
+        </div>
+    </div></head>
 <body>
 
 <div class="description-user">
-        <div class="container pos-set">
-            <div class="NameGroup color-NameGroup" onClick="javascript:document.location.href='settings-groups.html';">
-                <p class="n-group-size">ПМ-12
-                </p>
-                <p class="users-all">22 users
-                </p>
-            </div>
-            <hr class="sidebar">
-            <button type="button" class="button-exit">Вийти з акаунту</button>
+    <div class="container">
+        <div class="NameGroup color-NameGroup" onClick="javascript:document.location.href='settings-groups.html';">
+            <p class="n-group-size">ПМ-12
+            </p>
+            <p class="users-all">22 users
+            </p>
         </div>
-        <div class="image-avatar">
-            <!--Фото користувача-->
-            <img src="https://picsum.photos/id/237/200/300" alt="" class="avatar">
-            <div class="name-admin">
-                <!-- cabinet-header стиль для  Ім'я Прізвище користувача         -->
-                <h2 class="cabinet-header">Грицюк Христина</h2>
-                <h5 class="offline-online">online</h5>
-            </div>
+        <hr class="sidebar">
+        <button type="button" class="button-exit">Вийти з акаунту</button>
+    </div>
+    <div class="image-avatar">
+        <!--Фото користувача-->
+        <img src="https://picsum.photos/id/237/200/300" alt="" class="avatar">
+        <div class="name-admin">
+            <!-- cabinet-header стиль для  Ім'я Прізвище користувача         -->
+            <h2 class="cabinet-header">Грицюк Христина</h2>
+            <h5 class="offline-online">online</h5>
         </div>
-        <div class="content-admin">
-            <!-- Кнопки таби-->
+    </div>
+    <div class="content-admin">
+        <!-- Кнопки таби-->
 
-            <div class="button-admin">
-                <input class="radio" id="one-new" name="group" type="radio">
-                <input class="radio" id="three-new" name="group" type="radio" checked>
-                <div class="tabs content-monitor">
-                    <label class="tab" id="three-tab-new" for="three-new">Опис</label>
-                    <label class="tab" id="one-tab-new" for="one-new">Студенти</label>
+        <div class="button-admin pos">
+            <input class="radio" id="one-new" name="group" type="radio">
+            <input class="radio" id="three-new" name="group" type="radio" checked>
+            <div class="tabs content-monitor">
+                <label class="tab" id="three-tab-new" for="three-new">Опис</label>
+                <label class="tab" id="one-tab-new" for="one-new">Студенти</label>
+            </div>
+            <div class="line"></div>
+            <div class="panels">
+                <!--Панель опису користувача-->
+                <div class="description-admin" id="one-panel">
+                    <br>
+                    <p class="text-cabinet">Електронна пошта:</p>
+                    <p class="text-cabinet-var">mypost</p>
+                    <p class="text-cabinet">Університет:</p>
+                    <p class="text-cabinet-var">Львівська Політехніка</p>
+                    <p class="text-cabinet">Про користувача:</p>
+                    <p class="text-cabinet-var">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+                        вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI
+                        века.
+                        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов,
+                        используя
+                        Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных
+                        изменений пять веков, но и перешагнул в электронный дизайн.</p>
                 </div>
-                <div class="line"></div>
-                <div class="panels">
-                    <!--Панель опису користувача-->
-                    <div class="description-admin" id="one-panel">
-                        <br>
-                        <p class="text-cabinet">Електронна пошта:</p>
-                        <p class="text-cabinet-var">mypost</p>
-                        <p class="text-cabinet">Університет:</p>
-                        <p class="text-cabinet-var">Львівська Політехніка</p>
-                        <p class="text-cabinet">Про користувача:</p>
-                        <p class="text-cabinet-var">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                            вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI
-                            века.
-                            В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов,
-                            используя
-                            Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных
-                            изменений пять веков, но и перешагнул в электронный дизайн.</p>
+
+                <!--Панель Список групи-->
+                <div class="groups-all" id="three-panel">
+                    <br>
+                    <div class="scroll pos-scroll">
+                        <!--Тут знаходить фото та назва групи -->
+                        <a href="" class="scroll-button">
+                            <div class="list-scroll">
+                                <img src="https://picsum.photos/id/237/200/300" alt="" class="small-avatar">
+                                <p class="name-group-btn">ПМ-11</p>
+                            </div>
+                        </a>
+
                     </div>
-
-                    <!--Панель Список групи-->
-                    <div class="groups-all" id="three-panel">
-                        <br>
-                        <div class="scroll pos-scroll">
-                            <!--Тут знаходить фото та назва групи -->
-                            <a href="" class="scroll-button">
-                                <div class="list-scroll">
-                                    <img src="https://picsum.photos/id/237/200/300" alt="" class="small-avatar">
-                                    <p class="name-group-btn">ПМ-11</p>
-                                </div>
-                            </a>
-
-                        </div>
-                        <button type="button" class="style-set-btn pos-set-btn" data-bs-toggle="modal"
-                            data-bs-target="#CreationModalStudent">Створити студента</button>
+                    <div class="btn-crt">
+                        <button type="button" class="style-set-btn" data-bs-toggle="modal"
+                                data-bs-target="#CreationModalStudent">Створити студента
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
     <!--Модальне вікно Створення студента-->
     <div class="modal center-modal fade" id="CreationModalStudent" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -165,8 +172,10 @@
                         <div class="btn-pos positionForCreationButton">
                             <button type="button" class="btn btn-light-yellow small-btn-modal ">Назад
                             </button>
+                             <div class="top-position-btn">
                             <a class="btn btn-light-yellow small-btn-modal right-pos" href="creation-group.html">Далі
                             </a>
+                             </div>
                         </div>
                     </form>
 
@@ -178,7 +187,7 @@
         </div>
     </div>
 
-    </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

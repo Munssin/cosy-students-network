@@ -74,7 +74,8 @@
             </p>
         </div>
         <div class="listOfSubjects">
-            <a href="page-ihfo-monitor.html" type="button" class="button-sub">Дискретна математика</a>
+            <!--Кнопка активна active-->
+            <button type="button" class="button-sub active">Дискретна математика</button>
         </div>
 
         <div class="NewChanel">
@@ -84,34 +85,51 @@
         <button type="button" class="style-set-btn">Налаштування групи</button>
     </div>
     <div class="grey-background">
-        <div class="all-input">
-            <div class="settings-group pos">
-                <label class="label found">Додати користувача до групи:</label>
-                <input class="input" placeholder="  Введіть електронну пошту" aria-label="Username"/>
-            </div>
-            <div class="settings-group pos">
-                <label class="label found">Змінити назву групи:</label>
-                <input class="input" placeholder="  Введіть нову назву групи" aria-label="Username"/>
+        <div class="button-admin">
+            <input class="radio" id="one-monitor" name="group" type="radio" checked>
+            <input class="radio" id="two-monitor" name="group" type="radio">
+            <input class="radio" id="three-monitor" name="group" type="radio">
+            <input class="radio" id="four-monitor" name="group" type="radio">
+            <div class="tabs">
+                <label class="tab" id="four-tab-monitor" for="four-monitor">Чат</label>
+                <label class="tab" id="three-tab-monitor" for="three-monitor">Сховище</label>
+                <label class="tab" id="two-tab-monitor" for="two-monitor">Календар</label>
+                <label class="tab" id="one-tab-monitor" for="one-monitor">Налаштування</label>
             </div>
         </div>
-        <div class="line-set"></div>
-        <div class="list-students">
-            <br>
-            <div class="scroll-student pos">
-                <!--Тут знаходить фото та назва групи -->
-                <a href="#" class="scroll-button" data-bs-toggle="modal"
-                   data-bs-target="#modalInfo">
-                    <div class="list-scroll">
-                        <img src="https://picsum.photos/id/237/200/300" alt="" class="small-avatar">
-                        <p class="name-students">Ім'я Прізвище</p>
+        <div class="panels-set">
+            <div class="monitor-set" id="one-panel">
+                <div class="all-input">
+                    <div class="settings-group pos">
+                        <label class="label found">Додати користувача до групи:</label>
+                        <input class="input" placeholder="  Введіть електронну пошту" aria-label="Username"/>
                     </div>
-                </a>
+                    <div class="settings-group pos">
+                        <label class="label found">Змінити назву групи:</label>
+                        <input class="input" placeholder="  Введіть нову назву групи" aria-label="Username"/>
+                    </div>
+                </div>
+                <div class="line-set"></div>
+                <div class="list-students">
+                    <br>
+                    <div class="scroll-student pos">
+                        <!--Тут знаходить фото та назва групи -->
+                        <a href="#" class="scroll-button" data-bs-toggle="modal"
+                           data-bs-target="#modalInfo">
+                            <div class="list-scroll">
+                                <img src="https://picsum.photos/id/237/200/300" alt="" class="small-avatar">
+                                <p class="name-students">Ім'я Прізвище</p>
+                            </div>
+                        </a>
 
+                    </div>
+
+                </div>
+                <button type="button" class="button-delete">Видалити канал</button>
             </div>
-
         </div>
-        <button type="button" class="button-delete">Видалити канал</button>
     </div>
+
 
 
     <!--Модальне вікно Інформація про студента-->

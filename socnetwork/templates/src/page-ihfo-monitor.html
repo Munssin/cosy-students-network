@@ -1,0 +1,91 @@
+---
+layout: default
+title: General
+---
+
+<div class="settings-of-groups">
+    <!--Бічна панель-->
+    <div class="container pos-set">
+        <div class="NameGroup">
+            <p class="n-group-size">ПМ-12
+            </p>
+            <p class="users-all">22 users
+            </p>
+        </div>
+        <div class="listOfSubjects">
+            <!--Кнопка активна active-->
+            <button type="button" class="button-sub active">Дискретна математика</button>
+        </div>
+
+        <div class="NewChanel">
+            <button type="button" class="button-sub">+ новий канал</button>
+        </div>
+        <hr class="sidebar">
+        <button type="button" class="style-set-btn">Налаштування групи</button>
+    </div>
+    <div class="grey-background">
+        <div class="button-admin">
+            <input class="radio" id="one-monitor" name="group" type="radio" checked>
+            <input class="radio" id="two-monitor" name="group" type="radio">
+            <input class="radio" id="three-monitor" name="group" type="radio">
+            <input class="radio" id="four-monitor" name="group" type="radio">
+            <div class="tabs">
+                <label class="tab" id="four-tab-monitor" for="four-monitor">Чат</label>
+                <label class="tab" id="three-tab-monitor" for="three-monitor">Сховище</label>
+                <label class="tab" id="two-tab-monitor" for="two-monitor">Календар</label>
+                <label class="tab" id="one-tab-monitor" for="one-monitor">Налаштування</label>
+            </div>
+        </div>
+        <div class="panels-set">
+            <div class="monitor-set" id="one-panel">
+                <div class="all-input">
+                    <div class="settings-group pos">
+                        <label class="label found">Додати користувача до групи:</label>
+                        <input class="input" placeholder="  Введіть електронну пошту" aria-label="Username"/>
+                    </div>
+                    <div class="settings-group pos">
+                        <label class="label found">Змінити назву групи:</label>
+                        <input class="input" placeholder="  Введіть нову назву групи" aria-label="Username"/>
+                    </div>
+                </div>
+                <div class="line-set"></div>
+                <div class="list-students">
+                    <br>
+                    <div class="scroll-student pos">
+                        <!--Тут знаходить фото та назва групи -->
+                        <a href="#" class="scroll-button" data-bs-toggle="modal"
+                           data-bs-target="#modalInfo">
+                            <div class="list-scroll">
+                                <img src="https://picsum.photos/id/237/200/300" alt="" class="small-avatar">
+                                <p class="name-students">Ім'я Прізвище</p>
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+                <button type="button" class="button-delete">Видалити канал</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--Модальне вікно Інформація про студента-->
+    <div class="modal fade small" id="modalInfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content small">
+                <div class="modal-head">
+                </div>
+                <div class="modal-bod pos">
+                    <button type="button" class="button-list-group special">Видалити</button>
+                    <button type="button" class="button-list-group special">Інформація</button>
+                </div>
+                <div class="modal-foot">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
