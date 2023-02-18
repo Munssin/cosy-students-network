@@ -1,13 +1,8 @@
 .container {
   position: fixed;
-  transform: translateY(-40px);
   width: 370px;
   height: 100%;
   background: #1F1F1F;
-
-  &.pos-set {
-    transform: translateY(80px);
-  }
 
 }
 
@@ -19,29 +14,6 @@
   background: white;
   border: none;
   margin-left: -15px;
-}
-
-.button-exit {
-  position: absolute;
-  bottom: 90px;
-  color: #FFFFFF;
-  background: #1f1f1f;
-  border-radius: 6px;
-  height: 30px;
-  font-size: 17px;
-  transform: translateX(15px);
-  width: 150px;
-
-  &:hover {
-    color: #FFFFFF;
-    background: #454545;
-  }
-
-
-  &:active {
-    color: #FFFFFF;
-    background: #b1a10b;
-  }
 }
 
 

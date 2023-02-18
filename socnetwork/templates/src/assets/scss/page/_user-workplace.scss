@@ -1,4 +1,6 @@
-
+.dropdown{
+    transform: translateY(130px);
+}
 
 .sidebarCH {
     background: #B1A10B;
@@ -35,11 +37,11 @@
 
 .formCH{
     position: absolute;
-    width: 1000px;
-    height: 670px;
+    width: 70%;
+    height: 100%;
     background: #2E2E2E;
     border-radius: 10px;
-    margin-top: 45px;
+    margin-top: 0px;
     transform: translateX(400px);
     }
 
@@ -402,10 +404,12 @@ redactor {
 }
 
 .listA-button {
+     position: fixed;
     color: #FFFFFF;
     background: #ffffff00;
     font-size: 20px;
         text-align: left;
+
 }
 
 .listA-button:hover {

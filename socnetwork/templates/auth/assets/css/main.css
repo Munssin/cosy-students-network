@@ -119,6 +119,27 @@ button {
     top: 54px;
 }
 
+.button-exit {
+    position: absolute;
+    bottom: 45px;
+    color: #FFFFFF;
+    background: #1f1f1f;
+    border-radius: 6px;
+    height: 50px;
+    font-size: 17px;
+    width: 330px;
+}
+
+.button-exit:hover {
+    color: #FFFFFF;
+    background: #454545;
+}
+
+.button-exit:active {
+    color: #FFFFFF;
+    background: #b1a10b;
+}
+
 .scroll-button {
     display: inline-block;
     padding: 8px;
@@ -154,7 +175,6 @@ button {
 
 .form-two-green {
     padding: 5px 15px;
-    margin-top: -40px;
     height: 40px;
     width: 240px;
     float: right;
@@ -265,6 +285,29 @@ button {
 .button-list-group:active {
     color: #FFFFFF;
     background: #242424;
+}
+
+.button-sub {
+    color: #FFFFFF;
+    text-align: left;
+    padding: 5px;
+    margin-top: 12px;
+    transform: translateX(50px);
+    background: #1f1f1f;
+    border-radius: 6px;
+    height: auto;
+    font-size: 17px;
+    width: auto;
+}
+
+.button-sub:hover {
+    color: #FFFFFF;
+    background: #353535;
+}
+
+.button-sub:active {
+    color: #FFFFFF;
+    background: #353535;
 }
 
 .description-button {
@@ -499,7 +542,6 @@ hr {
 
 .modal-content {
     background: rgba(0, 0, 0, 0.65);
-    padding-bottom: 20px;
 }
 
 .modal-content.creation-color {
@@ -582,18 +624,6 @@ hr {
 
 .modal-bod.pos {
     transform: translateY(6px);
-}
-
-.position-set-large {
-    margin-left: 25px;
-}
-
-.position-set-small {
-    margin-top: -85px;
-}
-
-.top-position-btn {
-    margin-top: -85px;
 }
 
 .scroll {
@@ -728,14 +758,9 @@ hr {
 
 .container {
     position: fixed;
-    transform: translateY(-40px);
     width: 370px;
     height: 100%;
     background: #1F1F1F;
-}
-
-.container.pos-set {
-    transform: translateY(80px);
 }
 
 .sidebar {
@@ -748,33 +773,11 @@ hr {
     margin-left: -15px;
 }
 
-.button-exit {
-    position: absolute;
-    bottom: 90px;
-    color: #FFFFFF;
-    background: #1f1f1f;
-    border-radius: 6px;
-    height: 30px;
-    font-size: 17px;
-    transform: translateX(15px);
-    width: 150px;
-}
-
-.button-exit:hover {
-    color: #FFFFFF;
-    background: #454545;
-}
-
-.button-exit:active {
-    color: #FFFFFF;
-    background: #b1a10b;
-}
-
 .NameGroup {
     background: #B1A10B;
     width: 340px;
     height: 60px;
-    margin-top: 70px;
+    margin-top: 20px;
     border-radius: 6px;
 }
 
@@ -800,7 +803,7 @@ hr {
     transform: translateY(10px);
     margin-left: -34px;
     width: 370px;
-    height: 400px;
+    height: 480px;
     overflow-y: auto;
 }
 
@@ -808,7 +811,8 @@ hr {
     color: #FFFFFF;
     text-align: left;
     padding: 5px;
-    margin-left: 50px;
+    margin-top: 12px;
+    transform: translateX(50px);
     background: #1f1f1f;
     border-radius: 6px;
     height: auto;
@@ -832,8 +836,9 @@ hr {
     color: #FFFFFF;
     background: #B1A10B;
     border-radius: 6px;
-    height: auto;
+    height: 30px;
     font-size: 17px;
+    transform: translateX(15px);
     width: 250px;
 }
 
@@ -847,15 +852,11 @@ hr {
     background: #454545;
 }
 
-.button-admin {
+.button-tabs {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 120px;
-}
-
-.button-admin.pos {
-    margin-left: -375px;
+    margin-top: 100px;
 }
 
 .tab {
@@ -870,11 +871,6 @@ hr {
     width: 150px;
     text-align: center;
     margin: 20px;
-}
-
-.monitor-set {
-    display: none;
-    animation: fadein 0.8s;
 }
 
 .group {
@@ -911,15 +907,9 @@ hr {
 }
 
 .panels {
-    margin-left: 180px;
     margin-top: -120px;
     width: 100%;
     text-align: left;
-    z-index: 3;
-}
-
-.panels-set {
-    width: 100%;
     z-index: 3;
 }
 
@@ -952,21 +942,6 @@ hr {
 #two-user:checked ~ .tabs #two-tab-user,
 #three-user:checked ~ .tabs #three-tab-user,
 #four-user:checked ~ .tabs #four-tab-user {
-    background: #b1a10b;
-    color: #FFFFFF;
-}
-
-#four-monitor:checked ~ .panels-set #four-panel,
-#three-monitor:checked ~ .panels-set #two-panel,
-#two-monitor:checked ~ .panels-set #three-panel,
-#one-monitor:checked ~ .panels-set #one-panel {
-    display: block;
-}
-
-#one-monitor:checked ~ .tabs #one-tab-monitor,
-#two-monitor:checked ~ .tabs #two-tab-monitor,
-#three-monitor:checked ~ .tabs #three-tab-monitor,
-#four-monitor:checked ~ .tabs #four-tab-monitor {
     background: #b1a10b;
     color: #FFFFFF;
 }
@@ -1019,10 +994,6 @@ hr {
     font-family: "Ubuntu", sans-serif;
 }
 
-.forgott-parol {
-    margin-top: -100px;
-}
-
 .button {
     margin-top: 135px;
 }
@@ -1048,7 +1019,7 @@ hr {
 }
 
 .button-login {
-    margin-top: 250px;
+    margin-top: 330px;
 }
 
 .avatar {
@@ -1063,7 +1034,7 @@ hr {
 
 .image-avatar {
     position: relative;
-    transform: translateY(-15px);
+    transform: translateY(100px);
     margin-left: -10px;
 }
 
@@ -1127,8 +1098,7 @@ hr {
 }
 
 .content-admin {
-    transform: translateY(205px);
-    margin-right: -115px;
+    transform: translateY(180px);
     z-index: 3;
 }
 
@@ -1156,21 +1126,12 @@ hr {
 }
 
 .found-group {
-    margin-left: 680px;
+    transform: translateX(675px);
     padding: 10px;
 }
 
-.found-group.top {
-    margin-top: 15px;
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
-}
-
 .position-btn-found {
-    margin-left: 15px;
+    margin: 10px;
     height: 40px;
 }
 
@@ -1191,8 +1152,9 @@ hr {
 }
 
 .grey-background {
-    padding-bottom: 185px;
+    position: fixed;
     width: 1000px;
+    height: 100%;
     background: #2E2E2E;
     transform: translateX(450px);
 }
@@ -1214,8 +1176,6 @@ hr {
 }
 
 .NewChanel {
-    margin-top: 20px;
-    margin-bottom: 20px;
     margin-left: -34px;
 }
 
@@ -1226,16 +1186,16 @@ hr {
 }
 
 .all-input {
-    margin-top: 70px;
+    margin-top: -20px;
 }
 
 .settings-of-groups {
     overflow-y: auto;
 }
 
-.btn-crt {
-    margin-left: 700px;
-    margin-bottom: 135px;
+.description-student {
+    transform: translateX(400px);
+    margin-top: 250px;
 }
 
 .list {
@@ -1836,6 +1796,10 @@ buttonU {
     font-size: 17px;
 }
 
+.dropdown {
+    transform: translateY(130px);
+}
+
 .sidebarCH {
     background: #B1A10B;
     width: 805px;
@@ -1870,11 +1834,11 @@ buttonU {
 
 .formCH {
     position: absolute;
-    width: 1000px;
-    height: 670px;
+    width: 70%;
+    height: 100%;
     background: #2E2E2E;
     border-radius: 10px;
-    margin-top: 45px;
+    margin-top: 0px;
     transform: translateX(400px);
 }
 
@@ -2233,6 +2197,7 @@ redactor {
 }
 
 .listA-button {
+    position: fixed;
     color: #FFFFFF;
     background: rgba(255, 255, 255, 0);
     font-size: 20px;

@@ -65,15 +65,23 @@
 <body>
 
 <div class="description-user">
-
     <div class="container">
-        <button type="button" class="button-exit">Налаштування</button>
-        <hr class="sidebar">
-
-    </div>
+        <div class="dropdown">
+                <button type="buttonA" class="listA-button width-Asettings" data-bs-toggle="dropdown" aria-expanded="false">
+                    ПМ-12 <p class="text-A">21 users</p></button>
+                  </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="user-workplace.html">Дискретна</a></li>
+                    <li><a class="dropdown-item" href="user-workplace.html">Мат аналіз</a></li>
+                    <li><a class="dropdown-item" href="user-workplace.html">Фізика</a></li>
+                </ul>
+            </div>
+            <hr class="sidebar">
+            <button type="button" class="button-exit">Налаштування</button>
+        </div>
     <!-- Кнопки таби-->
     <form class="formCH">
-        <div class="button-admin">
+        <div class="button-tabs">
             <input class="radio" id="one-user" name="group" type="radio">
             <input class="radio" id="two-user" name="group" type="radio">
             <input class="radio" id="three-user" name="group" type="radio">
@@ -83,17 +91,6 @@
                 <label class="tab" id="three-tab-user" for="three-user">Сховище</label>
                 <label class="tab" id="two-tab-user" for="two-user">Календар</label>
                 <label class="tab" id="one-tab-user" for="one-user">Посилання</label>
-            </div>
-
-            <div class="dropdown">
-                <button type="buttonA" class="listA-button width-Asettings" data-bs-toggle="dropdown" aria-expanded="false">
-                    ПМ-12 <p class="text-A">21 users</p></button>
-                  </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Дискретна</a></li>
-                    <li><a class="dropdown-item" href="#">Мат аналіз</a></li>
-                    <li><a class="dropdown-item" href="#">Фізика</a></li>
-                </ul>
             </div>
 
             <div class="line"></div>
@@ -238,7 +235,8 @@
                         </div>
                     </div>
                 </div>
-
+            </div>
+        </div>
     </form>
     <!--Модальне вікно Створення групи-->
     <div class="modal center-modal fade" id="CreationModal" tabindex="-1" aria-labelledby="exampleModalLabel"

@@ -57,6 +57,28 @@
 }
 }
 
+.button-exit {
+  position: absolute;
+  bottom: 45px;
+  color: #FFFFFF;
+  background: #1f1f1f;
+  border-radius: 6px;
+  height: 50px;
+  font-size: 17px;
+  width: 330px;
+
+  &:hover {
+    color: #FFFFFF;
+    background: #454545;
+  }
+
+
+  &:active {
+    color: #FFFFFF;
+    background: #b1a10b;
+  }
+}
+
 .scroll-button {
   display: inline-block;
   padding: 8px;
