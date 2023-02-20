@@ -67,6 +67,10 @@
   font-size: 17px;
   width: 330px;
 
+  &.pos-for-button-exit{
+    margin-bottom: 30px;
+  }
+
   &:hover {
     color: #FFFFFF;
     background: #454545;

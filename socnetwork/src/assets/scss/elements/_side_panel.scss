@@ -4,6 +4,10 @@
   height: 100%;
   background: #1F1F1F;
 
+  &.pos-for-conteiner{
+    margin-top: 50px;
+  }
+
 }
 
 .sidebar {
@@ -62,6 +66,10 @@
   font-size: 17px;
   width: auto;
 
+  &.position-sub{
+    margin-bottom: 60px;
+  }
+
   &:hover {
     color: #FFFFFF;
     background: #353535;
@@ -82,6 +90,10 @@
   height: auto;
   font-size: 17px;
   width: 250px;
+
+  &.position {
+    margin-bottom: -15px;
+    margin-left: 40px;  }
 
   &:hover {
     color: #FFFFFF;
