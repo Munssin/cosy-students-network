@@ -14,6 +14,10 @@
   position: relative;
   transform: translateY( 100px);
   margin-left: -10px;
+
+  &.pos{
+    margin-top:-100px;
+  }
 }
 
 .name-admin{
@@ -84,11 +88,21 @@
   z-index: 3;
 }
 
+.position-for-content{
+  transform: translateY(130px);
+}
+
+
 .line{
   border-bottom: 2px solid  #1F1F1F;
   margin-bottom: 100px;
   width: 1700px;
   transform: translateY(-90px);
+
+  &.pos-right{
+    margin-left: 80px;
+  }
+
 
 }
 

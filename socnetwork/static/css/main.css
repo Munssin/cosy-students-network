@@ -122,6 +122,9 @@ button {
   font-size: 17px;
   width: 330px;
 }
+.button-exit.pos-for-button-exit {
+  margin-bottom: 30px;
+}
 .button-exit:hover {
   color: #FFFFFF;
   background: #454545;
@@ -698,6 +701,9 @@ hr {
   height: 100%;
   background: #1F1F1F;
 }
+.container.pos-for-conteiner {
+  margin-top: 50px;
+}
 
 .sidebar {
   position: absolute;
@@ -753,6 +759,9 @@ hr {
   font-size: 17px;
   width: auto;
 }
+.button-sub.position-sub {
+  margin-bottom: 60px;
+}
 .button-sub:hover {
   color: #FFFFFF;
   background: #353535;
@@ -771,6 +780,10 @@ hr {
   height: auto;
   font-size: 17px;
   width: 250px;
+}
+.style-set-btn.position {
+  margin-bottom: -15px;
+  margin-left: 40px;
 }
 .style-set-btn:hover {
   color: #FFFFFF;
@@ -1001,6 +1014,9 @@ hr {
   transform: translateY(100px);
   margin-left: -10px;
 }
+.image-avatar.pos {
+  margin-top: -100px;
+}
 
 .name-admin {
   position: absolute;
@@ -1065,11 +1081,18 @@ hr {
   z-index: 3;
 }
 
+.position-for-content {
+  transform: translateY(130px);
+}
+
 .line {
   border-bottom: 2px solid #1F1F1F;
   margin-bottom: 100px;
   width: 1700px;
   transform: translateY(-90px);
+}
+.line.pos-right {
+  margin-left: 80px;
 }
 
 .group {
@@ -1125,6 +1148,10 @@ hr {
   width: 1000px;
   background: #2E2E2E;
   transform: translateX(450px);
+}
+
+.gr-position {
+  margin-top: 100px;
 }
 
 .settings-group {
