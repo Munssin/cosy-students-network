@@ -58,7 +58,7 @@
     bottom: -25px;
     width: 1030px;
     height: 5px;
-    margin-left: -70px;
+    margin-left: 30px;
     index-z: 1;
 }
 
@@ -71,6 +71,13 @@
     font-size: 20px;
     padding: 17px 20px;
     margin-left: 960px;
+    @media (max-width: 1640px) {
+        font-size: 18px;
+    }
+    @media (max-width: 1440px) {
+        font-size: 16px;
+    }
+
 }
 
 .button-addF:hover {
@@ -124,7 +131,7 @@
   height: 15px;
   border: none;
   background: #2E2E2E;
-  margin-left: -70px;
+  margin-left: 30px;
   color: var(--yellow-dark);
 }
 
@@ -161,14 +168,14 @@ color: #FFFFFF;
 }
 /*===================================*/
 
-.chat-container {
-  display: flex;
-  flex-direction: column;
-  height: 400px;
+  .btn-container{
+  height: 100px;
   border: none;
   padding: 10px;
   box-sizing: border-box;
-}
+  }
+
+
 
 
 /*
@@ -180,45 +187,111 @@ color: #FFFFFF;
 */
 
 .button-AddFile {
+
+    @media (max-width: 1920px) {
     position: absolute;
-    bottom: 75px;
+    bottom: 170px;
     color: #FFFFFF;
     background: #b1a10b;
     border-radius: 6px;
     font-size: 20px;
-    padding: 10px 415px;
-    margin-left: 1125px;
-    transform: translateY(180px);
+    padding: 10px 585px;
+    margin-left: 15px;}
 
-}
-.button-AddFile:hover {
+    @media (max-width: 1640px) {
+    position: absolute;
+    bottom: 170px;
+    color: #FFFFFF;
+    background: #b1a10b;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 10px 485px;
+    margin-left: 15px;}
+
+    @media (max-width: 1440px) {
+    position: absolute;
+    bottom: 150px;
+    color: #FFFFFF;
+    background: #b1a10b;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 10px 400px;
+    margin-left: 15px;}
+
+     @media (max-width: 1366px) {
+    position: absolute;
+    bottom: 150px;
+    color: #FFFFFF;
+    background: #b1a10b;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 10px 400px;
+    margin-left: 15px;}
+
+    @media (max-width: 1280px) {
+    position: absolute;
+    bottom: 150px;
+    color: #FFFFFF;
+    background: #b1a10b;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 10px 360px;
+    margin-left: 15px;}
+&:hover {
     color: #FFFFFF;
     background: #454545;
 }
 
-.button-AddFile:active {
+&:active {
     color: #FFFFFF;
     background: #1f1f1f;
 }
+}
 .for-ulRG {
-    float: right;
-      list-style-type: none;
-      max-height: 420px;
-      width: 900px;
-      overflow-y: scroll;
-    margin-top: 50px;
-    transform: translateX(-200px);
+
+    @media (max-width: 1920px) {
+        list-style-type: none;
+        max-height: 600px;
+        width: 1300px;
+        overflow-y: scroll;
+        margin-top: 75px;
+         transform: translateX(20px);
     }
+    @media (max-width: 1640px){
+    list-style-type: none;
+        max-height: 450px;
+        width: 1100px;
+        overflow-y: scroll;
+        margin-top: 70px;
+         transform: translateX(20px);
+    }
+    @media (max-width: 1440px){
+    list-style-type: none;
+        max-height: 350px;
+        width: 920px;
+        overflow-y: scroll;
+        margin-top: 25px;
+         transform: translateX(20px);
+    }
+    @media (max-width: 1280px){
+    list-style-type: none;
+        max-height: 250px;
+        width: 850px;
+        overflow-y: scroll;
+        margin-top: 25px;
+         transform: translateX(20px);
+    }
+}
 
 .square {
-  position: absolute;
+  position: fixed;
   font-style: normal;
   font-weight: 700;
   font-size: 35px;
   color: #000000;
   background-color: #D9D9D9;
   border-radius: 10%;
-  padding: 10px 30px;
+  padding: 30px 30px;
 }
 
 .text {
@@ -310,8 +383,8 @@ color: #FFFFFF;
 }
 
 .button-calendar {
-   transform: translateX(1100px);
-    margin-top: 100px;
+   transform: translateX(100px);
+    margin-top: 25px;
     line-height: 60px;
 }
 
@@ -480,8 +553,6 @@ li2 {
 }
 .description-url {
     display: none;
-    transform: translateX(630px);
-    margin-top: -50px;
     max-width: 1000px;
     animation: fadein 0.8s;
 }
