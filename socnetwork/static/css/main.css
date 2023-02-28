@@ -1648,64 +1648,35 @@ buttonU {
 
 ======================
 */
-@media (max-width: 1920px) {
-  .button-AddFile {
-    position: absolute;
-    bottom: 170px;
-    color: #FFFFFF;
-    background: #b1a10b;
-    border-radius: 6px;
-    font-size: 20px;
-    padding: 10px 585px;
-    margin-left: 15px;
-  }
+.button-AddFile {
+  position: absolute;
+  bottom: 170px;
+  color: #FFFFFF;
+  background: #b1a10b;
+  border-radius: 6px;
+  font-size: 20px;
+  padding: 10px 585px;
+  margin-left: 15px;
 }
 @media (max-width: 1640px) {
   .button-AddFile {
-    position: absolute;
-    bottom: 170px;
-    color: #FFFFFF;
-    background: #b1a10b;
-    border-radius: 6px;
-    font-size: 20px;
     padding: 10px 485px;
-    margin-left: 15px;
+  }
+}
+@media (max-width: 1540px) {
+  .button-AddFile {
+    bottom: 150px;
+    padding: 10px 430px;
   }
 }
 @media (max-width: 1440px) {
   .button-AddFile {
-    position: absolute;
-    bottom: 150px;
-    color: #FFFFFF;
-    background: #b1a10b;
-    border-radius: 6px;
-    font-size: 20px;
     padding: 10px 400px;
-    margin-left: 15px;
-  }
-}
-@media (max-width: 1366px) {
-  .button-AddFile {
-    position: absolute;
-    bottom: 150px;
-    color: #FFFFFF;
-    background: #b1a10b;
-    border-radius: 6px;
-    font-size: 20px;
-    padding: 10px 400px;
-    margin-left: 15px;
   }
 }
 @media (max-width: 1280px) {
   .button-AddFile {
-    position: absolute;
-    bottom: 150px;
-    color: #FFFFFF;
-    background: #b1a10b;
-    border-radius: 6px;
-    font-size: 20px;
     padding: 10px 360px;
-    margin-left: 15px;
   }
 }
 .button-AddFile:hover {
@@ -1717,44 +1688,39 @@ buttonU {
   background: #1f1f1f;
 }
 
-@media (max-width: 1920px) {
-  .for-ulRG {
-    list-style-type: none;
-    max-height: 600px;
-    width: 1300px;
-    overflow-y: scroll;
-    margin-top: 75px;
-    transform: translateX(20px);
-  }
+.for-ulRG {
+  list-style-type: none;
+  max-height: 600px;
+  width: 1300px;
+  overflow-y: scroll;
+  margin-top: 75px;
+  transform: translateX(20px);
 }
 @media (max-width: 1640px) {
   .for-ulRG {
-    list-style-type: none;
     max-height: 450px;
     width: 1100px;
-    overflow-y: scroll;
     margin-top: 70px;
-    transform: translateX(20px);
+  }
+}
+@media (max-width: 1540px) {
+  .for-ulRG {
+    max-height: 370px;
+    width: 1000px;
+    margin-top: 25px;
   }
 }
 @media (max-width: 1440px) {
   .for-ulRG {
-    list-style-type: none;
     max-height: 350px;
     width: 920px;
-    overflow-y: scroll;
     margin-top: 25px;
-    transform: translateX(20px);
   }
 }
 @media (max-width: 1280px) {
   .for-ulRG {
-    list-style-type: none;
     max-height: 250px;
     width: 850px;
-    overflow-y: scroll;
-    margin-top: 25px;
-    transform: translateX(20px);
   }
 }
 
