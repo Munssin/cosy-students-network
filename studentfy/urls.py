@@ -16,13 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.contrib.auth import views as auth_views
+from django.conf import settings
+from django.conf.urls.static import static
 from socnetwork import views
 
 urlpatterns = [
+    path('', include('socnetwork.urls')),
+    path('user_profile/', views.user_profile, name='user_profile'),
+    path('user_workplace/', views.user_workplace, name='user_workplace'),
+    path('user_profile/', views.user_profile, name='user_profile'),
     path('admin/', admin.site.urls),
     path("", views.LoginPage, name="login"),
     path("home/", views.HomePage, name="home"),
     path("logout/", views.LogoutPage, name="logout"),
+    path("signup/", views.LoginPage, name="signup"),
 
     path('reset_password/', auth_views.PasswordResetView.as_view(template_name="login/password_reset_form.html"),name="reset_password"),
 

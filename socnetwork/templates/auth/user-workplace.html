@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="../../static/css/main.css"></head>
 <body>
@@ -36,14 +37,13 @@
             <div class="modal-bod">
                 <form action="">
                     <div class="form-group-modal">
-                        <label class="label l-position">Ім'я:</label>
-                        <input class="input name-adm" placeholder="  Ім'я" aria-label="Name"/>
                         <div class="btn-pos">
                             <div class="position-set-large">
+                                <a class="btn btn-light-yellow modal-light-button" href="/user_profile/">Профiль<a>
+                                <a class="btn btn-light-yellow modal-light-button" href="/user_workplace/">work_place<a>
                                 <button type="button" class="btn btn-light-yellow modal-light-button">Змінити пароль
                                 </button>
-                                <button type="button" class="btn btn-light-yellow modal-light-button">Вийти з акаунту
-                                </button>
+                                    <a class="btn btn-light-yellow modal-light-button" href="/logout/">Вийти з акаунту</a>
                             </div>
                                 <button type="button" class="btn btn-light-yellow small-btn-modal ">Назад
                                 </button>
@@ -79,156 +79,76 @@
         <button type="button" class="button-exit">Налаштування</button>
     </div>
     <!-- Кнопки таби-->
-    <form class="formCH">
-        <div class="button-tabs">
-            <input class="radio" id="one-user" name="group" type="radio">
-            <input class="radio" id="two-user" name="group" type="radio">
-            <input class="radio" id="three-user" name="group" type="radio">
-            <input class="radio" id="four-user" name="group" type="radio">
-            <div class="tabs">
-                <label class="tab" id="four-tab-user" for="four-user">Чат</label>
-                <label class="tab" id="three-tab-user" for="three-user">Сховище</label>
-                <label class="tab" id="two-tab-user" for="two-user">Календар</label>
-                <label class="tab" id="one-tab-user" for="one-user">Посилання</label>
-            </div>
+    <div class="formCH">
+        <div class="worko-tabs">
+            <input class="state" type="radio" title="tab-one" name="tabs-state" id="tab-one" checked />
+            <input class="state" type="radio" title="tab-two" name="tabs-state" id="tab-two" />
+            <input class="state" type="radio" title="tab-three" name="tabs-state" id="tab-three" />
+            <input class="state" type="radio" title="tab-four" name="tabs-state" id="tab-four" />
+            <div class="tabs flex-tabs">
+                <label for="tab-one" id="tab-one-label" class="tab">Чат</label>
+                <label for="tab-two" id="tab-two-label" class="tab">Сховище</label>
+                <label for="tab-three" id="tab-three-label" class="tab">Календар</label>
+                <label for="tab-four" id="tab-four-label" class="tab">Посилання</label>
 
-            <div class="line"></div>
-            <div class="panels">
-                <div class="chat" id="one-panel">
-                    <hr class="sidebarCH">
-                        <input class="message" type="text" placeholder="Massage">
-                        <div class="btn-container">
-                            <button type="button" class="button-addF">Add file</button>
-                            <button type="button" class="button-sendF">Send</button>
+                <div class="panels">
+                    <div id="tab-one-panel" class="panel active">
+                        <div id="tab_1" class="tab_1">
+                            <div id="chat_box" class="chat_box">
+
+                            </div> 
+
+                            <hr class="sidebarCH">
+                                <div class="inputsandplaceholders">
+                                    <form id="post-form" method="POST" class="post-form" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="username" id="username" value=""/>
+                                        <input class="message" type="text" name="message" id="message" placeholder="Massage" />
+                                        <input type="submit" value="Send" class="button-sendF">
+                                        <!--<input type="file" id="file" name="myfiles[]" class="button-addF" value="Add file" multiple>-->
+                                    </form> 
+                                </div>
                         </div>
-                    <div class="speakermess">
-                        <p class="nickuser">Alina Kat</p>
-                        <div class="text-mess">yes it is bat too bad and bat to not bad</div>
                     </div>
-                    <div class="usermess">
-                        <div class="text-mess">What?</div>
-                    </div>
-                </div>
+                    <div id="tab-two-panel" class="panel">
 
-                <div class="group" id="two-panel">
-                    <button type="button" class="button-AddFile">Додати файл</button>
-                    <div class="refuge-group">
-                            <ul class="for-ulRG">
-                                <li>
-                                    <button type="buttonU" class="listR-button width-Usettings " data-toggle="modal"
-                                            data-target="#staticBackdrop">
-                                        <div class="square">T</div>
-                                        <h2 class="text">Name File</h2>
-                                        <p class="text-R">121 mb</p></button>
-                                </li>
-                                <li>
-                                    <button type="buttonU" class="listR-button width-Usettings ">
-                                        <div class="square">T</div>
-                                        <h2 class="text">Name File</h2>
-                                        <p class="text-R">122 mb</p></button>
-                                </li>
-                                <li>
-                                    <button type="buttonU" class="listR-button width-Usettings ">
-                                        <div class="square">T</div>
-                                        <h2 class="text">Name File</h2>
-                                        <p class="text-R">123 mb</p></button>
-                                </li>
-                                <li>
-                                    <button type="buttonU" class="listR-button width-Usettings ">
-                                        <div class="square">T</div>
-                                        <h2 class="text">Name File</h2>
-                                        <p class="text-R">124 mb</p></button>
-                                </li>
-                                <li>
-                                    <button type="buttonU" class="listR-button width-Usettings ">
-                                        <div class="square">T</div>
-                                        <h2 class="text">Name File</h2>
-                                        <p class="text-R">125 mb</p></button>
-                                </li>
-                                <li>
-                                    <button type="buttonU" class="listR-button width-Usettings ">
-                                        <div class="square">T</div>
-                                        <h2 class="text">Name File</h2>
-                                        <p class="text-R">126 mb</p></button>
-                                </li>
-                                <li>
-                                    <button type="buttonU" class="listR-button width-Usettings ">
-                                        <div class="square">T</div>
-                                        <h2 class="text">Name File</h2>
-                                        <p class="text-R">127 mb</p></button>
-                                </li>
-                                <li>
-                                    <button type="buttonU" class="listR-button width-Usettings ">
-                                        <div class="square">T</div>
-                                        <h2 class="text">Name File</h2>
-                                        <p class="text-R">128 mb</p></button>
-                                </li>
-                                <li>
-                                    <button type="buttonU" class="listR-button width-Usettings ">
-                                        <div class="square">T</div>
-                                        <h2 class="text">Name File</h2>
-                                        <p class="text-R">129 mb</p></button>
-                                </li>
-                                <li>
-                                    <button type="buttonU" class="listR-button width-Usettings ">
-                                        <div class="square">T</div>
-                                        <h2 class="text">Name File</h2>
-                                        <p class="text-R">130 mb</p></button>
-                                </li>
-                                <li>
-                                    <button type="buttonU" class="listR-button width-Usettings ">
-                                        <div class="square">T</div>
-                                        <h2 class="text">Name File</h2>
-                                        <p class="text-R">131 mb</p></button>
-                                </li>
-                                <li>
-                                    <button type="buttonU" class="listR-button width-Usettings ">
-                                        <div class="square">T</div>
-                                        <h2 class="text">Name File</h2>
-                                        <p class="text-R">132 mb</p></button>
-                                </li>
-                            </ul>
-                    </div>
-                </div>
 
-                <div class="groups-all" id="three-panel">
-                    <div class="button-calendar">
-                            <button class="list-buttonCA width-settingsCA">16.01.2023</button>
-                            <button class="list-buttonCA width-settingsCA">17.01.2023</button>
-                            <button class="list-buttonCA width-settingsCA">18.01.2023</button>
-                            <button class="list-buttonCA width-settingsCA">19.01.2023</button>
-                            <button class="list-buttonCA width-settingsCA">20.01.2023</button>
-                            <button class="list-buttonCA width-settingsCA">21.01.2023</button>
-                            <button class="list-buttonCA width-settingsCA">22.01.2023</button>
-                            <button class="list-buttonCA width-settingsCA">23.01.2023</button>
-                            <button class="list-buttonCA width-settingsCA">24.01.2023</button>
-                            <button class="list-buttonCA width-settingsCA">25.01.2023</button>
-                            <button class="list-buttonCA width-settingsCA">26.01.2023</button>
-                            <button class="list-buttonCA width-settingsCA">27.01.2023</button>
-                            <button class="list-buttonCA width-settingsCA">28.01.2023</button>
-                            <button class="list-buttonCA width-settingsCA">29.01.2023</button>
-                            <button class="list-buttonCA width-settingsCA">30.01.2023</button>
-                            <button class="list-buttonCA width-settingsCA">31.01.2023</button>
-                            <button class="list-buttonCA width-settingsCA">01.02.2023</button>
-                            <button class="list-buttonCA width-settingsCA">02.02.2023</button>
-                            <a class="text-calendar" href="#">1.Захист робіт з фізики.(8:30-10:05)</a>
-                            <a class="text-calendar" href="#">2.Контрольна робота з дискретної математики.(10:20-11:55)</a>
-                            <a class="text-calendar" href="#">3.Консультація С++(17:00-18:00)</a>
-                    </div>
-                </div>
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <input type="file" id="file" name="myfiles[]" class="button-addF" value="Add file" multiple>
+                            <button type="submit" class="button-sendFile_2">Upload file</button>
+                        </form>  
 
-                <div class="description-url" id="four-panel">
-                    <hr class="sidebarCH">
-                         <input class="message" type="text" placeholder="URL">
-                        <div class="speakermess">
-                        <p class="nickuser">Alina Kat</p>
-                        <div class="text-mess">https://www.figma.com/file/7A984f2Ej9S9HHRXKgq0Jp/Project?node-id=159%3A132&t=vck7KsKKOS2u3EEx-0</div>
-                            </div>
+                        <div class="refuge-group" id="refuge-group">
+
                         </div>
+                    </div>
+                    <div id="tab-three-panel" class="panel">
+                        <div class="button-calendar">
+
+                        </div>
+                    </div>
+                    <div id="tab-four-panel" class="panel">
+                        <hr class="sidebarCH">
+                            <div id="chat_box_url" class="chat_box_url">
+
+                            </div> 
+
+                            <hr class="sidebarCH">
+                                <div class="inputsandplaceholders">
+                                    <form id="post-form_url">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="username" id="username" value=""/>
+                                        <input class="message_url" type="message_url" name="message_url" id="message_url" placeholder="url" />
+                                        <input type="submit" value="Send" class="button-sendF_url">
+                                    </form>  
+                                </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </form>
+    </div>
+
     <!--Модальне вікно Створення групи-->
     <div class="modal center-modal fade" id="CreationModal" tabindex="-1" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
@@ -285,6 +205,131 @@
 
 
 
+<script>
+$(document).ready(function(){
+
+setInterval(function(){
+    $.ajax({
+        type: 'GET',
+        url : "/getMessages/",
+        data:{
+            username:$('#username').val(),
+        },
+        success: function(response){
+            console.log(response);
+            $("#chat_box").empty();
+            for (var key in response.messages)
+            {
+                var temp="<div class='speakermess'><b class='nickuser'>"+response.messages[key].user+"</b><p class='text-mess'>"+response.messages[key].value+"</p> </div>";
+                var temp2="<div class='usermess'><b class='nickusermess'>"+response.messages[key].user+"</b><p class='text-mess'>"+response.messages[key].value+"</p> </div>";
+                $("#chat_box").append(temp);
+            }
+        },
+        error: function(response){
+            alert('An error occured')
+        }
+    });
+},1000);
+})
+</script>
+
+<script type="text/javascript">
+  $(document).on('submit','#post-form_url',function(e){
+    e.preventDefault();
+
+    $.ajax({
+      type:'POST',
+      url:'/send_url/',
+      data:{
+          username:$('#username').val(),
+          message_url:$('#message_url').val(),
+          csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+      },
+      success: function(data){
+         //alert(data)
+      }
+    });
+    document.getElementById('message_url').value = ''
+  });
+</script>
+
+<script>
+$(document).ready(function(){
+
+setInterval(function(){
+    $.ajax({
+        type: 'GET',
+        url : "/getMessages_url/",
+        data:{
+            username:$('#username').val(),
+        },
+        success: function(response){
+            console.log(response);
+            $("#chat_box_url").empty();
+            for (var key in response.messages_url)
+            {
+                var temp="<div class='speakermess'><b class='nickuser'>"+response.messages_url[key].user+"</b><p class='text-mess'>"+response.messages_url[key].value+"</p> </div>";
+                var temp2="<div class='usermess'><b class='nickusermess'>"+response.messages_url[key].user+"</b><p class='text-mess'>"+response.messages_url[key].value+"</p> </div>";
+                $("#chat_box_url").append(temp);
+            }
+        },
+        error: function(response){
+            alert('An error occured')
+        }
+    });
+},1000);
+})
+</script>
+
+<script type="text/javascript">
+  $(document).on('submit','#post-form',function(e){
+    e.preventDefault();
+
+    $.ajax({
+      type:'POST',
+      url:'/send/',
+      data:{
+          username:$('#username').val(),
+          message:$('#message').val(),
+          file:$('#file').val(),
+          csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+      },
+      success: function(data){
+         //alert(data)
+      }
+    });
+    document.getElementById('message').value = ''
+  });
+</script>
+
+<script>
+$(document).ready(function(){
+
+setInterval(function(){
+    $.ajax({
+        type: 'GET',
+        url : "/getFiles/",
+        data:{
+            files:$('#files').val(),
+        },
+        success: function(response){
+            console.log(response);
+            $("#refuge-group").empty();
+            for (var key in response.files)
+            {
+                var temp="<ul class='for-ulRG'><li><button type='buttonU' class='listR-button width-Usettings' data-toggle='modal' data-target='#staticBackdrop'><div class='square'>T</div><h2 class='text'>"+response.files[key].file_name+"</h2><p class='text-R'>mb</p><p class='text-R'>"+response.files[key].user+"</p></button></li></ul>";
+                $("#refuge-group").append(temp);
+            }
+        },
+        error: function(response){
+            alert('An error occured')
+        }
+    });
+},1000);
+})
+</script>
+
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="../../static/js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="../../static/js/main.js"></script>
