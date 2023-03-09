@@ -8,10 +8,10 @@ class UsersProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     about = models.TextField(max_length=2000, null=True)
     university = models.CharField(max_length=50, null=True)
-    avatar = models.ImageField(upload_to='media/profile/', verbose_name='Изображение', null=True)
+    avatar = models.ImageField(upload_to='media/profile/', null=True)
 
-def __str__(self):
-    return str(self.user)
+    def __str__(self):
+        return str(self.user)
 
 class Message(models.Model):
     value = models.CharField(max_length=5000)

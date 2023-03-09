@@ -999,6 +999,11 @@ hr {
   margin-top: 250px;
 }
 
+.edit-profile-form {
+  margin-top: 600px;
+  margin-left: 150px;
+}
+
 .avatar {
   position: absolute;
   z-index: 2;

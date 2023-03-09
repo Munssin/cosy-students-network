@@ -13,7 +13,9 @@ urlpatterns = [
     path('getMessages/', getMessages, name='getMessages'),
     path('getFiles/', getFiles, name='getFiles'),
     path('send_url/', send_url, name='send_url'),
+    path('edit_profile/', edit_profile, name='edit_profile'),
     path('getMessages_url/', getMessages_url, name='getMessages_url'),
+    path('settings_group/', settings_group, name='settings_group'),
 
     path('reset_password/', auth_views.PasswordResetView.as_view(template_name="login/password_reset_form.html"),name="reset_password"),
 

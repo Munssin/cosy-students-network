@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 from .models import Message, Message_url, ResumeF, UsersProfile
+from .forms import UsersProfileForm
 from django.conf import settings
 from django.urls import reverse
 import os
@@ -14,7 +15,7 @@ from django.views.generic.detail import DetailView
 
 class ShowProfilePageView(DetailView):
     model = UsersProfile
-    template_name = 'auth/profile/user-profile.html'
+    template_name = 'profile/user-profile.html'
 
     def get_context_data(self, *args, **kwargs):
         users = UsersProfile.objects.all()
@@ -22,6 +23,18 @@ class ShowProfilePageView(DetailView):
         page_user = get_object_or_404(UsersProfile, id=self.kwargs['pk'])
         context['page_user'] = page_user
         return context
+
+def edit_profile(request):
+    userid = request.user.id
+    user_profile = get_object_or_404(UsersProfile, user_id=userid)
+
+    if request.method == "POST":
+        user_profile.name = request.POST.get("name")
+        user_profile.age = request.POST.get("age")
+        person.save()
+        return HttpResponseRedirect("user-profile")
+    else:
+        return render(request, 'profile/edit-profile.html', {'form': form})
 
 # Create your views here.
 @login_required(login_url='login')
@@ -59,7 +72,7 @@ def LoginPage(request):
         else: 
             return HttpResponse("Username or password is incorrect!")
     if request.user.is_authenticated:
-        return redirect('user_workplace')
+        return redirect('/')
 
     return render(request, "auth/index.html")
 
@@ -82,7 +95,7 @@ def user_workplace(request):
         new_ResumeF.save()
         return HttpResponseRedirect(request.path)
 
-    return render(request, 'auth/user-workplace.html', {'username': username})
+    return render(request, 'workplace/user-workplace.html', {'username': username})
 
 def send(request):
     message = request.POST.get('message')
@@ -151,3 +164,11 @@ def user_profile_my(request):
         return redirect(reverse('user_profile', args=[page_user.id]))
     else:
         return redirect('/')
+
+def settings_group(request):
+    if request.user.is_authenticated:
+        username = request.user.username
+    else:
+        return redirect('/')
+
+    return render(request, 'groupsettings/settings-groups.html')
