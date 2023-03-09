@@ -39,7 +39,7 @@
                     <div class="form-group-modal">
                         <div class="btn-pos">
                             <div class="position-set-large">
-                                <a class="btn btn-light-yellow modal-light-button" href="/user_profile/">Профiль<a>
+                                <a class="btn btn-light-yellow modal-light-button" href="/user_profile_my/">Профiль<a>
                                 <a class="btn btn-light-yellow modal-light-button" href="/user_workplace/">work_place<a>
                                 <button type="button" class="btn btn-light-yellow modal-light-button">Змінити пароль
                                 </button>
@@ -147,7 +147,7 @@ setInterval(function(){
             $("#chat_box_url").empty();
             for (var key in response.messages_url)
             {
-                var temp="<div class='speakermess'><b class='nickuser'>"+response.messages_url[key].user+"</b><p class='text-mess'>"+response.messages_url[key].value+"</p> </div>";
+                var temp="<div class='speakermess'><b class='nickuser'>"+response.messages_url[key].user+"</b><p class='text-mess'><a href="+response.messages_url[key].value+" target='_blank'>"+response.messages_url[key].value+"</a></p> </div>";
                 var temp2="<div class='usermess'><b class='nickusermess'>"+response.messages_url[key].user+"</b><p class='text-mess'>"+response.messages_url[key].value+"</p> </div>";
                 $("#chat_box_url").append(temp);
             }
@@ -207,6 +207,7 @@ setInterval(function(){
 },1000);
 })
 </script>
+
 
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="../../static/js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

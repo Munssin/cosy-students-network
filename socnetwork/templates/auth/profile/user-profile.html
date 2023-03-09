@@ -41,6 +41,43 @@
                             <div class="position-set-large">
                                 <a class="btn btn-light-yellow modal-light-button" href="/user_profile_my/">Профiль</a>
                                 <a class="btn btn-light-yellow modal-light-button" href="/user_workplace/">work_place</a>
+                                <button type="button" class="btn btn-light-yellow modal-light-button">Змінити пароль</button>
+                                    <a class="btn btn-light-yellow modal-light-button" href="/logout/">Вийти з акаунту</a>
+
+                            </div>
+                                <button type="button" class="btn btn-light-yellow small-btn-modal ">Назад
+                                </button>
+                             <div class="position-set-small">
+                                <button type="button" class="btn btn-light-yellow small-btn-modal right-pos">Далі
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-foot">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal center-modal fade" id="editprofilemodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-head">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
+                <button type="button" class="btn-close button-close" data-bs-dismiss="modal">x</button>
+                <hr class="line-modal">
+            </div>
+            <div class="modal-bod">
+                <form action="">
+                    <div class="form-group-modal">
+                        <div class="btn-pos">
+                            <div class="position-set-large">
+                                <a class="btn btn-light-yellow modal-light-button" href="/user_profile_my/">Профiль</a>
+                                <a class="btn btn-light-yellow modal-light-button" href="/user_workplace/">work_place</a>
                                 <button type="button" class="btn btn-light-yellow modal-light-button">Змінити пароль
                                 </button>
                                     <a class="btn btn-light-yellow modal-light-button" href="/logout/">Вийти з акаунту</a>
@@ -81,11 +118,19 @@
 
     <div class="image-avatar">
         <!--Фото користувача-->
-        <img src="https://picsum.photos/id/237/200/300" alt="" class="avatar">
+        {% if usersprofile.avatar %}
+            <img src="{{ usersprofile.avatar.url }}" alt="" class="avatar"><br><br>
+        {% else %}
+            <img src="https://media.discordapp.net/attachments/1028699884850794658/1083344804043292702/avatar.png?width=700&height=701" alt="" class="avatar"><br><br>
+        {% endif %}
         <div class="name-admin">
             <!-- cabinet-header стиль для  Ім'я Прізвище користувача         -->
-            <p class="cabinet-header"></p>
-            <h5 class="offline-online">online [Dont work]</h5>
+            <p class="cabinet-header">{{ usersprofile.user.username }}</p>
+            {% if usersprofile.user.is_authenticated %}
+                <h5 class="offline-online">Online</h5>
+            {% else %}
+                <h5 class="offline-online">Offline</h5>
+            {% endif %}
         </div>
     </div>
     <hr class="cabinet-hr-student">
@@ -95,15 +140,15 @@
     <div class="description-student">
         <br>
         <p class="text-cabinet">Пошта:</p>
-        <p class="text-cabinet-var">null@gmail.com:</p>
+        <p class="text-cabinet-var">{{ usersprofile.user.email }}</p>
         <p class="text-cabinet">Університет:</p>
-        <p class="text-cabinet-var">null</p>
+        <p class="text-cabinet-var">{{ usersprofile.university }}</p>
         <p class="text-cabinet">Про користувача:</p>
-        <p class="text-cabinet-var">I am an atom is a particle of matter that uniquely defines a chemical element.
-            An atom consists of a central nucleus that is surrounded by one or more negatively charged electons. The
-            nucleus is positively charged and contains one or more relatively
-            heavy particles known as protons and neutons.</p>
+        <p class="text-cabinet-var">{{ usersprofile.about }}</p>
         <p class="text-cabinet-var"></p>
+        <p class="text-cabinet">ID: {{ usersprofile.id }}</p>
+        <a href="" class="edit_profile_btn" data-bs-toggle="modal"
+                   data-bs-target="#editprofilemodal">Edit</a>
     </div>
 </div>
 

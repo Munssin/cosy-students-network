@@ -699,8 +699,8 @@ hr {
   position: fixed;
   width: 370px;
   height: 100%;
-  z-index: 1;
   background: #1F1F1F;
+  z-index: 1;
 }
 .container.pos-for-conteiner {
   margin-top: 50px;
@@ -1003,7 +1003,7 @@ hr {
   position: absolute;
   z-index: 2;
   transform: translateX(395px);
-  margin-top: 20px;
+  margin-top: 74px;
   width: 170px;
   height: 170px;
   border-radius: 50%;
@@ -1072,6 +1072,7 @@ hr {
   transform: translateX(5px);
   margin-top: -8px;
   font-size: 17px;
+  width: 1000px;
 }
 
 .content-admin {
@@ -2208,6 +2209,26 @@ body {
 
 .inputsandplaceholders {
   margin-top: 50px;
+}
+
+#tab-one-panel {
+  width: 750px;
+  pointer-events: auth;
+}
+
+#tab-two-panel {
+  width: 750px;
+  pointer-events: auth;
+}
+
+#tab-three-panel {
+  width: 750px;
+  pointer-events: auth;
+}
+
+#tab-four-panel {
+  width: 750px;
+  pointer-events: auth;
 }
 
 #tab-one:checked ~ .tabs #tab-one-label,
