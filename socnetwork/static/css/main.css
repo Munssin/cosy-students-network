@@ -1579,7 +1579,7 @@ buttonU {
   font-size: 20px;
   pointer-events: auto;
   padding: 33px 14px;
-  margin-left: -68px;
+  margin-left: -15px;
   width: 775px;
   height: 99px;
 }
@@ -1613,19 +1613,29 @@ buttonU {
   font-size: 20px;
   padding: 17px 50px;
   pointer-events: auto;
-  margin-left: 1016px;
+  margin-left: 932px;
 }
 
-.button-sendFile_2 {
+.button-sendF2 {
   position: absolute;
-  bottom: 15px;
+  bottom: 13px;
   color: #FFFFFF;
   background: #B1A10B;
   border-radius: 6px;
   font-size: 20px;
-  padding: 17px 50px;
+  padding: 20px 81px;
   pointer-events: auto;
-  margin-left: 1016px;
+  margin-left: 789px;
+}
+
+.button-sendF2:hover {
+  color: #FFFFFF;
+  background: #6a6006;
+}
+
+.button-sendF2:active {
+  color: #FFFFFF;
+  background: #353003;
 }
 
 .button-sendF_url {
@@ -1637,7 +1647,7 @@ buttonU {
   font-size: 20px;
   padding: 17px 50px;
   pointer-events: auto;
-  margin-left: 1016px;
+  margin-left: 932px;
 }
 
 .button-sendF:hover {
@@ -2162,7 +2172,7 @@ body {
   display: inline-block;
   overflow: auto;
   max-height: 592px;
-  width: 1230px;
+  width: 1220px;
   margin-left: -6%;
   margin-top: 93px;
   pointer-events: auto;
@@ -2181,9 +2191,9 @@ body {
 .chat_box_url {
   display: inline-block;
   overflow: auto;
-  max-height: 592px;
-  width: 1230px;
-  margin-left: -6%;
+  max-height: 595px;
+  width: 1220px;
+  margin-left: -16%;
   margin-top: 93px;
   pointer-events: auto;
 }
