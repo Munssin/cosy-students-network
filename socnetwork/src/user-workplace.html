@@ -45,7 +45,6 @@ title: General
                                         <input type="hidden" name="username" id="username" value="{{username}}"/>
                                         <input class="message" type="text" name="message" id="message" placeholder="Massage" />
                                         <input type="submit" value="Send" class="button-sendF">
-                                        <!--<input type="file" id="file" name="myfiles[]" class="button-addF" value="Add file" multiple>-->
                                     </form> 
                                 </div>
                         </div>
@@ -54,7 +53,8 @@ title: General
 
                         <form method="post" enctype="multipart/form-data">
                             {% csrf_token %}
-                            <input type="file" id="file" name="myfiles[]" class="button-addF" value="Add file" multiple>
+                            <label for="file">Выберите файл:</label>
+                            <input type="file" id="file" name="myfiles[]" class="button-addF" placeholder="Add File" value="Choose file">
                             <button type="submit" class="button-sendF2">Upload file</button>
                         </form>  
 

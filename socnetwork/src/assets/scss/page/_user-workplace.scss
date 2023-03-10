@@ -62,37 +62,38 @@
     index-z: 1;
 }
 
-.button-addF {
-        position: absolute;
+input[type="file"] {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+label[for="file"]::before {
+    position: absolute;
+  content: "Add File";
+  display: inline-block;
+  border: 1px solid #ccc;
+  cursor: pointer;
     bottom: 13px;
-    color: #B1A10B;
+    color: #FFFFFF;
     background: #B1A10B;
     border-radius: 6px;
-    font-size: 20px;
+    text-align: center;
+    font-size: 30px;
     pointer-events: auto;
     padding: 33px 14px;
     margin-left: -15px;
-    width: 775px;
+    width: 800px;
     height: 99px;
-    @media (max-width: 1640px) {
-        font-size: 18px;
-    }
-    @media (max-width: 1440px) {
-        font-size: 16px;
-    }
-
 }
-
-.button-addF:hover {
-    color: #FFFFFF;
-    background: #6a6006;
-}
-
-.button-addF:active {
+label[for="file"]:active::before {
     color: #FFFFFF;
     background: #353003;
 }
 
+label[for="file"]:hover::before {
+    color: #FFFFFF;
+    background: #6a6006;
+}
 .button-sendF {
     position: absolute;
     bottom: 15px;
@@ -107,14 +108,14 @@
 
 .button-sendF2 {
     position: absolute;
-    bottom: 13px;
+    bottom: 15px;
     color: #FFFFFF;
     background: #B1A10B;
     border-radius: 6px;
     font-size: 20px;
     padding: 20px 81px;
     pointer-events: auto;
-    margin-left: 789px;
+    margin-left: 723px;
 }
 
 .button-sendF2:hover {
