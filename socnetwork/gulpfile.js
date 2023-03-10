@@ -20,15 +20,15 @@ const srcPath = "src/"
 const path = {
       build: {
           html: "templates/auth",
-          html_workplace: "templates",
-          html_groupsettings: "templates",
+          html_workplace: "templates/profile",
+          html_groupsettings: "templates/profile",
           css: "static/css/" ,
           js: "static/js/",
       },
       src: {
           html: srcPath + "*.html",
-          html_workplace: srcPath + "workplace/*.html",
-          html_groupsettings: srcPath + "groupsettings/*.html",
+          html_workplace: srcPath + "user-workplace.html",
+          html_groupsettings: srcPath + "settings-groups.html",
           css: srcPath + "assets/scss/*.scss",
           js: srcPath + "assets/js/*.js",
       },

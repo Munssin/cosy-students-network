@@ -16,7 +16,7 @@
 <header class="header">
     <div class="header-container">
         <div class="header-main">
-            <a href="/socnetwork/static" class="header-logo">STUDENTFLY</a>
+            <a href="/" class="header-logo">STUDENTFLY</a>
             <nav class="header-nav">
                 <a href="" class="header-link">Про нас</a>
                 <a href="" class="header-link" data-bs-toggle="modal"
@@ -140,8 +140,7 @@
         <p class="text-cabinet-var"></p>
         <p class="text-cabinet">ID: {{ usersprofile.id }}</p>
         {% if user.id == usersprofile.user_id  %}
-            <a href="" class="edit_profile_btn" data-bs-toggle="modal"
-                       data-bs-target="#editprofilemodal">Edit</a>
+            <a href="../../edit_profile/" class="edit_profile_btn">Edit</a>
         {% endif %}
     </div>
 </div>

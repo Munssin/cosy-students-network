@@ -16,7 +16,7 @@
 <header class="header">
     <div class="header-container">
         <div class="header-main">
-            <a href="/socnetwork/static" class="header-logo">STUDENTFLY</a>
+            <a href="/" class="header-logo">STUDENTFLY</a>
             <nav class="header-nav">
                 <a href="" class="header-link">Про нас</a>
                 <a href="" class="header-link" data-bs-toggle="modal"
@@ -67,7 +67,18 @@
 
     <form action="{% url 'edit_profile' %}" method="POST" enctype="multipart/form-data" class="edit-profile-form">
         {% csrf_token %}
-        {{ form.as_p }}
+        <p>
+            <label>Введите обо мне</label><br>
+            <input type="text" name="about" />
+        </p>
+        <p>
+            <label>Введите университет</label><br>
+            <input type="text" name="university" />
+        </p>
+        <p>
+            <label>Аватарка</label><br>
+            <input type="file" accept="image/*" name="avatar-profile" required/>
+        </p>
         <input type="submit" value="Update" />
     </form>
 

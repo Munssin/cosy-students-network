@@ -6,7 +6,6 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 from .models import Message, Message_url, ResumeF, UsersProfile
-from .forms import UsersProfileForm
 from django.conf import settings
 from django.urls import reverse
 import os
@@ -29,12 +28,15 @@ def edit_profile(request):
     user_profile = get_object_or_404(UsersProfile, user_id=userid)
 
     if request.method == "POST":
-        user_profile.name = request.POST.get("name")
-        user_profile.age = request.POST.get("age")
-        person.save()
-        return HttpResponseRedirect("user-profile")
+        if request.POST.get("about"):
+            user_profile.about = request.POST.get("about")
+        if request.POST.get("university"):
+            user_profile.university = request.POST.get("university")
+        user_profile.avatar = request.FILES['avatar-profile']
+        user_profile.save()
+        return redirect(reverse('user_profile', args=[user_profile.id]))
     else:
-        return render(request, 'profile/edit-profile.html', {'form': form})
+        return render(request, 'profile/edit-profile.html')
 
 # Create your views here.
 @login_required(login_url='login')
@@ -95,7 +97,7 @@ def user_workplace(request):
         new_ResumeF.save()
         return HttpResponseRedirect(request.path)
 
-    return render(request, 'workplace/user-workplace.html', {'username': username})
+    return render(request, 'profile/user-workplace.html', {'username': username})
 
 def send(request):
     message = request.POST.get('message')
@@ -171,4 +173,4 @@ def settings_group(request):
     else:
         return redirect('/')
 
-    return render(request, 'groupsettings/settings-groups.html')
+    return render(request, 'profile/settings-groups.html')
