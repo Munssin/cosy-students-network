@@ -706,19 +706,19 @@ display: inline-block;
 
 #tab-one-panel{
     width: 750px;
-    pointer-events: auth;
+    pointer-events: auto;
 }
 #tab-two-panel{
     width: 750px;
-    pointer-events: auth;
+    pointer-events: auto;
 }
 #tab-three-panel{
     width: 750px;
-    pointer-events: auth;
+    pointer-events: auto;
 }
 #tab-four-panel{
     width: 750px;
-    pointer-events: auth;
+    pointer-events: auto;
 }
 
 #tab-one:checked ~ .tabs #tab-one-label,
