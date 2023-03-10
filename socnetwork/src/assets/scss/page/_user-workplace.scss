@@ -62,37 +62,38 @@
     index-z: 1;
 }
 
-.button-addF {
+input[type="file"] {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+label[for="file"]::before {
     position: absolute;
+  content: "Add File";
+  display: inline-block;
+  border: 1px solid #ccc;
+  cursor: pointer;
     bottom: 13px;
-    color: #B1A10B;
+    color: #FFFFFF;
     background: #B1A10B;
     border-radius: 6px;
-    font-size: 20px;
+    text-align: center;
+    font-size: 30px;
     pointer-events: auto;
     padding: 33px 14px;
-    margin-left: -68px;
-    width: 775px;
+    margin-left: -15px;
+    width: 800px;
     height: 99px;
-    @media (max-width: 1640px) {
-        font-size: 18px;
-    }
-    @media (max-width: 1440px) {
-        font-size: 16px;
-    }
-
 }
-
-.button-addF:hover {
-    color: #FFFFFF;
-    background: #6a6006;
-}
-
-.button-addF:active {
+label[for="file"]:active::before {
     color: #FFFFFF;
     background: #353003;
 }
 
+label[for="file"]:hover::before {
+    color: #FFFFFF;
+    background: #6a6006;
+}
 .button-sendF {
     position: absolute;
     bottom: 15px;
@@ -102,19 +103,29 @@
     font-size: 20px;
     padding: 17px 50px;
     pointer-events: auto;
-    margin-left: 1016px;
+    margin-left: 932px;
 }
 
-.button-sendFile_2 {
+.button-sendF2 {
     position: absolute;
     bottom: 15px;
     color: #FFFFFF;
     background: #B1A10B;
     border-radius: 6px;
     font-size: 20px;
-    padding: 17px 50px;
+    padding: 20px 81px;
     pointer-events: auto;
-    margin-left: 1016px;
+    margin-left: 723px;
+}
+
+.button-sendF2:hover {
+    color: #FFFFFF;
+    background: #6a6006;
+}
+
+.button-sendF2:active {
+    color: #FFFFFF;
+    background: #353003;
 }
 
 .button-sendF_url {
@@ -126,7 +137,7 @@
     font-size: 20px;
     padding: 17px 50px;
     pointer-events: auto;
-    margin-left: 1016px;
+    margin-left: 932px;
 }
 
 .button-sendF:hover {
@@ -462,17 +473,6 @@ redactor {
     position: relative;
     index-z: 0;
 }
-
-.formG {
-    float: right;
-    width: 1050px;
-    height: 670px;
-    background: #2E2E2E;
-    padding: 30px 50px;
-    margin-right: 75px;
-    margin-top: -40px;
-}
-
 .formG .form-group {
     margin-bottom: 25px;
 }
@@ -489,15 +489,6 @@ redactor {
     font-weight: 300;
     color: #FFFFFF;
     margin-bottom: 30px;
-}
-
-.sidebarG {
-    background: #242424;
-    width: 900px;
-    height: 1px;
-    margin-left: 460px;
-    transform: translateY(230px);
-    index-z: 1;
 }
 
 .listG-button {
@@ -668,7 +659,7 @@ body {
     display: inline-block;
     overflow: auto;
     max-height: 592px;
-    width: 1230px;
+    width: 1220px;
     margin-left: -6%;
     margin-top: 93px;
     pointer-events: auto;
@@ -685,11 +676,11 @@ body {
 }
 
 .chat_box_url{
-    display: inline-block;
+display: inline-block;
     overflow: auto;
-    max-height: 592px;
-    width: 1230px;
-    margin-left: -6%;
+    max-height: 595px;
+    width: 1220px;
+    margin-left: -16%;
     margin-top: 93px;
     pointer-events: auto;
 }
@@ -715,19 +706,19 @@ body {
 
 #tab-one-panel{
     width: 750px;
-    pointer-events: auth;
+    pointer-events: auto;
 }
 #tab-two-panel{
     width: 750px;
-    pointer-events: auth;
+    pointer-events: auto;
 }
 #tab-three-panel{
     width: 750px;
-    pointer-events: auth;
+    pointer-events: auto;
 }
 #tab-four-panel{
     width: 750px;
-    pointer-events: auth;
+    pointer-events: auto;
 }
 
 #tab-one:checked ~ .tabs #tab-one-label,

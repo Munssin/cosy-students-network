@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 from .models import Message, Message_url, ResumeF, UsersProfile
+from .forms import UsersProfileForm
 from django.conf import settings
 from django.urls import reverse
 import os
