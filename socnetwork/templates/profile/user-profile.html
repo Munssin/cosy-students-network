@@ -16,7 +16,7 @@
 <header class="header">
     <div class="header-container">
         <div class="header-main">
-            <a href="/socnetwork/static" class="header-logo">STUDENTFLY</a>
+            <a href="/" class="header-logo">STUDENTFLY</a>
             <nav class="header-nav">
                 <a href="" class="header-link">Про нас</a>
                 <a href="" class="header-link" data-bs-toggle="modal"
@@ -39,8 +39,8 @@
                     <div class="form-group-modal">
                         <div class="btn-pos">
                             <div class="position-set-large">
-                                <a class="btn btn-light-yellow modal-light-button" href="/user_profile/">Профiль<a>
-                                <a class="btn btn-light-yellow modal-light-button" href="/user_workplace/">work_place<a>
+                                <a class="btn btn-light-yellow modal-light-button" href="/user_profile_my/">Профiль<a>
+                                <a class="btn btn-light-yellow modal-light-button" href="/">work_place<a>
                                 <button type="button" class="btn btn-light-yellow modal-light-button">Змінити пароль
                                 </button>
                                     <a class="btn btn-light-yellow modal-light-button" href="/logout/">Вийти з акаунту</a>
@@ -51,6 +51,35 @@
                                 <button type="button" class="btn btn-light-yellow small-btn-modal right-pos">Далі
                                 </button>
                             </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-foot">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal center-modal fade" id="editprofilemodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-head">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
+                <button type="button" class="btn-close button-close" data-bs-dismiss="modal">x</button>
+                <hr class="line-modal">
+            </div>
+            <div class="modal-bod">
+                <form action="">
+                    <div class="form-group-modal">
+                        <div class="btn-pos">
+                            <form action="{% url 'edit_profile' %}" method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                {{ form }}
+                                <input type="submit" value="Submit">
+                            </form>
                         </div>
                     </div>
                 </form>
@@ -76,15 +105,24 @@
                 </ul>
             </div>
             <hr class="sidebar">
-            <button type="button" class="button-exit">Налаштування</button>
+            <a type="button" class="button-exit" href="../../settings_group/"> Налаштування</a>
         </div>
+
     <div class="image-avatar">
         <!--Фото користувача-->
-        <img src="https://picsum.photos/id/237/200/300" alt="" class="avatar">
+        {% if usersprofile.avatar %}
+            <img src="{{ usersprofile.avatar.url }}" alt="" class="avatar"><br><br>
+        {% else %} 
+            <img src="https://media.discordapp.net/attachments/1028699884850794658/1083344804043292702/avatar.png?width=700&height=701" alt="" class="avatar"><br><br>
+        {% endif %}
         <div class="name-admin">
             <!-- cabinet-header стиль для  Ім'я Прізвище користувача         -->
-            <p class="cabinet-header">{username:}</p>
-            <h5 class="offline-online">online</h5>
+            <p class="cabinet-header">{{ usersprofile.user.username }}</p>
+            {% if usersprofile.user.is_authenticated %}
+                <h5 class="offline-online">Online</h5>
+            {% else %}
+                <h5 class="offline-online">Offline</h5>
+            {% endif %}
         </div>
     </div>
     <hr class="cabinet-hr-student">
@@ -94,18 +132,18 @@
     <div class="description-student">
         <br>
         <p class="text-cabinet">Пошта:</p>
-        <p class="text-cabinet-var">null@gmail.com:</p>
+        <p class="text-cabinet-var">{{ usersprofile.user.email }}</p>
         <p class="text-cabinet">Університет:</p>
-        <p class="text-cabinet-var">null</p>
+        <p class="text-cabinet-var">{{ usersprofile.university }}</p>
         <p class="text-cabinet">Про користувача:</p>
-        <p class="text-cabinet-var">I am an atom is a particle of matter that uniquely defines a chemical element.
-            An atom consists of a central nucleus that is surrounded by one or more negatively charged electons. The
-            nucleus is positively charged and contains one or more relatively
-            heavy particles known as protons and neutons.</p>
+        <p class="text-cabinet-var">{{ usersprofile.about }}</p>
         <p class="text-cabinet-var"></p>
+        <p class="text-cabinet">ID: {{ usersprofile.id }}</p>
+        {% if user.id == usersprofile.user_id  %}
+            <a href="../../edit_profile/" class="edit_profile_btn">Edit</a>
+        {% endif %}
     </div>
 </div>
-
 
 <script>
 $(document).ready(function(){
@@ -170,7 +208,7 @@ setInterval(function(){
             $("#chat_box_url").empty();
             for (var key in response.messages_url)
             {
-                var temp="<div class='speakermess'><b class='nickuser'>"+response.messages_url[key].user+"</b><p class='text-mess'>"+response.messages_url[key].value+"</p> </div>";
+                var temp="<div class='speakermess'><b class='nickuser'>"+response.messages_url[key].user+"</b><p class='text-mess'><a href="+response.messages_url[key].value+" target='_blank'>"+response.messages_url[key].value+"</a></p> </div>";
                 var temp2="<div class='usermess'><b class='nickusermess'>"+response.messages_url[key].user+"</b><p class='text-mess'>"+response.messages_url[key].value+"</p> </div>";
                 $("#chat_box_url").append(temp);
             }
@@ -230,6 +268,7 @@ setInterval(function(){
 },1000);
 })
 </script>
+
 
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="../../static/js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

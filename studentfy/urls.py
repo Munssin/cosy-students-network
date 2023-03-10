@@ -22,21 +22,11 @@ from socnetwork import views
 
 urlpatterns = [
     path('', include('socnetwork.urls')),
-    path('user_profile/', views.user_profile, name='user_profile'),
-    path('user_workplace/', views.user_workplace, name='user_workplace'),
-    path('user_profile/', views.user_profile, name='user_profile'),
+    path("", views.user_workplace, name='user_workplace'),
     path('admin/', admin.site.urls),
-    path("", views.LoginPage, name="login"),
+    path("login/", views.LoginPage, name="login"),
     path("home/", views.HomePage, name="home"),
     path("logout/", views.LogoutPage, name="logout"),
     path("signup/", views.LoginPage, name="signup"),
-
-    path('reset_password/', auth_views.PasswordResetView.as_view(template_name="login/password_reset_form.html"),name="reset_password"),
-
-    path('reset_password_sent/', auth_views.PasswordResetDoneView.as_view(template_name="login/password_reset_done.html"),name="password_reset_done"),
-
-    path('reset/<uidb64>/<token>', auth_views.PasswordResetConfirmView.as_view(template_name="login/password_reset_cofirm.html"),name="password_reset_confirm"),
-
-    path('reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(template_name="login/password_reset_complete.html"),name="pasword_reset_complete"),
 
 ]
