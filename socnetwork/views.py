@@ -3,6 +3,9 @@ from django.shortcuts import render,HttpResponse,redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from .models import Group
 
 # Create your views here.
 @login_required(login_url='login')
@@ -46,3 +49,28 @@ def LoginPage(request):
 def LogoutPage(request):
     logout(request)
     return redirect('login')
+
+@login_required
+def create_group(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        members = request.POST.getlist('members')
+
+        # перевірка чи введено назву групи
+        if not name:
+            return render(request, 'create_group.html', {'error': 'Please enter a group name.'})
+
+        # створення нової групи
+        group = Group.objects.create(name=name)
+
+        # додавання користувачів до групи
+        if members:
+            for member_id in members:
+                member = User.objects.get(id=member_id)
+                group.members.add(member)
+
+        # перенаправлення на сторінку зі списком груп
+        return redirect('groups')
+
+    # відображення форми для створення нової групи
+    return render(request, 'create_group.html')
