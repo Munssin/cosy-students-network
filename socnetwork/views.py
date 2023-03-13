@@ -6,7 +6,6 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 from .models import Message, Message_url, ResumeF, UsersProfile
-from .forms import UsersProfileForm
 from django.conf import settings
 from django.urls import reverse
 import os
@@ -175,3 +174,10 @@ def settings_group(request):
         return redirect('/')
 
     return render(request, 'profile/settings-groups.html')
+
+def download(request, document_id):
+    document = get_object_or_404(ResumeF, pk=document_id)
+    with open(f'{settings.BASE_DIR}{document.file}', 'rb') as fh:
+        response = HttpResponse(fh.read(), content_type="application/adminupload")
+        response['Content-Disposition'] = f'inline; filename={document.file_name}'
+        return response

@@ -116,7 +116,7 @@
                             <label for="file">Выберите файл:</label>
                             <input type="file" id="file" name="myfiles[]" class="button-addF" placeholder="Add File" value="Choose file">
                             <button type="submit" class="button-sendF2">Upload file</button>
-                        </form>  
+                        </form>
 
                         <div class="refuge-group" id="refuge-group">
 
@@ -314,7 +314,7 @@ setInterval(function(){
             $("#refuge-group").empty();
             for (var key in response.files)
             {
-                var temp="<ul class='for-ulRG'><li><button type='buttonU' class='listR-button width-Usettings' data-toggle='modal' data-target='#staticBackdrop'><div class='square'>T</div><h2 class='text'>"+response.files[key].file_name+"</h2><p class='text-R'>mb</p><p class='text-R'>"+response.files[key].user+"</p></button></li></ul>";
+                var temp="<ul class='for-ulRG'><li><a href='download/"+response.files[key].id+"/'><button type='buttonU' class='listR-button width-Usettings' data-toggle='modal' data-target='#staticBackdrop'><div class='square'>T</div><h2 class='text'>"+response.files[key].file_name+"</h2><p class='text-R'>mb</p><p class='text-R'>"+response.files[key].user+"</p></button></a></li></ul>";
                 $("#refuge-group").append(temp);
             }
         },

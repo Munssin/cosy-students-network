@@ -2172,7 +2172,7 @@ body {
 .chat_box {
   display: inline-block;
   overflow: auto;
-  max-height: 592px;
+  max-height: 595px;
   width: 1220px;
   margin-left: -6%;
   margin-top: 93px;
@@ -2194,7 +2194,7 @@ body {
   overflow: auto;
   max-height: 595px;
   width: 1220px;
-  margin-left: -16%;
+  margin-left: -9%;
   margin-top: 93px;
   pointer-events: auto;
 }
@@ -2216,26 +2216,6 @@ body {
 
 .inputsandplaceholders {
   margin-top: 50px;
-}
-
-#tab-one-panel {
-  width: 750px;
-  pointer-events: auth;
-}
-
-#tab-two-panel {
-  width: 750px;
-  pointer-events: auth;
-}
-
-#tab-three-panel {
-  width: 750px;
-  pointer-events: auth;
-}
-
-#tab-four-panel {
-  width: 750px;
-  pointer-events: auth;
 }
 
 #tab-one:checked ~ .tabs #tab-one-label,

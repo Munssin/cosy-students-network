@@ -656,9 +656,9 @@ body {
 }
 
 .chat_box{
-    display: inline-block;
+display: inline-block;
     overflow: auto;
-    max-height: 592px;
+    max-height: 595px;
     width: 1220px;
     margin-left: -6%;
     margin-top: 93px;
@@ -680,7 +680,7 @@ display: inline-block;
     overflow: auto;
     max-height: 595px;
     width: 1220px;
-    margin-left: -16%;
+    margin-left: -9%;
     margin-top: 93px;
     pointer-events: auto;
 }
@@ -702,23 +702,6 @@ display: inline-block;
 
 .inputsandplaceholders{
     margin-top: 50px
-}
-
-#tab-one-panel{
-    width: 750px;
-    pointer-events: auto;
-}
-#tab-two-panel{
-    width: 750px;
-    pointer-events: auto;
-}
-#tab-three-panel{
-    width: 750px;
-    pointer-events: auto;
-}
-#tab-four-panel{
-    width: 750px;
-    pointer-events: auto;
 }
 
 #tab-one:checked ~ .tabs #tab-one-label,
