@@ -8,6 +8,7 @@
     <title>General</title>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
     <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     
@@ -18,15 +19,15 @@
         <div class="header-main">
             <a href="/" class="header-logo">STUDENTFLY</a>
             <nav class="header-nav">
-                <a href="" class="header-link">Про нас</a>
-                <a href="" class="header-link" data-bs-toggle="modal"
-                   data-bs-target="#modal">Налаштування</a>
+                <a href="" class="header-link margin"></a>
+                <a href="" class="header-link margin-two" data-bs-toggle="modal"
+                   data-bs-target="#modal"><span id="boot-icon" class="bi bi-gear" style="font-size: 29px; color: rgb(255, 255, 255);"></span></a>
             </nav>
         </div>
     </div>
 </header>
 
-<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal adapt fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-head">
@@ -64,267 +65,275 @@
 
 
 <div class="description-user">
-    <div class="container">
-        <div class="dropdown">
-            <button type="buttonA" class="listA-button width-Asettings" data-bs-toggle="dropdown" aria-expanded="false">
-                ПМ-12 <p class="text-A">21 users</p></button>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="user-workplace.html">Дискретна</a></li>
-                <li><a class="dropdown-item" href="user-workplace.html">Мат аналіз</a></li>
-                <li><a class="dropdown-item" href="user-workplace.html">Фізика</a></li>
-            </ul>
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox"/>
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+        <div class="container menu__box">
+            <div class="dropdown">
+                <button type="buttonA" class="listA-button width-Asettings position-ad" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                    ПМ-12 <p class="text-A">21 users</p></button>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="user-workplace.html">Дискретна</a></li>
+                    <li><a class="dropdown-item" href="user-workplace.html">Мат аналіз</a></li>
+                    <li><a class="dropdown-item" href="user-workplace.html">Фізика</a></li>
+                </ul>
+            </div>
+            <hr class="sidebar down">
+        <a type="button" class="button-exit adapt-position down down-for-set" href="settings_group/">Налаштування</a>
         </div>
-        <hr class="sidebar">
-        <a type="button" class="button-exit"  href="settings_group/">Налаштування</a>
     </div>
-    <!-- Кнопки таби-->
-    <div class="formCH">
-        <div class="worko-tabs">
-            <input class="state" type="radio" title="tab-one" name="tabs-state" id="tab-one" checked />
-            <input class="state" type="radio" title="tab-two" name="tabs-state" id="tab-two" />
-            <input class="state" type="radio" title="tab-three" name="tabs-state" id="tab-three" />
-            <input class="state" type="radio" title="tab-four" name="tabs-state" id="tab-four" />
-            <div class="tabs flex-tabs">
-                <label for="tab-one" id="tab-one-label" class="tab">Чат</label>
-                <label for="tab-two" id="tab-two-label" class="tab">Сховище</label>
-                <label for="tab-three" id="tab-three-label" class="tab">Календар</label>
-                <label for="tab-four" id="tab-four-label" class="tab">Посилання</label>
+        <!-- Кнопки таби-->
+        <div class="formCH">
+            <div class="worko-tabs">
+                <input class="state" type="radio" title="tab-one" name="tabs-state" id="tab-one" checked/>
+                <input class="state" type="radio" title="tab-two" name="tabs-state" id="tab-two"/>
+                <input class="state" type="radio" title="tab-three" name="tabs-state" id="tab-three"/>
+                <input class="state" type="radio" title="tab-four" name="tabs-state" id="tab-four"/>
+                <div class="tabs flex-tabs">
+                    <label for="tab-one" id="tab-one-label" class="tab">Чат</label>
+                    <label for="tab-two" id="tab-two-label" class="tab">Сховище</label>
+                    <label for="tab-three" id="tab-three-label" class="tab">Календар</label>
+                    <label for="tab-four" id="tab-four-label" class="tab">Посилання</label>
 
-                <div class="panels">
-                    <div id="tab-one-panel" class="panel active">
-                        <div id="tab_1" class="tab_1">
-                            <div id="chat_box" class="chat_box">
+                    <div class="panels-other">
+                        <div id="tab-one-panel" class="panel active">
+                            <div id="tab_1" class="tab_1">
+                                <div id="chat_box" class="chat_box">
 
-                            </div> 
+                                </div>
 
-                            <hr class="sidebarCH">
+                                <hr class="sidebarCH">
                                 <div class="inputsandplaceholders">
                                     <form id="post-form" method="POST" class="post-form" enctype="multipart/form-data">
                                         {% csrf_token %}
                                         <input type="hidden" name="username" id="username" value=""/>
-                                        <input class="message" type="text" name="message" id="message" placeholder="Massage" />
+                                        <input class="message" type="text" name="message" id="message"
+                                               placeholder="Massage"/>
                                         <input type="submit" value="Send" class="button-sendF">
-                                    </form> 
+                                    </form>
                                 </div>
+                            </div>
                         </div>
-                    </div>
-                    <div id="tab-two-panel" class="panel">
+                        <div id="tab-two-panel" class="panel">
 
-                        <form method="post" enctype="multipart/form-data">
-                            {% csrf_token %}
-                            <label for="file">Выберите файл:</label>
-                            <input type="file" id="file" name="myfiles[]" class="button-addF" placeholder="Add File" value="Choose file">
-                            <button type="submit" class="button-sendF2">Upload file</button>
-                        </form>  
+                            <form method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <label for="file">Выберите файл:</label>
+                                <input type="file" id="file" name="myfiles[]" class="button-addF" placeholder="Add File"
+                                       value="Choose file">
+                                <button type="submit" class="button-sendF2">Upload file</button>
+                            </form>
 
-                        <div class="refuge-group" id="refuge-group">
+                            <div class="refuge-group" id="refuge-group">
 
+                            </div>
                         </div>
-                    </div>
-                    <div id="tab-three-panel" class="panel">
-                        <div class="button-calendar">
+                        <div id="tab-three-panel" class="panel">
+                            <div class="button-calendar">
 
+                            </div>
                         </div>
-                    </div>
-                    <div id="tab-four-panel" class="panel">
-                        <hr class="sidebarCH">
+                        <div id="tab-four-panel" class="panel">
+                            <hr class="sidebarCH">
                             <div id="chat_box_url" class="chat_box_url">
 
-                            </div> 
+                            </div>
 
                             <hr class="sidebarCH">
-                                <div class="inputsandplaceholders">
-                                    <form id="post-form_url">
-                                        {% csrf_token %}
-                                        <input type="hidden" name="username" id="username" value=""/>
-                                        <input class="message_url" type="message_url" name="message_url" id="message_url" placeholder="url" />
-                                        <input type="submit" value="Send" class="button-sendF_url">
-                                    </form>  
-                                </div>
+                            <div class="inputsandplaceholders">
+                                <form id="post-form_url">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="username" id="username" value=""/>
+                                    <input class="message_url" type="message_url" name="message_url" id="message_url"
+                                           placeholder="url"/>
+                                    <input type="submit" value="Send" class="button-sendF_url">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Модальне вікно Створення групи-->
+        <div class="modal center-modal fade" id="CreationModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-head">
+                        <h5 class="modal-title" id="exampleModalLabel">Створити групу</h5>
+                        <button type="button" class="btn-close button-close" data-bs-dismiss="modal">x</button>
+                        <hr class="line-modal">
+                    </div>
+                    <div class="modal-bod">
+                        <form action="">
+                            <div class="creation-group">
+                                <label class="label l-position top-label">Назва групи:</label>
+                                <input class="input-name-adm pos-input-creation" placeholder="  Введіть назву групи"
+                                       aria-label="Name"/>
+                            </div>
+                            <div class="creation-group">
+                                <label class="label l-position top-label">Ім'я старости:</label>
+                                <input class="input-name-adm pos-input-creation" placeholder="  Введіть ім'я старости"
+                                       aria-label="Name"/>
+                            </div>
+                            <div class="creation-group">
+                                <label class="label l-position top-label">Електронна пошта:</label>
+                                <input class="input-name-adm pos-input-creation"
+                                       placeholder="  Введіть електронну пошту"
+                                       aria-label="Name"/>
+                            </div>
+                            <div class="creation-group">
+                                <label class="label l-position top-label">Пароль:</label>
+                                <input class="input-name-adm pos-input-creation" placeholder="  Введіть пароль"
+                                       aria-label="Name"/>
+                            </div>
+                            <div class="creation-group">
+                                <label class="label l-position top-label">Повторіть пароль:</label>
+                                <input class="input-name-adm pos-input-creation" placeholder="  Введіть пароль знову"
+                                       aria-label="Name"/>
+                            </div>
+                            <div class="btn-pos positionForCreationButton">
+                                <button type="button" class="btn btn-light-yellow small-btn-modal ">Назад
+                                </button>
+                                <button type="button" class="btn btn-light-yellow small-btn-modal right-pos">Далі
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="modal-foot">
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!--Модальне вікно Створення групи-->
-    <div class="modal center-modal fade" id="CreationModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-head">
-                    <h5 class="modal-title" id="exampleModalLabel">Створити групу</h5>
-                    <button type="button" class="btn-close button-close" data-bs-dismiss="modal">x</button>
-                    <hr class="line-modal">
-                </div>
-                <div class="modal-bod">
-                    <form action="">
-                        <div class="creation-group">
-                            <label class="label l-position top-label">Назва групи:</label>
-                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть назву групи"
-                                   aria-label="Name"/>
-                        </div>
-                        <div class="creation-group">
-                            <label class="label l-position top-label">Ім'я старости:</label>
-                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть ім'я старости"
-                                   aria-label="Name"/>
-                        </div>
-                        <div class="creation-group">
-                            <label class="label l-position top-label">Електронна пошта:</label>
-                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть електронну пошту"
-                                   aria-label="Name"/>
-                        </div>
-                        <div class="creation-group">
-                            <label class="label l-position top-label">Пароль:</label>
-                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть пароль"
-                                   aria-label="Name"/>
-                        </div>
-                        <div class="creation-group">
-                            <label class="label l-position top-label">Повторіть пароль:</label>
-                            <input class="input-name-adm pos-input-creation" placeholder="  Введіть пароль знову"
-                                   aria-label="Name"/>
-                        </div>
-                        <div class="btn-pos positionForCreationButton">
-                            <button type="button" class="btn btn-light-yellow small-btn-modal ">Назад
-                            </button>
-                            <button type="button" class="btn btn-light-yellow small-btn-modal right-pos">Далі
-                            </button>
-                        </div>
-                    </form>
+    <script>
+        $(document).ready(function () {
 
-                </div>
-                <div class="modal-foot">
+            setInterval(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: "/getMessages/",
+                    data: {
+                        username: $('#username').val(),
+                    },
+                    success: function (response) {
+                        console.log(response);
+                        $("#chat_box").empty();
+                        for (var key in response.messages) {
+                            var temp = "<div class='speakermess'><b class='nickuser'>" + response.messages[key].user + "</b><p class='text-mess'>" + response.messages[key].value + "</p> </div>";
+                            var temp2 = "<div class='usermess'><b class='nickusermess'>" + response.messages[key].user + "</b><p class='text-mess'>" + response.messages[key].value + "</p> </div>";
+                            $("#chat_box").append(temp);
+                        }
+                    },
+                    error: function (response) {
+                        alert('An error occured')
+                    }
+                });
+            }, 1000);
+        })
+    </script>
 
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    <script type="text/javascript">
+        $(document).on('submit', '#post-form_url', function (e) {
+            e.preventDefault();
 
-<script>
-$(document).ready(function(){
+            $.ajax({
+                type: 'POST',
+                url: '/send_url/',
+                data: {
+                    username: $('#username').val(),
+                    message_url: $('#message_url').val(),
+                    csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
+                },
+                success: function (data) {
+                    //alert(data)
+                }
+            });
+            document.getElementById('message_url').value = ''
+        });
+    </script>
 
-setInterval(function(){
-    $.ajax({
-        type: 'GET',
-        url : "/getMessages/",
-        data:{
-            username:$('#username').val(),
-        },
-        success: function(response){
-            console.log(response);
-            $("#chat_box").empty();
-            for (var key in response.messages)
-            {
-                var temp="<div class='speakermess'><b class='nickuser'>"+response.messages[key].user+"</b><p class='text-mess'>"+response.messages[key].value+"</p> </div>";
-                var temp2="<div class='usermess'><b class='nickusermess'>"+response.messages[key].user+"</b><p class='text-mess'>"+response.messages[key].value+"</p> </div>";
-                $("#chat_box").append(temp);
-            }
-        },
-        error: function(response){
-            alert('An error occured')
-        }
-    });
-},1000);
-})
-</script>
+    <script>
+        $(document).ready(function () {
 
-<script type="text/javascript">
-  $(document).on('submit','#post-form_url',function(e){
-    e.preventDefault();
+            setInterval(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: "/getMessages_url/",
+                    data: {
+                        username: $('#username').val(),
+                    },
+                    success: function (response) {
+                        console.log(response);
+                        $("#chat_box_url").empty();
+                        for (var key in response.messages_url) {
+                            var temp = "<div class='speakermess'><b class='nickuser'>" + response.messages_url[key].user + "</b><p class='text-mess'><a href=" + response.messages_url[key].value + " target='_blank'>" + response.messages_url[key].value + "</a></p> </div>";
+                            var temp2 = "<div class='usermess'><b class='nickusermess'>" + response.messages_url[key].user + "</b><p class='text-mess'>" + response.messages_url[key].value + "</p> </div>";
+                            $("#chat_box_url").append(temp);
+                        }
+                    },
+                    error: function (response) {
+                        alert('An error occured')
+                    }
+                });
+            }, 1000);
+        })
+    </script>
 
-    $.ajax({
-      type:'POST',
-      url:'/send_url/',
-      data:{
-          username:$('#username').val(),
-          message_url:$('#message_url').val(),
-          csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
-      },
-      success: function(data){
-         //alert(data)
-      }
-    });
-    document.getElementById('message_url').value = ''
-  });
-</script>
+    <script type="text/javascript">
+        $(document).on('submit', '#post-form', function (e) {
+            e.preventDefault();
 
-<script>
-$(document).ready(function(){
+            $.ajax({
+                type: 'POST',
+                url: '/send/',
+                data: {
+                    username: $('#username').val(),
+                    message: $('#message').val(),
+                    file: $('#file').val(),
+                    csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
+                },
+                success: function (data) {
+                    //alert(data)
+                }
+            });
+            document.getElementById('message').value = ''
+        });
+    </script>
 
-setInterval(function(){
-    $.ajax({
-        type: 'GET',
-        url : "/getMessages_url/",
-        data:{
-            username:$('#username').val(),
-        },
-        success: function(response){
-            console.log(response);
-            $("#chat_box_url").empty();
-            for (var key in response.messages_url)
-            {
-                var temp="<div class='speakermess'><b class='nickuser'>"+response.messages_url[key].user+"</b><p class='text-mess'><a href="+response.messages_url[key].value+" target='_blank'>"+response.messages_url[key].value+"</a></p> </div>";
-                var temp2="<div class='usermess'><b class='nickusermess'>"+response.messages_url[key].user+"</b><p class='text-mess'>"+response.messages_url[key].value+"</p> </div>";
-                $("#chat_box_url").append(temp);
-            }
-        },
-        error: function(response){
-            alert('An error occured')
-        }
-    });
-},1000);
-})
-</script>
+    <script>
+        $(document).ready(function () {
 
-<script type="text/javascript">
-  $(document).on('submit','#post-form',function(e){
-    e.preventDefault();
-
-    $.ajax({
-      type:'POST',
-      url:'/send/',
-      data:{
-          username:$('#username').val(),
-          message:$('#message').val(),
-          file:$('#file').val(),
-          csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
-      },
-      success: function(data){
-         //alert(data)
-      }
-    });
-    document.getElementById('message').value = ''
-  });
-</script>
-
-<script>
-$(document).ready(function(){
-
-setInterval(function(){
-    $.ajax({
-        type: 'GET',
-        url : "/getFiles/",
-        data:{
-            files:$('#files').val(),
-        },
-        success: function(response){
-            console.log(response);
-            $("#refuge-group").empty();
-            for (var key in response.files)
-            {
-                var temp="<ul class='for-ulRG'><li><button type='buttonU' class='listR-button width-Usettings' data-toggle='modal' data-target='#staticBackdrop'><div class='square'>T</div><a href='' target='_blank' class='text'>"+response.files[key].file_name+"</a><p class='text-R'>mb</p><p class='text-R'>"+response.files[key].user+"</p></button></li></ul>";
-                $("#refuge-group").append(temp);
-            }
-        },
-        error: function(response){
-            alert('An error occured')
-        }
-    });
-},1000);
-})
-</script>
+            setInterval(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: "/getFiles/",
+                    data: {
+                        files: $('#files').val(),
+                    },
+                    success: function (response) {
+                        console.log(response);
+                        $("#refuge-group").empty();
+                        for (var key in response.files) {
+                            var temp = "<ul class='for-ulRG'><li><button type='buttonU' class='listR-button width-Usettings' data-toggle='modal' data-target='#staticBackdrop'><div class='square'>T</div><h2 class='text'>" + response.files[key].file_name + "</h2><p class='text-R'>mb</p><p class='text-R'>" + response.files[key].user + "</p></button></li></ul>";
+                            $("#refuge-group").append(temp);
+                        }
+                    },
+                    error: function (response) {
+                        alert('An error occured')
+                    }
+                });
+            }, 1000);
+        })
+    </script>
 
 
 

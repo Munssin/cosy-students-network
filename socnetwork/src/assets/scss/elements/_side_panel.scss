@@ -5,20 +5,44 @@
   background: #1F1F1F;
   z-index: 1;
 
-  &.pos-for-conteiner{
+  &.pos-for-conteiner {
     margin-top: 50px;
   }
 
+  &.menu__box {
+    @media(max-width: 1024px) {
+      display: block;
+      position: fixed;
+      visibility: hidden;
+      top: 0;
+      left: -100%;
+      margin: 0;
+      text-align: center;
+      box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+      width: 100%;
+    }
+
+  }
+
+
 }
+
 
 .sidebar {
   position: absolute;
-  bottom: 100px;
+  bottom: 120px;
   width: 100%;
   height: 1px;
   background: white;
   border: none;
   margin-left: -15px;
+  @media(max-width: 1024px) {
+    bottom: 65px;
+  }
+
+  &.down {
+    bottom: 80px;
+  }
 }
 
 
@@ -28,6 +52,10 @@
   height: 60px;
   margin-top: 70px;
   border-radius: 6px;
+  @media(max-width: 1024px) {
+
+    margin: auto;
+  }
 
   &.color-NameGroup {
     transform: translateY(10px);
@@ -54,6 +82,12 @@
   width: 370px;
   height: 400px;
   overflow-y: auto;
+
+  &.right-btn {
+    @media (max-width: 1024px) {
+      margin: auto;
+    }
+  }
 }
 
 .button-sub {
@@ -67,8 +101,14 @@
   font-size: 17px;
   width: auto;
 
-  &.position-sub{
+  &.position-sub {
     margin-bottom: 60px;
+  }
+
+  &.right-btn {
+    @media (max-width: 1024px) {
+      margin: auto;
+    }
   }
 
   &:hover {
@@ -92,9 +132,19 @@
   font-size: 17px;
   width: 250px;
 
+
   &.position {
     margin-bottom: -15px;
-    margin-left: 40px;  }
+    margin-left: 40px;
+  }
+
+  &.top {
+    bottom: 120px;
+    @media(max-width: 1024px) {
+      bottom: 60px;
+      margin-left: -125px;
+    }
+  }
 
   &:hover {
     color: #FFFFFF;
@@ -106,6 +156,81 @@
     color: #FFFFFF;
     background: #454545;
   }
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+
+
+.menu__btn {
+  display: none;
+  @media(max-width: 1024px) {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 10;
+  }
+}
+
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+}
+
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+
+.menu__box {
+  transition-duration: .25s;
+}
+
+.menu__item {
+  transition-duration: .25s;
 }
 
 

@@ -1,49 +1,66 @@
 
-.grey-background{
-  padding-bottom: 185px;
+.grey-background {
   width: 1000px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
   background: #2E2E2E;
-  transform: translateX(450px);
+  transform: translateX(600px);
 
 }
 
-.gr-position{
+.gr-position {
   margin-top: 100px;
 }
 
 
-
-.settings-group{
+.settings-group {
   margin-top: 20px;
-  margin-left:35px;
-  &.pos{
+  margin-left: 35px;
+
+  &.pos {
     transform: translateY(85px);
   }
 }
 
-.line-set{
-   border-bottom: 3px solid  #242424;
-   transform: translateY(115px);
-   width:930px;
+.line-set {
+  border-bottom: 3px solid #242424;
+  transform: translateY(115px);
+  width: 930px;
   margin-left: 35px;
 }
 
-.NewChanel{
+.NewChanel {
+  position: absolute;
+  bottom: 100px;
   margin-top: 20px;
-  margin-bottom: 20px;
   margin-left: -34px;
+
+  &.set {
+    bottom: 80px;
+  }
+
+  &.down-btn {
+    @media(max-width: 1024px) {
+      bottom: 60px;
+    }
+
+  }
+
+  &.down {
+    @media(max-width: 1024px) {
+      bottom: 70px;
+    }
+  }
 }
 
-.button-hidden{
+.button-hidden {
   display: none;
   transform: translateY(90px);
   margin-left: 25px;
 }
 
-.all-input{
+.all-input {
   margin-top: 70px;
-}
-
-.settings-of-groups{
-  overflow-y: auto;
 }

@@ -1,9 +1,9 @@
 .modal-content {
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 1);
   padding-bottom: 20px;
 
   &.creation-color {
-    background: rgba(0, 0, 0, 95);
+    background: rgba(0, 0, 0, 1);
   }
 
   &.small {
@@ -21,7 +21,7 @@
 }
 
 .modal {
-  transform: translateX(500px);
+  transform: translateX(700px);
 
   &.center-modal {
     transform: translateX(0px);
@@ -30,6 +30,12 @@
   &.small {
     transform: translateX(250px);
     margin-top: 250px;
+  }
+
+  &.adapt {
+    @media(max-width: 1024px) {
+      margin-left: -705px;
+    }
   }
 }
 

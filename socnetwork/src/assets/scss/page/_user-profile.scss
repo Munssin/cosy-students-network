@@ -98,6 +98,10 @@ buttonG {
 .redactor {
     position: relative;
     index-z: 0;
+
+    &.top{
+        top:-30px;
+    }
 }
 
 .formG {

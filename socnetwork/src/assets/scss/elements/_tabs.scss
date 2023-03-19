@@ -1,14 +1,20 @@
-.button-admin{
+.button-admin {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 120px;
 
-  &.pos{
+  &.pos {
     margin-left: -375px;
   }
+
 }
-.button-tabs{
+
+.center-tabs {
+}
+
+
+.button-tabs {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,14 +36,15 @@
 
 }
 
-.monitor-set{
+.monitor-set {
   display: none;
   animation: fadein 0.8s;
 }
 
-.group{
+.group {
   display: none;
   animation: fadein 0.8s;
+
 }
 
 @keyframes fadein {
@@ -58,23 +65,40 @@
   transform: translateX(-500px);
 
   &.content-monitor {
-    margin-left: -195px;
+    margin-left: -400px;
   }
+
+  &.first {
+    margin-left: -300px;
+    @media(max-width: 1024px) {
+      margin-right: -450px;
+      top: 60px;
+    }
+  }
+
 }
+
 #three:checked ~ .panels #one-panel,
 #two:checked ~ .panels #two-panel,
 #one:checked ~ .panels #three-panel {
   display: block;
 }
 
-.panels{
+.panels {
   margin-top: -120px;
+  margin-left: 550px;
   width: 100%;
   text-align: left;
   z-index: 3;
+
+  @media(max-width: 1024px) {
+    margin-top: -200px;
+    margin-left: -240px;
+
+  }
 }
 
-.panels-set{
+.panels-set {
   width: 100%;
   z-index: 3;
 }
@@ -102,27 +126,39 @@
 #four-user:checked ~ .panels #one-panel,
 #three-user:checked ~ .panels #two-panel,
 #two-user:checked ~ .panels #three-panel,
-#one-user:checked ~ .panels #four-panel{
-    display: block;
+#one-user:checked ~ .panels #four-panel {
+  display: block;
 }
+
 #one-user:checked ~ .tabs #one-tab-user,
 #two-user:checked ~ .tabs #two-tab-user,
 #three-user:checked ~ .tabs #three-tab-user,
-#four-user:checked ~ .tabs #four-tab-user{
-    background: #b1a10b;
-    color: #FFFFFF;
+#four-user:checked ~ .tabs #four-tab-user {
+  background: #b1a10b;
+  color: #FFFFFF;
 }
 
 #four-monitor:checked ~ .panels-set #four-panel,
 #three-monitor:checked ~ .panels-set #two-panel,
 #two-monitor:checked ~ .panels-set #three-panel,
-#one-monitor:checked ~ .panels-set #one-panel{
-    display: block;
+#one-monitor:checked ~ .panels-set #one-panel {
+  display: block;
 }
+
 #one-monitor:checked ~ .tabs #one-tab-monitor,
 #two-monitor:checked ~ .tabs #two-tab-monitor,
 #three-monitor:checked ~ .tabs #three-tab-monitor,
-#four-monitor:checked ~ .tabs #four-tab-monitor{
-    background: #b1a10b;
-    color: #FFFFFF;
+#four-monitor:checked ~ .tabs #four-tab-monitor {
+  background: #b1a10b;
+  color: #FFFFFF;
+}
+
+.description-admin {
+  display: none;
+  animation: fadein 0.8s;
+  margin-left: 500px;
+
+  @media(max-width: 1024px) {
+    text-align: center;
+  }
 }

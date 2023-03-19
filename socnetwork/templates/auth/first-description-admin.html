@@ -8,6 +8,7 @@
     <title>General</title>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
     <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     
@@ -18,15 +19,15 @@
         <div class="header-main">
             <a href="/" class="header-logo">STUDENTFLY</a>
             <nav class="header-nav">
-                <a href="" class="header-link">Про нас</a>
-                <a href="" class="header-link" data-bs-toggle="modal"
-                   data-bs-target="#modal">Налаштування</a>
+                <a href="" class="header-link margin"></a>
+                <a href="" class="header-link margin-two" data-bs-toggle="modal"
+                   data-bs-target="#modal"><span id="boot-icon" class="bi bi-gear" style="font-size: 29px; color: rgb(255, 255, 255);"></span></a>
             </nav>
         </div>
     </div>
 </header>
 
-<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal adapt fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-head">
@@ -39,8 +40,8 @@
                     <div class="form-group-modal">
                         <div class="btn-pos">
                             <div class="position-set-large">
-                                <a class="btn btn-light-yellow modal-light-button" href="/user_profile_my/">Профiль<a>
-                                <a class="btn btn-light-yellow modal-light-button" href="/">work_place<a>
+                                <a class="btn btn-light-yellow modal-light-button" href="/user_profile_my/">Профiль</a>
+                                <a class="btn btn-light-yellow modal-light-button" href="/">work_place</a>
                                 <button type="button" class="btn btn-light-yellow modal-light-button">Змінити пароль
                                 </button>
                                     <a class="btn btn-light-yellow modal-light-button" href="/logout/">Вийти з акаунту</a>
@@ -64,9 +65,15 @@
 
 
 <div class="description-user">
-    <div class="container pos-for-conteiner">
-        <hr class="sidebar">
-        <button type="button" class="button-exit pos-for-button-exit">Вийти з акаунту</button>
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox"/>
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+        <div class="container pos-for-conteiner menu__box">
+            <hr class="sidebar">
+            <button type="button" class="button-exit pos-for-button-exit">Вийти з акаунту</button>
+        </div>
     </div>
     <div class="image-avatar pos">
         <!--Фото користувача-->
@@ -84,7 +91,7 @@
                 <input class="radio" id="one" name="group" type="radio">
                 <input class="radio" id="two" name="group" type="radio">
                 <input class="radio" id="three" name="group" type="radio" checked>
-                <div class="tabs">
+                <div class="tabs first">
                     <label class="tab" id="three-tab" for="three">Опис</label>
                     <label class="tab" id="two-tab" for="two">Групи</label>
                     <label class="tab" id="one-tab" for="one">Список групи</label>

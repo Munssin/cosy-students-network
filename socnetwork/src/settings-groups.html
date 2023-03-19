@@ -2,10 +2,15 @@
 layout: default
 title: General
 ---
-
-    <div class="container">
+<div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox"/>
+    <label class="menu__btn" for="menu__toggle">
+        <span></span>
+    </label>
+    <div class="container menu__box">
         <div class="dropdown">
-            <button type="buttonA" class="listA-button width-Asettings" data-bs-toggle="dropdown" aria-expanded="false">
+            <button type="buttonA" class="listA-button width-Asettings position-ad" data-bs-toggle="dropdown"
+                    aria-expanded="false">
                 ПМ-12 <p class="text-A">21 users</p></button>
             </button>
             <ul class="dropdown-menu">
@@ -14,41 +19,101 @@ title: General
                 <li><a class="dropdown-item" href="user-workplace.html">Фізика</a></li>
             </ul>
         </div>
-        <hr class="sidebar">
-        <a type="button" class="button-exit">Налаштування</a>
+        <div class="NewChanel adapt-pos set">
+            <button type="button" class="button-sub position-sub">+ новий канал</button>
+        </div>
+        <hr class="sidebar down">
+        <a type="button" class="button-exit adapt-position down down-for-set">Налаштування</a>
     </div>
-
-<div class="redactor">
-   <form class="formG">
-       <hr class="sidebarG">
-  <div class="form-group">
-       <label class="label">Додати користувача:</label>
-       <input class="input-G" readonly placeholder="Ви не можете додати користувача" aria-label="Username"/>
-   </div>
-   <div class="form-group">
-       <label class="label">Змінити імя групи:</label>
-       <input class="input-G" readonly placeholder="Ви не можете змінювати назву групи" aria-label="Username"/>
-   </div>
-       <div class="students_group">
-   <div class="formGD">
-       <ul class="for-ul">
-          <li><button type="buttonU" class="listU-button width-Usettings " data-toggle="modal" data-target="#staticBackdrop">  <div class="circleG2"></div> <h2 class="name-user">Name Surname</h2></button></li>
-          <li><button type="buttonU" class="listU-button width-Usettings ">  <div class="circleG2"></div> <h2 class="name-user">Name Surname</h2></button></li>
-          <li><button type="buttonU" class="listU-button width-Usettings ">  <div class="circleG2"></div> <h2 class="name-user">Name Surname</h2></button></li>
-          <li><button type="buttonU" class="listU-button width-Usettings ">  <div class="circleG2"></div> <h2 class="name-user">Name Surname</h2></button></li>
-          <li><button type="buttonU" class="listU-button width-Usettings ">  <div class="circleG2"></div> <h2 class="name-user">Name Surname</h2></button></li>
-          <li><button type="buttonU" class="listU-button width-Usettings ">  <div class="circleG2"></div> <h2 class="name-user">Name Surname</h2></button></li>
-          <li><button type="buttonU" class="listU-button width-Usettings ">  <div class="circleG2"></div> <h2 class="name-user">Name Surname</h2></button></li>
-          <li><button type="buttonU" class="listU-button width-Usettings ">  <div class="circleG2"></div> <h2 class="name-user">Name Surname</h2></button></li>
-          <li><button type="buttonU" class="listU-button width-Usettings ">  <div class="circleG2"></div> <h2 class="name-user">Name Surname</h2></button></li>
-          <li><button type="buttonU" class="listU-button width-Usettings ">  <div class="circleG2"></div> <h2 class="name-user">Name Surname</h2></button></li>
-          <li><button type="buttonU" class="listU-button width-Usettings ">  <div class="circleG2"></div> <h2 class="name-user">Name Surname</h2></button></li>
-          <li><button type="buttonU" class="listU-button width-Usettings ">  <div class="circleG2"></div> <h2 class="name-user">Name Surname</h2></button></li>
-          <li><button type="buttonU" class="listU-button width-Usettings ">  <div class="circleG2"></div> <h2 class="name-user">Name Surname</h2></button></li>
-          <li><button type="buttonU" class="listU-button width-Usettings ">  <div class="circleG2"></div> <h2 class="name-user">Name Surname</h2></button></li>
-        </ul>
-   </div>
 </div>
-</form>
+
+<div class="redactor top">
+    <form class="formG">
+        <div class="form-group">
+            <label class="label">Додати користувача:</label>
+            <input class="input-G" readonly placeholder="Ви не можете додати користувача" aria-label="Username"/>
+        </div>
+        <div class="form-group">
+            <label class="label">Змінити імя групи:</label>
+            <input class="input-G" readonly placeholder="Ви не можете змінювати назву групи" aria-label="Username"/>
+        </div>
+        <div class="students_group">
+            <div class="formGD">
+                <ul class="for-ul">
+                    <li>
+                        <button type="buttonU" class="listU-button width-Usettings " data-toggle="modal"
+                                data-target="#staticBackdrop">
+                            <div class="circleG2"></div>
+                            <h2 class="name-user">Name Surname</h2></button>
+                    </li>
+                    <li>
+                        <button type="buttonU" class="listU-button width-Usettings ">
+                            <div class="circleG2"></div>
+                            <h2 class="name-user">Name Surname</h2></button>
+                    </li>
+                    <li>
+                        <button type="buttonU" class="listU-button width-Usettings ">
+                            <div class="circleG2"></div>
+                            <h2 class="name-user">Name Surname</h2></button>
+                    </li>
+                    <li>
+                        <button type="buttonU" class="listU-button width-Usettings ">
+                            <div class="circleG2"></div>
+                            <h2 class="name-user">Name Surname</h2></button>
+                    </li>
+                    <li>
+                        <button type="buttonU" class="listU-button width-Usettings ">
+                            <div class="circleG2"></div>
+                            <h2 class="name-user">Name Surname</h2></button>
+                    </li>
+                    <li>
+                        <button type="buttonU" class="listU-button width-Usettings ">
+                            <div class="circleG2"></div>
+                            <h2 class="name-user">Name Surname</h2></button>
+                    </li>
+                    <li>
+                        <button type="buttonU" class="listU-button width-Usettings ">
+                            <div class="circleG2"></div>
+                            <h2 class="name-user">Name Surname</h2></button>
+                    </li>
+                    <li>
+                        <button type="buttonU" class="listU-button width-Usettings ">
+                            <div class="circleG2"></div>
+                            <h2 class="name-user">Name Surname</h2></button>
+                    </li>
+                    <li>
+                        <button type="buttonU" class="listU-button width-Usettings ">
+                            <div class="circleG2"></div>
+                            <h2 class="name-user">Name Surname</h2></button>
+                    </li>
+                    <li>
+                        <button type="buttonU" class="listU-button width-Usettings ">
+                            <div class="circleG2"></div>
+                            <h2 class="name-user">Name Surname</h2></button>
+                    </li>
+                    <li>
+                        <button type="buttonU" class="listU-button width-Usettings ">
+                            <div class="circleG2"></div>
+                            <h2 class="name-user">Name Surname</h2></button>
+                    </li>
+                    <li>
+                        <button type="buttonU" class="listU-button width-Usettings ">
+                            <div class="circleG2"></div>
+                            <h2 class="name-user">Name Surname</h2></button>
+                    </li>
+                    <li>
+                        <button type="buttonU" class="listU-button width-Usettings ">
+                            <div class="circleG2"></div>
+                            <h2 class="name-user">Name Surname</h2></button>
+                    </li>
+                    <li>
+                        <button type="buttonU" class="listU-button width-Usettings ">
+                            <div class="circleG2"></div>
+                            <h2 class="name-user">Name Surname</h2></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </form>
 </div>
 

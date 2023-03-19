@@ -7,7 +7,7 @@
   border-radius: 10px;
   font-style: normal;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 17px;
   line-height: 1.2;
   color: #fff;
   display: flex;
@@ -22,13 +22,14 @@
   }
 
   &.large-btn {
-    height: 80px;
+    height: 35px;
     max-width: 100%;
   }
 
   &.yellow-btn {
     background: var(--yellow-dark);
-    max-width: 280px;
+    height: 35px;
+    width: 200px;
 
     &:hover {
       color: var(--yellow-dark);
@@ -49,17 +50,17 @@
   }
 
   &.empty {
-  background: #0cab5f;
-  color: white;
-  border-radius: 6px;
-  left: 1521px;
-  top: 54px;
-}
+    background: #0cab5f;
+    color: white;
+    border-radius: 6px;
+    left: 1521px;
+    top: 54px;
+  }
 }
 
 .button-exit {
   position: absolute;
-  bottom: 45px;
+  bottom: 55px;
   color: #FFFFFF;
   background: #1f1f1f;
   border-radius: 6px;
@@ -68,10 +69,33 @@
   height: 50px;
   font-size: 17px;
   width: 330px;
+  @media(max-width: 1024px) {
+    display: inline-block;
+    left: 50%;
+    bottom: -20px;
+    transform: translate(-50%, -50%);
+  }
 
-  &.pos-for-button-exit{
+  &.pos-for-button-exit {
     margin-bottom: 30px;
   }
+
+  &.adapt-position {
+    @media(max-width: 1024px) {
+      bottom: 40px;
+    }
+
+
+  }
+
+  &.down {
+    bottom: 45px;
+  }
+
+  &.down-for-set{
+    bottom: 10px;
+  }
+
 
   &:hover {
     color: #FFFFFF;
@@ -83,6 +107,7 @@
     color: #FFFFFF;
     background: #b1a10b;
   }
+
 }
 
 .scroll-button {
@@ -97,13 +122,14 @@
   font-size: 17px;
 
   &:hover {
-  color: #FFFFFF;
-  background: #4a4a4a;
-}
+    color: #FFFFFF;
+    background: #4a4a4a;
+  }
+
   &:active {
-  color: #FFFFFF;
-  background: #4a4a4a;
-}
+    color: #FFFFFF;
+    background: #4a4a4a;
+  }
 }
 
 .form-one-green {
@@ -128,6 +154,11 @@
   font-size: 15px;
   font-weight: 300;
 
+  @media(max-width: 420px) {
+    width: 100%;
+    margin-top: 50px;
+  }
+
 
 }
 
@@ -147,6 +178,11 @@
   font-style: normal;
   font-size: 15px;
   font-weight: 300;
+
+  @media(max-width: 420px) {
+    width: 100%;
+  }
+
 }
 
 
@@ -156,16 +192,17 @@
   border-radius: 6px;
 
   &:hover {
-  color: white;
-  background: #d3cb81;
-  border: #d3cb81;
-  transition: all 0.3s ease;
-}
+    color: white;
+    background: #d3cb81;
+    border: #d3cb81;
+    transition: all 0.3s ease;
+  }
+
   &:active {
-  color: white;
-  background: #d3cb81;
-  border: #d3cb81;
-}
+    color: white;
+    background: #d3cb81;
+    border: #d3cb81;
+  }
 }
 
 .list-button {
@@ -178,13 +215,14 @@
   font-size: 17px;
 
   &:hover {
-  color: #FFFFFF;
-  background: #3d3d3d;
-}
+    color: #FFFFFF;
+    background: #3d3d3d;
+  }
+
   &:active {
-  color: #FFFFFF;
-  background: #b1a10b;
-}
+    color: #FFFFFF;
+    background: #b1a10b;
+  }
 }
 
 .button-delete {
