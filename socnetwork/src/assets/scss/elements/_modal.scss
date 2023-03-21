@@ -33,8 +33,21 @@
   }
 
   &.adapt {
+     @media(max-width: 1370px) {
+      margin-left: -320px;
+    }
     @media(max-width: 1024px) {
       margin-left: -705px;
+    }
+     @media(max-width: 915px) {
+      margin-left: -515px;
+    }
+
+     @media(max-width: 850px) {
+      margin-left: -570px;
+    }
+    @media(max-width: 780px) {
+      margin-left: -600px;
     }
   }
 }

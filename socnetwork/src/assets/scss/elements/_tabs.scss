@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin-top: 120px;
 
   &.pos {
@@ -41,11 +42,6 @@
   animation: fadein 0.8s;
 }
 
-.group {
-  display: none;
-  animation: fadein 0.8s;
-
-}
 
 @keyframes fadein {
   from {
@@ -70,10 +66,18 @@
 
   &.first {
     margin-left: -300px;
-    @media(max-width: 1024px) {
+     @media(max-width: 1370px) {
+      margin-right: -620px;
+    }
+
+     @media(max-width: 1024px) {
       margin-right: -450px;
       top: 60px;
     }
+     @media(max-width: 915px) {
+      margin-left: -300px;
+    }
+
   }
 
 }
@@ -161,4 +165,10 @@
   @media(max-width: 1024px) {
     text-align: center;
   }
+
+   @media(max-width: 915px) {
+    text-align: center;
+  }
+
+
 }
