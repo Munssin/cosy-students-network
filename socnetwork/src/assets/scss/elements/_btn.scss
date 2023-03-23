@@ -59,7 +59,7 @@
 
 .button-exit {
   position: absolute;
-  bottom: 45px;
+  bottom: 55px;
   color: #FFFFFF;
   background: #1f1f1f;
   border-radius: 6px;
@@ -70,6 +70,35 @@
   width: 330px;
 
   &.pos-for-button-exit{
+    margin-bottom: 30px;
+  }
+
+  &:hover {
+    color: #FFFFFF;
+    background: #454545;
+  }
+
+
+  &:active {
+    color: #FFFFFF;
+    background: #b1a10b;
+  }
+}
+
+.button-create {
+  position: absolute;
+  bottom: 5px;
+  color: #FFFFFF;
+  background: #1f1f1f;
+  border-radius: 6px;
+  text-align: center;
+  padding: 10px 20px;
+  height: 50px;
+  font-size: 17px;
+  width: 330px;
+  margin-top: 5px;
+
+  &.pos-for-button-create{
     margin-bottom: 30px;
   }
 
@@ -188,24 +217,22 @@
 }
 
 .button-delete {
-  margin-left: 35px;
-  transform: translateY(140px);
-  color: #FFFFFF;
-  background: #353535;
-  border-radius: 6px;
-  height: 30px;
-  font-size: 17px;
-  width: 150px;
-
-  &:hover {
+  margin-left: 0px;
+    transform: translateY(610px);
     color: #FFFFFF;
-    background: #242424;
+    background: #353535;
+    border-radius: 6px;
+    height: 30px;
+    font-size: 17px;
+    width: 150px;
+
+    &:hover {
+    color: #000000;
+    background: #c60000;
   }
-
-
   &:active {
     color: #FFFFFF;
-    background: #242424;
+    background: #b1a10b;
   }
 }
 

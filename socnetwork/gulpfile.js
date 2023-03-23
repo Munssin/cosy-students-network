@@ -20,22 +20,19 @@ const srcPath = "src/"
 const path = {
       build: {
           html: "templates/auth",
-          html_workplace: "templates/profile",
-          html_groupsettings: "templates/profile",
+
           css: "static/css/" ,
           js: "static/js/",
       },
       src: {
           html: srcPath + "*.html",
-          html_workplace: srcPath + "user-workplace.html",
-          html_groupsettings: srcPath + "settings-groups.html",
+
           css: srcPath + "assets/scss/*.scss",
           js: srcPath + "assets/js/*.js",
       },
       watch: {
           html: srcPath + "**/*.html",
-          html_workplace: srcPath + "**/*.html",
-          html_groupsettings: srcPath + "**/*.html",
+
           css: srcPath + "assets/scss/**/*.scss",
           js: srcPath + "assets/js/**/*.js",
       }
@@ -58,23 +55,7 @@ function html() {
         .pipe(browserSync.reload({stream:true}));
 }
 
-function html_workplace() {
-    panini.refresh()
-    return src(path.src.html_workplace, {base: srcPath})
-        .pipe(plumber())
-        .pipe(panini({root: srcPath, layouts: srcPath + "tpl/layouts/", partials: srcPath + "tpl/partials/"}))
-        .pipe(dest(path.build.html_workplace))
-        .pipe(browserSync.reload({stream:true}));
-}
 
-function html_groupsettings() {
-    panini.refresh()
-    return src(path.src.html_groupsettings, {base: srcPath})
-        .pipe(plumber())
-        .pipe(panini({root: srcPath, layouts: srcPath + "tpl/layouts/", partials: srcPath + "tpl/partials/"}))
-        .pipe(dest(path.build.html_groupsettings))
-        .pipe(browserSync.reload({stream:true}));
-}
 
 function css() {
     return src(path.src.css, {base: srcPath + "assets/scss/"})
@@ -127,19 +108,17 @@ function js() {
 
 function watchFiles() {
     gulp.watch([path.watch.html], html)
-    gulp.watch([path.watch.html_workplace], html_workplace)
-    gulp.watch([path.watch.html_groupsettings], html_groupsettings)
+
     gulp.watch([path.watch.css], css)
     gulp.watch([path.watch.js], js)
 }
 
-const build = gulp.series(gulp.parallel(html, html_workplace, html_groupsettings, css, js))
+const build = gulp.series(gulp.parallel(html, css, js))
 const watch = gulp.parallel(build, watchFiles, serve)
 
 
 exports.html = html
-exports.html_workplace = html_workplace
-exports.html_groupsettings = html_groupsettings
+
 exports.css = css
 exports.js = js
 exports.build = build
