@@ -26,6 +26,7 @@ urlpatterns = [
     path('edit_profile/', edit_profile, name='edit_profile'),
     path('getMessages_url/<int:room_id>/<int:under_room_id>/', getMessages_url, name='getMessages_url'),
     path('settings_group/<int:room_id>/', settings_group, name='settings_group'),
+    path('delete_room/<int:room_id>/', delete_room, name='delete_room'),
     path('download/<int:document_id>/', download, name='download'),
     path('send_member_username/', send_member_username, name='send_member_username'),
     path('send_room_name/', send_room_name, name='send_room_name'),

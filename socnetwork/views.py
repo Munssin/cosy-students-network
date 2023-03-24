@@ -68,7 +68,8 @@ def edit_profile(request):
             user_profile.about = request.POST.get("about")
         if request.POST.get("university"):
             user_profile.university = request.POST.get("university")
-        user_profile.avatar = request.FILES['avatar-profile']
+        if 'avatar-profile' in request.FILES:
+            user_profile.avatar = request.FILES['avatar-profile']
         user_profile.save()
         return redirect(reverse('user_profile', args=[user_profile.id]))
     else:
@@ -148,6 +149,8 @@ def send(request):
         if match:
             new_message_url_c = Message_url.objects.create(value=message, user=username, room=f"{room}_{under_room}")
             new_message_url_c.save()
+            new_message = Message.objects.create(value=message, user=username, room=f"{room}_{under_room}")
+            new_message.save()
         else:
             new_message = Message.objects.create(value=message, user=username, room=f"{room}_{under_room}")
             new_message.save()
@@ -277,7 +280,7 @@ def send_room_name(request):
     if len(room_name) != 0:
         Room.objects.filter(id=room_id).update(name=room_name)
     else:
-        print("error member_username empty")
+        print("error name_room empty")
 
 def download(request, document_id):
     document = get_object_or_404(ResumeF, pk=document_id)
@@ -290,11 +293,20 @@ def create_room(request):
     username = request.user.username
     if request.user.groups.filter(name='Moderation').exists():
         if request.method == "POST":
-            c_room = Room.objects.create(name=request.POST.get("room_name"), members=request.user.id)
-            c_room.save()
+            if len(request.POST.get("room_name")) != 0:
+                c_room = Room.objects.create(name=request.POST.get("room_name"), members=request.user.id)
+                c_room.save()
 
-            return redirect('../')
+                return redirect('../')
+            else:
+                return redirect('../')
         else:
             return render(request, 'profile/create-room.html')
     else:
-        return HttpResponse("You are not in moderation!")
+        return render(request, 'profile/error-page.html')
+
+def delete_room(request, room_id):
+    room = get_object_or_404(Room, id=room_id)
+    room.delete()
+
+    return redirect('/')

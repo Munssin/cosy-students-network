@@ -62,12 +62,15 @@ $.ajax({
         $("#rooms_menu").empty();
         for (var key in response.room){
             if (response.room[key].members.includes(response.username_r)){
-                var temp="<div class='group_btn'><div class='dropdown'><button type='buttonA' class='listA-button width-Asettings' data-bs-toggle='dropdown' aria-expanded='false'>"+response.room[key].name+"<p class='text-A'>error users</p></button></button><ul class='dropdown-menu'><li><a class='dropdown-item' href='../../../user_workplace_test/"+response.room[key].id+"/1/'>Дискретна</a></li><li><a class='dropdown-item' href='../../../user_workplace_test/"+response.room[key].id+"/2/'>Мат аналіз</a></li><li><a class='dropdown-item' href='../../../user_workplace_test/"+response.room[key].id+"/3/'>Фізика</a></li></ul></div>";
+                var temp="<div class='group_btn'><div class='dropdown'><button type='buttonA' class='listA-button width-Asettings' data-bs-toggle='dropdown' aria-expanded='false'>"+response.room[key].name+"<p class='text-A'>"+response.room[key].members.split(',').length+" users</p></button></button><ul class='dropdown-menu'><li><a class='dropdown-item' href='../../../user_workplace_test/"+response.room[key].id+"/1/'>Дискретна</a></li><li><a class='dropdown-item' href='../../../user_workplace_test/"+response.room[key].id+"/2/'>Мат аналіз</a></li><li><a class='dropdown-item' href='../../../user_workplace_test/"+response.room[key].id+"/3/'>Фізика</a></li></ul></div>";
                 $("#rooms_menu").append(temp);
             }
         }
     },
 });
+
+
+
 
 
 $.ajax({
@@ -118,7 +121,7 @@ $.ajax({
         $("#refuge-group").empty();
         for (var key in response.files)
         {
-            var temp="<ul class='for-ulRG'><li><a href='download/"+response.files[key].id+"/'><button type='buttonU' class='listR-button width-Usettings' data-toggle='modal' data-target='#staticBackdrop'><div class='square'>T</div><h2 class='text'>"+response.files[key].file_name+"</h2><p class='text-R'>mb</p><p class='text-R'>"+response.files[key].user+"</p></button></a></li></ul>";
+            var temp="<ul class='for-ulRG'><li><a href='url {download/"+response.files[key].id+"/}'><button type='buttonU' class='listR-button width-Usettings' data-toggle='modal' data-target='#staticBackdrop'><div class='square'>T</div><h2 class='text'>"+response.files[key].file_name+"</h2><p class='text-R'>mb</p><p class='text-R'>"+response.files[key].user+"</p></button></a></li></ul>";
             $("#refuge-group").append(temp);
         }
     },
@@ -173,7 +176,7 @@ setInterval(function(){
             $("#refuge-group").empty();
             for (var key in response.files)
             {
-                var temp="<ul class='for-ulRG'><li><a href='download/"+response.files[key].id+"/'><button type='buttonU' class='listR-button width-Usettings' data-toggle='modal' data-target='#staticBackdrop'><div class='square'>T</div><h2 class='text'>"+response.files[key].file_name+"</h2><p class='text-R'>mb</p><p class='text-R'>"+response.files[key].user+"</p></button></a></li></ul>";
+                var temp="<ul class='for-ulRG'><li><a href='http://127.0.0.1:8000/download/"+response.files[key].id+"/'><button type='buttonU' class='listR-button width-Usettings' data-toggle='modal' data-target='#staticBackdrop'><div class='square'>T</div><h2 class='text'>"+response.files[key].file_name+"</h2><p class='text-R'>mb</p><p class='text-R'>"+response.files[key].user+"</p></button></a></li></ul>";
                 $("#refuge-group").append(temp);
             }
         },

@@ -42,6 +42,10 @@ class Room(models.Model):
     name = models.CharField(max_length=1000, null=True)
     members = models.TextField(max_length=999999999, null=True)
 
+class UnderRoom(models.Model):
+    name = models.CharField(max_length=1000, null=True)
+    room = models.CharField(max_length=1000000, null=True)
+
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:

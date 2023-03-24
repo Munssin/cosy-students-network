@@ -72,13 +72,11 @@
         {% csrf_token %}
        <label class="label">Додати користувача:</label>
        <input class="input-G" type="text" id="input-member_username" type="input-member_username" name="input-member_username" placeholder="додати користувача"/>
-       <input type="submit" value="Send" class="button-sendF">
    </form>
    <form class="form-group_two" id="form-group_two" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
        <label class="label">Змінити імя групи:</label>
        <input class="input-G" type="text" id="input-room_name" type="input-room_name" name="input-room_name" placeholder="змінювати назву групи"/>
-       <input type="submit" value="Send" class="button-sendF">
    </form>
        <div class="students_group">
    <div class="formGD">
@@ -93,7 +91,7 @@
    </div>
 </div>
 </form>
-   <button type="button" class="button-delete">Видалити канал</button>
+   <a type="button" class="button-delete" href="../../delete_room/{{room_id}}/">Видалити канал</a>
 </div>
 
 <input type="hidden" id="room_id" value="{{room_id}}">
@@ -110,10 +108,11 @@
               csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
           },
           success: function(data){
-             //alert(data)
+            //window.location.reload();
           }
         });
         document.getElementById('input-member_username').value = ''
+        document.location.reload();
     });
 </script>
 
@@ -129,10 +128,11 @@
               csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
           },
           success: function(data){
-             //alert(data)
+            //document.location.reload();
           }
         });
         document.getElementById('input-room_name').value = ''
+        document.location.reload();
     });
 </script>
 
