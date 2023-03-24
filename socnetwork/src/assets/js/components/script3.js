@@ -104,7 +104,7 @@ $.ajax({
         $("#refuge-group").empty();
         for (var key in response.files)
         {
-            var temp="<ul class='for-ulRG'><li><a href='url {download/"+response.files[key].id+"/}'><button type='buttonU' class='listR-button width-Usettings' data-toggle='modal' data-target='#staticBackdrop'><div class='square'>T</div><h2 class='text'>"+response.files[key].file_name+"</h2><p class='text-R'>mb</p><p class='text-R'>"+response.files[key].user+"</p></button></a></li></ul>";
+            var temp="<ul class='for-ulRG'><li><a  href='http://127.0.0.1:8000/download/"+response.files[key].id+"/'><button type='buttonU' class='listR-button width-Usettings' data-toggle='modal' data-target='#staticBackdrop'><div class='square'>T</div><h2 class='text'>"+response.files[key].file_name+"</h2><p class='text-R'>mb</p><p class='text-R'>"+response.files[key].user+"</p></button></a></li></ul>";
             $("#refuge-group").append(temp);
         }
     },

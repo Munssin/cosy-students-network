@@ -267,6 +267,7 @@ button {
   height: 30px;
   font-size: 17px;
   width: 150px;
+  padding: 3px 11px;
 }
 .button-delete:hover {
   color: #000000;
@@ -528,6 +529,21 @@ hr {
   font-size: 22px;
   transform: translateY(-40px);
   margin-left: 450px;
+}
+
+.button-user {
+  color: #242424;
+  font-size: 30px;
+  transform: translateY(-23px);
+  margin-left: 250px;
+}
+.button-user:hover {
+  color: #c60000;
+  font-size: 31px;
+}
+.button-user:active {
+  color: #3d3d3d;
+  font-size: 31px;
 }
 
 .modal {

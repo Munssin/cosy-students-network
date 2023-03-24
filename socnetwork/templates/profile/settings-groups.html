@@ -85,13 +85,13 @@
 
                     <!--<li><button type="buttonU" class="listU-button width-Usettings ">  <img src="../../media/{{avatar}}" alt="" class="circleG2"> <h2 class="name-user">{{ member }}</h2></button></li>--> 
 
-                <li><button type="buttonU" class="listU-button width-Usettings ">  <img src="https://media.discordapp.net/attachments/1028699884850794658/1083344804043292702/avatar.png?width=700&height=701" alt="" class="circleG2"> <h2 class="name-user">{{ member }}</h2></button></li>
+                <li><button type="buttonU" class="listU-button width-Usettings ">  <img src="https://media.discordapp.net/attachments/1028699884850794658/1083344804043292702/avatar.png?width=700&height=701" alt="" class="circleG2"> <h2 class="name-user">{{ member }}{% if username != member%}<a type="button" class="button-user" href="../../remove_member/{{room_id}}/{{member}}/">x</a>{% endif %}</h2></button></li>
             {% endfor %}
         </ul>
    </div>
 </div>
 </form>
-   <a type="button" class="button-delete" href="../../delete_room/{{room_id}}/">Видалити канал</a>
+   <a type="button" class="button-delete" href="../../delete_room/{{room_id}}/">Видалити групу</a>
 </div>
 
 <input type="hidden" id="room_id" value="{{room_id}}">

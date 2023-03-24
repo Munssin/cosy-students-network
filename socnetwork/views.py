@@ -242,13 +242,14 @@ def settings_group(request, room_id):
 
         context = {
         'room_id':room_id,
+        'username':username,
         'members_list':members,
         'avatars_list':avatars_list,
         }
 
         return render(request, 'profile/settings-groups.html', context)
     else:
-        return HttpResponse("You are not in moderation!")
+        return render(request, 'profile/error-page.html')
 
 def send_member_username(request):
     member_username = request.POST.get('member_username')
@@ -310,3 +311,24 @@ def delete_room(request, room_id):
     room.delete()
 
     return redirect('/')
+
+def remove_member(request, room_id, member_username):
+    room = get_object_or_404(Room, id=room_id)
+
+    if len(member_username) != 0:
+        user_id = get_object_or_404(User, username=member_username)
+
+        pre_members = f'[{room.members}]'
+        pre_members = json.loads(pre_members)
+        members = []
+
+        for r_user_id in pre_members:
+            user_name = get_object_or_404(UsersProfile, user_id=r_user_id)
+            members.append(user_name.user.id)
+
+        members.remove(user_id.id)
+        members = f"{members}"
+        members = members[1:-1]
+        Room.objects.filter(id=room_id).update(members=members)
+
+        return redirect(f'../../../settings_group/{room_id}/')

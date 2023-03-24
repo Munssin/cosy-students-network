@@ -30,7 +30,7 @@ urlpatterns = [
     path('download/<int:document_id>/', download, name='download'),
     path('send_member_username/', send_member_username, name='send_member_username'),
     path('send_room_name/', send_room_name, name='send_room_name'),
-
+    path('remove_member/<int:room_id>/<str:member_username>/', remove_member, name='remove_member'),
 
     path('password-reset/', PasswordResetView.as_view(template_name='login/password_reset.html'),name='password-reset'),
     path('password-reset/done/', PasswordResetDoneView.as_view(template_name='login/password_reset_done.html'),name='password_reset_done'),
