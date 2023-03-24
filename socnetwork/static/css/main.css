@@ -2202,6 +2202,11 @@ li2 {
 .dropdown-menu {
   background: rgba(255, 255, 255, 0);
 }
+.dropdown-menu.show {
+  border: none;
+  position: relative !important;
+  transform: translate(0px, 50px) !important;
+}
 
 .dropdown-item {
   color: #FFFFFF;
